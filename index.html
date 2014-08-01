@@ -1,14 +1,18 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html> <head>
-<title>ro14nd</title>
-</head>
+---
+layout: default
+---
 
-<body>
-<h1>ro14nd</h1>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">    
+      
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-
-
-<hr>
-<address></address>
-<!-- hhmts start -->Last modified: Wed Aug  7 13:09:31 CEST 2013 <!-- hhmts end -->
-</body> </html>
+      <div class="entry">
+        {{ post.content | truncatewords:40}}
+      </div>
+      
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
