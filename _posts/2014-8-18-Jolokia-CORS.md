@@ -47,14 +47,12 @@ For best computability Jolokia always answers with the provided `Origin:` which 
 
 This behavior can be tuned by adapting the `jolokia-access.xml` policy as described in the [reference manual][6] :
 
-````xml
 	<cors>
 	   <allow-origin>http://www.jolokia.org</allow-origin>
 	   <allow-origin>*://*.jmx4perl.org</allow-origin>
 	   
 	   <strict-checking/>
 	</cors>
-````
 
 If a `<cors>` section is present in `jolokia-access.xml` then only those hosts declared in this sections are allowed. The Origin URLs to match against can be specified either literally or as pattern containing the wildcard `*`.  The optional declaration `<strict-checking/>` is not really connected to CORS but helps in defending against [Cross-Site-Request-Forgery][7](CSRF). If this option is given, then the given patterns are used for **every** request to compare it against the `Origin:` or `Referer:` header (not only for CORS requests).
  
