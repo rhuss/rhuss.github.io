@@ -2,7 +2,8 @@
 layout: post
 title: Jolokia and CORS
 ---
-[Jolokia][1] has configurable [CORS][2] support so that it plays nicely together with the Browser world when it comes to cross origin requests. However, Jolokia’s CORS support is not without gotchas. This gist explains how Jolokias CORS supports works, what are the issues and how I plan to solve them. 
+[Jolokia][1] has configurable [CORS][2] support so that it plays nicely together with the Browser world when it comes to cross origin requests. However, Jolokia’s CORS support is not without gotchas. This post explains how Jolokias CORS supports works, what are the issues and how I plan to solve them. 
+<!-- more -->
 
 **tldr;** *Jolokia CORS support is configured via `jolokia-access.xml` but has issues with authenticated requests which are tackled for the next release 1.3.0*
 
@@ -50,11 +51,11 @@ This behavior can be tuned by adapting the `jolokia-access.xml` policy as descri
 	<cors>
 	   <allow-origin>http://www.jolokia.org</allow-origin>
 	   <allow-origin>*://*.jmx4perl.org</allow-origin>
-	   
+	
 	   <strict-checking/>
 	</cors>
 
-If a `<cors>` section is present in `jolokia-access.xml` then only those hosts declared in this sections are allowed. The Origin URLs to match against can be specified either literally or as pattern containing the wildcard `*`.  The optional declaration `<strict-checking/>` is not really connected to CORS but helps in defending against [Cross-Site-Request-Forgery][7](CSRF). If this option is given, then the given patterns are used for **every** request to compare it against the `Origin:` or `Referer:` header (not only for CORS requests).
+If a `<cors>` section is present in `jolokia-access.xml` then only those hosts declared in this sections are allowed. The Origin URLs to match against can be specified either literally or as pattern containing the wildcard `*`.  The optional declaration `<strict-checking/>` is not really connected to CORS but helps in defending against [Cross-Site-Request-Forgery][7] (CSRF). If this option is given, then the given patterns are used for **every** request to compare it against the `Origin:` or `Referer:` header (not only for CORS requests).
  
 ## CORS and Authentication
 
@@ -91,18 +92,18 @@ This is the dark matter, because I don’t know where and how Jolokia is integra
 Since 1.2.2 is already finished and about to be published today, the stuff I can do as described above will go into a 1.3.0. Looking back at my release history this will probably be ready approx. end of august.
 
 
-[1]: http://www.jolokia.org
-[2]: http://www.w3.org/TR/cors/
-[3]: http://www.w3.org/TR/cors/
-[4]: http://www.w3.org/TR/cors/#resource-preflight-requests
-[5]: http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0
-[6]: http://www.jolokia.org/reference/html/security.html#security-policy
-[7]: http://de.wikipedia.org/wiki/Cross-Site-Request-Forgery
-[8]: https://code.google.com/p/twitter-api/issues/detail?id=2273
-[9]: https://jcp.org/aboutJava/communityprocess/final/jsr315/
-[10]: http://search.cpan.org/~roland/jmx4perl/scripts/jolokia
-[11]: http://www.osgi.org/javadoc/r4v42/org/osgi/service/http/HttpService.html
-[12]: http://activemq.apache.org/rest.html
-[13]: http://karaf.apache.org/manual/latest/users-guide/monitoring.html
-[14]: https://github.com/spring-projects/spring-boot/blob/master/spring-boot-docs/src/main/asciidoc/production-ready-features.adoc
-[15]: http://hawt.io
+[1]:	http://www.jolokia.org
+[2]:	http://www.w3.org/TR/cors/
+[3]:	http://www.w3.org/TR/cors/
+[4]:	http://www.w3.org/TR/cors/#resource-preflight-requests
+[5]:	http://www.w3.org/TR/cors/#cross-origin-request-with-preflight-0
+[6]:	http://www.jolokia.org/reference/html/security.html#security-policy
+[7]:	http://de.wikipedia.org/wiki/Cross-Site-Request-Forgery
+[8]:	https://code.google.com/p/twitter-api/issues/detail?id=2273
+[9]:	https://jcp.org/aboutJava/communityprocess/final/jsr315/
+[10]:	http://search.cpan.org/~roland/jmx4perl/scripts/jolokia
+[11]:	http://www.osgi.org/javadoc/r4v42/org/osgi/service/http/HttpService.html
+[12]:	http://activemq.apache.org/rest.html
+[13]:	http://karaf.apache.org/manual/latest/users-guide/monitoring.html
+[14]:	https://github.com/spring-projects/spring-boot/blob/master/spring-boot-docs/src/main/asciidoc/production-ready-features.adoc
+[15]:	http://hawt.io
