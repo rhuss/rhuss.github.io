@@ -4,7 +4,7 @@ title: Docker for (Java) Developers
 ---
 
 Recently I gave a Meetup talk for the [Docker Munich][1] Meetup Group which explained how Docker can help developers to improve integration tests and to ship applications. 
-<!-- more --> 
+<!-- more -->
 
 The [slides][2] are online as well as the [demo project][3]. 
 
