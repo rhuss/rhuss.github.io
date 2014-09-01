@@ -16,28 +16,39 @@ Luckily Jérôme provides a solution to satisfy this thirst: [nsenter][4]. This 
 
 If you want to use it from OS X with e.g. [Boot2Docker][5] you need to login into the VM hosting the Docker daemon and the connect to a running container.
 
-This works but it is somewhat inconvenient. Therefore I've written a small shell script [docker-sh][6] which runs on the *OS X host* and uses `boot2docker ssh -t` for connecting to a running container. As arguments it expects a container id or name and optionally a command to execute in the container.  This script also will automatically install `nsenter`  on the boot2docker VM if not already present: 
+As described in the [NSenter README][6] you can use a simple alias for doing this transparently
+
+```bash
+	docker-enter() {
+	  boot2docker ssh '[ -f /var/lib/boot2docker/nsenter ] || docker run --rm -v /var/lib/boot2docker/:/target jpetazzo/nsenter'
+	  boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
+	}
+```
+
+This works fine but if you want some extra comfort with bash completion you simply need to convert this into a shell script. I've written a small script [docker-enter][7] which needs to be installed in the path on the OS X host. As arguments it expects a container id or name and optionally a command to execute in the container.  This script also will automatically install `nsenter`  on the boot2docker VM if not already present (like the alias above does this as well): 
 
 ```bash
 	10:20 [~] $ docker ps -q
 	5bf8a161cceb
-	10:20 [~] $ docker-sh 5bf8a161cceb bash
+	
+	10:20 [~] $ docker-enter 5bf8a161cceb bash
+	
 	Unable to find image 'jpetazzo/nsenter' locally
 	Pulling repository jpetazzo/nsenter
 	Installing nsenter to /target
 	Installing docker-enter to /target
+	
 	root@5bf8a161cceb:/#
 ```
 
-Furthermore a small Bash completion script [docker-sh_commands][7] (inspired by [Docker's bash completion][8]) completes on container names and ids on the arguments for `docker-sh`.
-
-The scripts are not perfect, though (my shell fu got a bit rusty ;-). I highly appreciate any improvement, please comment and/or send pull request, I will update them accordingly.
+Then add the small Bash completion script [docker-enter\_commands][8] (inspired by [Docker's bash completion][9]) to your `~/.bash_completion_scripts` directory (or wherever your completion scripts are located). This setup completes on container names and ids on the arguments for `docker-enter`.
 
 [1]:	https://github.com/jpetazzo/nsenter
 [2]:	https://github.com/boot2docker/boot2docker
 [3]:	https://blog.docker.com/2014/06/why-you-dont-need-to-run-sshd-in-docker/
 [4]:	https://github.com/jpetazzo/nsenter
 [5]:	https://github.com/boot2docker/boot2docker
-[6]:	https://gist.github.com/rhuss/a8a40bd143001fd5c83c#file-docker-sh
-[7]:	https://gist.github.com/rhuss/a8a40bd143001fd5c83c#file-docker-sh_commands
-[8]:	https://github.com/docker/docker/blob/master/contrib/completion/bash/docker
+[6]:	https://github.com/jpetazzo/nsenter#docker-enter-with-boot2docker
+[7]:	https://gist.github.com/rhuss/a8a40bd143001fd5c83c#file-docker-enter
+[8]:	https://gist.github.com/rhuss/a8a40bd143001fd5c83c#file-docker-enter_commands
+[9]:	https://github.com/docker/docker/blob/master/contrib/completion/bash/docker
