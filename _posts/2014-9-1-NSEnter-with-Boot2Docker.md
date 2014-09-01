@@ -14,7 +14,7 @@ Nevertheless I still have this irresistible urge to login into a container. And 
 
 Luckily Jérôme provides a solution to satisfy this thirst: [nsenter][4]. This allows you to **enter** into container **n**ame**s**paces. On the GitHub page you find the corresponding recipe for installing and using `nsenter` on a Linux host. 
 
-If you want to use it from OS X with e.g. [Boot2Docker][5] you need to login into the VM hosting the Docker daemon and the connect to a running container.
+If you want to use it from OS X with e.g. [Boot2Docker][5] you need to login into the VM hosting the Docker daemon and then connect to a running container.
 
 As described in the [NSenter README][6] you can use a simple alias for doing this transparently
 
