@@ -3,7 +3,7 @@ layout: post
 title: Using NSEnter with Boot2Docker
 ---
 
-[NSEnter][1] is a nice way to connect to a running Docker container. This post presents a script to ease the usage of `nsenter` together with [Boot2Docker][2].
+[NSEnter][1] is a nice way to connect to a running Docker container. This post presents a script to simplify the usage of `nsenter` together with [Boot2Docker][2].
 <!-- more -->
 
 There is still quite some dust around Docker and day after day after gaining more and more experience, new patterns and anti-patterns are emerging. 
