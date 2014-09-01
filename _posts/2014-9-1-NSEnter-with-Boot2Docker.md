@@ -8,7 +8,7 @@ title: Using NSEnter with Boot2Docker
 
 There is still quite some dust around Docker and day after day after gaining more and more experience, new patterns and anti-patterns are emerging. 
 
-One of those anti-patterns is the usage of an SSH daemon inside an image for debugging, backup and troubleshooting purposes. Jérôme Petazzoni's [Blog Post][3] explains this nicely. In additions it provides proper solutions for common use cases SSH is currently used for.
+One of those anti-patterns is the usage of an SSH daemon inside an image for debugging, backup and troubleshooting purposes. Jérôme Petazzoni's [Blog Post][3] explains this nicely. In addition it provides proper solutions for common use cases SSH is currently used for.
 
 Nevertheless there I still have this irresistible urge to login into a container. And if it is only for looking around and examine the environment (call me old-fashioned, that's ok ;-)
 
