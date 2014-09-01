@@ -10,7 +10,7 @@ There is still quite some dust around Docker and day after day after gaining mor
 
 One of those anti-patterns is the usage of an SSH daemon inside an image for debugging, backup and troubleshooting purposes. Jérôme Petazzoni's [Blog Post][3] explains this nicely. In addition it provides proper solutions for common use cases for which SSH is currently used.
 
-Nevertheless there I still have this irresistible urge to login into a container. And if it is only for looking around and examine the environment (call me old-fashioned, that's ok ;-)
+Nevertheless I still have this irresistible urge to login into a container. And if it is only for looking around and examine the environment (call me old-fashioned, that's ok ;-)
 
 Luckily Jérôme provides a solution to satisfy this thirst: [nsenter][4]. This allows you to **enter** into container **n**ame**s**paces. On the GitHub page you find the corresponding recipe for installing and using `nsenter` on a Linux host. 
 
