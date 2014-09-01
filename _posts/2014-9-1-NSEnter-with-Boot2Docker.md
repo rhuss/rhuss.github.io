@@ -25,7 +25,7 @@ As described in the [NSenter README][6] you can use a simple alias for doing thi
 	}
 ```
 
-This works fine but if you want some extra comfort with bash completion you simply need to convert this into a shell script. I've written a small script [docker-enter][7] which needs to be installed in the path on the OS X host. As arguments it expects a container id or name and optionally a command to execute in the container.  This script also will automatically install `nsenter`  on the boot2docker VM if not already present (like the alias above does this as well): 
+This works fine but if you want some extra comfort with bash completion you simply need to convert this into a small shell script like [docker-enter][7] which needs to be installed within the path (on OS X). As arguments it expects a container id or name and optionally a command (with args) to execute in the container.  This script also will automatically install `nsenter` on the boot2docker VM if not already present (like the alias above does this as well): 
 
 ```bash
 	10:20 [~] $ docker ps -q
@@ -41,7 +41,7 @@ This works fine but if you want some extra comfort with bash completion you simp
 	root@5bf8a161cceb:/#
 ```
 
-Then add the small Bash completion script [docker-enter\_commands][8] (inspired by [Docker's bash completion][9]) to your `~/.bash_completion_scripts` directory (or wherever your completion scripts are located). This setup completes on container names and ids on the arguments for `docker-enter`.
+Then add the small Bash completion script [docker-enter\_commands][8] (inspired by [Docker's bash completion][9]) to your `~/.bash_completion_scripts/` directory (or wherever your completion scripts are located). This setup completes on container names and ids on the arguments for `docker-enter`.
 
 [1]:	https://github.com/jpetazzo/nsenter
 [2]:	https://github.com/boot2docker/boot2docker
