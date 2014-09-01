@@ -12,14 +12,14 @@ During the demo I used [Butterfly][4] for an in-browser shell, which was quite c
 
 I'm going to continue to celebrate my Docker-♡ with another two talks in autumn:
 
-* [Boosting your developer toolbox with Docker][5] at JBoss One Day Talk, 29. September in Gemering (Munich, Germany)
-* [Docker für Java Entwickler][6] (in german) at W-JAX 14, 3. - 7. November in Munich
+* [Boosting your developer toolbox with Docker][5] at JBoss One Day Talk, September, 29. in Germering (Munich, Germany)
+* [Docker für Java Entwickler][6] (in german) at W-JAX 14, November, 3. - 7.  in Munich
 
 And there is a slight chance (since the CFP has not yet been declined ;-) to talk at [Devoxx][7] about Docker. [JavaZone][8] unfortunately declined my CFP, I guess there are already too many riding the docker horse (which is a good thing). 
 
 Nevertheless I will attend both conferences with talks about [Jolokia][9], and I'm really looking forward to it.
 
-'guess it will become a hot autumn (hotter than this german 20134 summer for sure) ....
+'guess it will become a hot autumn (hotter than this german 2014 summer for sure) ....
 
 [1]:	http://www.meetup.com/Docker-Munich/
 [2]:	http://ro14nd.de/meetup-docker-developer-slides
