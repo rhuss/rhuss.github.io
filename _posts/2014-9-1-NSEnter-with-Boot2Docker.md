@@ -44,7 +44,7 @@ For a bit more comfort with usage information and error checking you can convert
 If you want even more comfort with bash completion you 
 can add the small Bash completion script [docker-enter\_commands][8] (inspired by and copied from [Docker's bash completion][9]) to your `~/.bash_completion_scripts/` directory (or wherever your completion scripts are located, e.g. `/usr/local/etc/bash_completion.d` if you installed `bash-completion` via brew). This setup completes on container names and ids on the arguments for `docker-enter`. Alternatively you can put the commands together with the shell function code above directly into your `~/.bashrc`, too.
 
-*P.S. After writing this post, I found out, that this topic was already covered in another [blog post][10] previously by Lajos Papp. That's also where the shell function definition in the `nsenter` README originates from. Give credit to whom it’s due.*
+*P.S. After writing this post, I've found out, that this topic has been already covered in another [blog post][10] previously by Lajos Papp. That's also where the shell function definition in the `nsenter` README originates from. Give credit to whom it’s due.*
 
 
 [1]:	https://github.com/jpetazzo/nsenter
