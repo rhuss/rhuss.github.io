@@ -18,16 +18,16 @@ If you want to use it from OS X with e.g. [Boot2Docker][5] you need to login int
 
 As described in the [NSenter README][6] you can use a simple alias for doing this transparently
 
-```bash
+````bash
 	docker-enter() {
 	  boot2docker ssh '[ -f /var/lib/boot2docker/nsenter ] || docker run --rm -v /var/lib/boot2docker/:/target jpetazzo/nsenter'
 	  boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
 	}
-```
+````
 
 For a bit more comfort with usage information and error checking you can convert this to a small shell script like [docker-enter][7] which needs to be installed within the path (on OS X). As arguments it expects a container id or name and optionally a command (with args) to execute in the container.  This script also will automatically install `nsenter` on the boot2docker VM if not already present (like the shell function above does this as well): 
 
-```bash
+````bash
 	10:20 [~] $ docker ps -q
 	5bf8a161cceb
 	
@@ -39,10 +39,9 @@ For a bit more comfort with usage information and error checking you can convert
 	Installing docker-enter to /target
 	
 	root@5bf8a161cceb:/#
-```
+````
 
-If you want even more comfort with bash completion you 
-can add the small Bash completion script [docker-enter\_commands][8] (inspired by and copied from [Docker's bash completion][9]) to your `~/.bash_completion_scripts/` directory (or wherever your completion scripts are located, e.g. `/usr/local/etc/bash_completion.d` if you installed `bash-completion` via brew). This setup completes on container names and ids on the arguments for `docker-enter`. Alternatively you can put the commands together with the shell function code above directly into your `~/.bashrc`, too.
+If you want even more comfort with bash completion you can add the small Bash completion script [docker-enter\_commands][8] (inspired by and copied from [Docker's bash completion][9]) to your `~/.bash_completion_scripts/` directory (or wherever your completion scripts are located, e.g. `/usr/local/etc/bash_completion.d` if you installed `bash-completion` via brew). This setup completes on container names and ids on the arguments for `docker-enter`. Alternatively you can put the commands together with the shell function code above directly into your `~/.bashrc`, too.
 
 *P.S. After writing this post, I've found out, that this topic has been already covered in another [blog post][10] previously by Lajos Papp. That's also where the shell function definition in the `nsenter` README originates from. Give credit to whom it’s due.*
 
