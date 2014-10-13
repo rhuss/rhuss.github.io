@@ -16,7 +16,7 @@ It turned out that the plugin works quite well, people liked and starred it on G
 
 But I was not happy.
 
-The reason is, that I started from a very special, probably very uncommon use case: A single application, multiple different servers for multiples tests. A much more common scenario is to have a fixed application server brand for the application, running with multiple linked in backend containers like databases. My plugin doesn't work well with running multiple containers at once. Or to state it otherwise: The plugin was not prepared for orchestration of multiple docker containers.  
+The reason is, that I started from a very special, probably very uncommon use case: A single application, multiple different servers for multiples tests. A much more common scenario is to have a fixed application server brand for the application, running with multiple linked backend containers like databases. My plugin doesn't work well with running multiple containers at once. Or to state it otherwise: The plugin was not prepared for orchestration of multiple docker containers.  
 
 Also, there was too much happening *magically* behind the scenes: When pushing a data image, it was implicitly build. When starting a container for integration test, the data container is also build before. 
 
@@ -24,7 +24,7 @@ Two operational modes were supported: One with two images holding the server and
 
 So I changed the configuration syntax completely. 
 
-It is now much more explicit and you will know merely by looking at the configuration which and how many containers will be started during integration testing and what the container with the application will look like. I don't want to go into much detail here, the post is already surprisingly long. Instead here is an an example of the new syntax:
+It is now much more explicit and you will know merely by looking at the configuration which and how many containers will be started during integration testing and what the container with the application will look like. I don't want to go into much detail here, the post is already surprisingly long. Instead here is an example of the new syntax:
 
 ````xml
 <plugin>
