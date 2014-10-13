@@ -12,7 +12,7 @@ Originally, I needed a *docker-maven-plugin* for a very specific use case: To te
 
 Early this year when I searched the Web, I couldn't find a good Docker build integration, so I decided to write my own [docker-maven-plugin][3] to back my use case. Today you find nearly a dozen of Maven plugins for your Docker business. However, only four plugins ([alexec][4], [wouterd][5], [spotify][6] and [rhuss][7]) are still actively maintained. A later blog post will present a detailed comparison between those four plugins (or come to my [W-JAX][8] session), but this post is about the evolution of the `rhuss` plugin.
 
-It turned out that the plugin works quite well, people liked it and starred it on GitHub, and it also provides some unique features like creating Docker images from [assembly descriptors][9]. 
+It turned out that the plugin works quite well, people liked and starred it on GitHub. It provides also some unique features like creating Docker images from [assembly descriptors][9]. 
 
 But I was not happy.
 
