@@ -24,7 +24,7 @@ Two operational modes were supported: One with images holding the server and dat
 
 So I changed the configuration syntax completely. 
 
-It is now much more explicit and you will know merely by looking at the configuration which and how many containers will be started during integration testing and what the container with the application will look like. I don't want to go into much detail here, the post is already surprisingly long. Instead here is an example of the new syntax:
+It is now much more explicit and you will know merely by looking at the configuration which and how many containers will be started during integration testing and what the container with the application will look like. I don't want to go into much detail here, the post is already too long. Instead here is an example of the new syntax:
 
 ````xml
 <plugin>
