@@ -14,7 +14,7 @@ Early this year when I searched the Web, I couldn't find a good Docker build int
 
 It turned out that the plugin works quite well, people liked and starred it on GitHub. It provides also some unique features like creating Docker images from [assembly descriptors][9]. 
 
-But I was not happy.
+But I was not so happy.
 
 The reason is, that I started from a very special, probably very uncommon use case: A single application, multiple different servers for multiples tests. A much more common scenario is to have a fixed application server brand for the application, running with multiple linked backend containers like databases. My plugin doesn't work well with running multiple containers at once. Or to state it otherwise: The plugin was not prepared for orchestration of multiple docker containers.  
 
