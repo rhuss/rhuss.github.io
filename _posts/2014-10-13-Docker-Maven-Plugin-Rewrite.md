@@ -71,7 +71,7 @@ Alternatively, a **single** image could be created:
   <configuration>
     <images>
       <image>
-        <name>jolokia/${project.artifactId}:${project.version}</name>
+        <name>jolokia/docker-jolokia-combined-demo</name>
         <build>
           <baseImage>consol/tomcat-7.0</baseImage>
           <assemblyDescriptor>src/main/assembly.xml</assemblyDescriptor>
