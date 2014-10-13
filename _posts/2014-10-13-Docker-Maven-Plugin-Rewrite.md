@@ -4,7 +4,7 @@ title: Docker maven plugin rewrite
 published: true
 ---
 
-My [docker-maven-plugin][1] is undergoing a major refacftoring. This post explains the motivation behind this and also what you can expect in the very near future.
+My [docker-maven-plugin][1] is undergoing a major refactoring. This post explains the motivation behind this and also what you can expect in the very near future.
 The configuration syntax becomes much cleaner and implicit behavior was removed. 
 <!-- more -->
 
