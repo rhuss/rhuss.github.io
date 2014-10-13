@@ -98,7 +98,7 @@ Said all that, and since `rhuss/docker-maven-plugin` is still pre-1.0, I take th
 
 There will be a `1.0.0` release before the end of this year.
 
-Please let me know your feedback on the new syntax and what features you would like to see. Everything is moving before 1.0.0 before hell freezes over. Please open an [issue][12] in case.
+Please let me know your feedback on the new syntax and what features you would like to see. Everything is moving before 1.0.0 before hell freezes over. You can open an [issue][12] for any suggestion or feature request.
 
 
 [1]:	https://github.com/rhuss/docker-maven-plugin
