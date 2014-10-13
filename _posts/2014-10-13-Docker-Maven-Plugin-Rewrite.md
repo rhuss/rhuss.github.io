@@ -37,8 +37,8 @@ It is now much more explicit and you will know merely by looking at the configur
          <name>consol/tomcat-7.0</name>
          <run>
            <volumes>
-		   <from>jolokia/docker-jolokia-demo</from>
- 		 </volumes>
+             <from>jolokia/docker-jolokia-demo</from>
+           </volumes>
            <ports>
              <port>jolokia.port:8080</port>
            </ports>
