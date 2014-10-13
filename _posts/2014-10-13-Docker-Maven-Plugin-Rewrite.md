@@ -92,7 +92,7 @@ Alternatively, a **single** image could be created:
 
 Here `consol/tomcat-7.0` is used as base for the image to build and the data referenced in the assembly descriptor is copied into the image. So there is no need to volume-link them together. 
 
-I won't repeat the old, more confusing syntax for this both use cases here, you find in the current [online documentation][10]. 
+I won't repeat the old, more confusing syntax for this both use cases here, you find it in the current [online documentation][10]. 
 
 Said all that, and since `rhuss/docker-maven-plugin` is still pre-1.0, I take the liberty to change it without much thoughts on backwards compatibility (you can easily adapt your syntax which shouldn't be any problem). The new syntax is available since `0.10.1`, the old syntax will still be used in the `0.9.x` line. Everybody is encouraged to upgrade to `0.10.x`, although the documentation still reflects the old syntax (will be fixed soon). Please refer to the [examples][11] on the `new-config` branch for more details. An upgrade path will be available soon, too.
 
