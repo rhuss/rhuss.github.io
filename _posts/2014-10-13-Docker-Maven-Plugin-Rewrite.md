@@ -20,7 +20,7 @@ The reason is, that I started from a very special, probably very uncommon use ca
 
 Also, there was too much happening *magically* behind the scenes: When pushing a data image, it was implicitly build. When starting a container for integration test, the data container is also build before. 
 
-Two operational modes were supported: One with images holding the server and data separately in two containers (linked via `volumes`) and one so called *merged* image, holding both, the application and server together in one image. This is perfect for creating micro services. The mode is determined only by a configuration flag (`mergeData`), but it is not really clear how many and what Docker images are created. And it was hard to document which always a very bad smell.
+Two operational modes were supported: One with images holding the server and data separately in two containers (linked via `volumes`) and one so called *merged* image, holding both, the application and server together in one image. This is perfect for creating micro services. The mode is determined only by a configuration flag (`mergeData`), but it is not really clear how many and what Docker images are created. And it was hard to document which is always a very bad smell.
 
 So I changed the configuration syntax completely. 
 
