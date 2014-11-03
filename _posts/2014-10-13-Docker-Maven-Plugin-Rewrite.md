@@ -26,51 +26,51 @@ So I changed the configuration syntax completely.
 
 It is now much more explicit and you will know merely by looking at the configuration which and how many containers will be started during integration testing and what the container with the application will look like. I don't want to go into much detail here, the post is already too long. Instead here is an example of the new syntax:
 
-\`\`\`\`xml
-<plugin>
-  <groupId>org.jolokia</groupId>
-  <artifactId>docker-maven-plugin</artifactId>
-  <version>0.10.1</version>
-
-  <configuration>
-	  <image>
-	     <name>consol/tomcat-7.0</name>
-	     <run>
-	       <volumes>
-	         <from>jolokia/docker-jolokia-demo</from>
-	       </volumes>
-	       <ports>
-	         <port>jolokia.port:8080</port>
-	       </ports>
-	       <wait>
-	         <url>http://localhost:${jolokia.port}/jolokia</url>
-	         <time>10000</time>
-	       </wait>
-	     </run>
-	  </image>
-	  <image>
-	     <name>jolokia/docker-jolokia-demo</name>
-	     <build>
-	       <assemblyDescriptor>src/main/assembly.xml</assemblyDescriptor>
-	     </build>
-	  </image>
-  </configuration>
-</plugin>
-\`\`\`\`
+	````xml
+	<plugin>
+	 <groupId>org.jolokia</groupId>
+	 <artifactId>docker-maven-plugin</artifactId>~
+	 <version>0.10.1</version>~
+	 <configuration>
+	  <images>
+	    <image>
+	      <name>consol/tomcat-7.0</name>
+	      <run>
+	        <volumes>
+	          <from>jolokia/docker-jolokia-demo</from>
+	        </volumes>
+	        <ports>
+	          <port>jolokia.port:8080</port>
+	        </ports>
+	        <wait>
+	          <url>http://localhost:${jolokia.port}/jolokia</url>
+	          <time>10000</time>
+	        </wait>
+	      </run>
+	    </image>
+	    <image>
+	      <name>jolokia/docker-jolokia-demo</name>
+	      <build>
+	        <assemblyDescriptor>src/main/assembly.xml</assemblyDescriptor>
+	      </build>
+	    </image>
+	  </images>
+	 </configuration>
+	</plugin>
+	`````
 
 This examples creates and starts **two** containers during `docker:start`, linked together via the `volumes` directive. The **`<run>`** configuration section is used  to describe the runtime behavior for `docker:start` and `docker:stop`, and **`<build>`** is for specifying how images are build up during `docker:build`. 
 
 Alternatively, a **single** image could be created:
 
-\`\`\`\`xml
-<plugin>
-  <groupId>org.jolokia</groupId>
-  <artifactId>docker-maven-plugin</artifactId>
-  <version>0.10.1</version>
-
-  <configuration>
-	<images>
-	  <image>
+	````xml
+	<plugin>
+	 <groupId>~org.jolokia~</groupId>~
+	 <artifactId>~docker-maven-plugin~</artifactId>
+	 <version>~0.10.1~</version>
+	 <configuration>
+	  <images>
+	   <image>
 	    <name>jolokia/docker-jolokia-combined-demo</name>
 	    <build>
 	      <baseImage>consol/tomcat-7.0</baseImage>
@@ -84,11 +84,11 @@ Alternatively, a **single** image could be created:
 	        <url>http://localhost:${jolokia.port}/jolokia</url>
 	      </wait>
 	    </run>
-	  </image>
-	</images>
-  </configuration>
-</plugin>
-\`\`\`\`
+	   </image>
+	  </images>
+	 </configuration>
+	</plugin>
+	````
 
 Here `consol/tomcat-7.0` is used as base for the image to build and the data referenced in the assembly descriptor is copied into the image. So there is no need to volume-link them together. 
 
