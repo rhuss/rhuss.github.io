@@ -8,7 +8,7 @@ A local Maven repository serves as a cache for artifacts and dependencies, you a
 
 Before doing a release I typically move `~/.m2/repository` away to be really sure that everybody else can build the source as well and that any dependencies are also on the remote Maven repository. This is a bit tedious, because it is a manual process and you can forget to move the old directory back which will was a LOT of disk space over time.
 
-Docker can help here a bit: Since yesterday there is an [official Maven image][1] which can be used to build your project. The nice thing for doing releases is, that it always starts afresh with an empty local Maven repository. 
+Docker can help here a bit: Since yesterday there is an [official Maven image][1] which can be used to build your project. The nice thing for doing releases with this image is, that it always starts afresh with an empty local Maven repository. 
 
 Assuming you are currently located in the top-level directory holding your `pom.xml` you can use this single command for running a real clean build:
 
