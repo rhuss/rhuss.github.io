@@ -22,7 +22,7 @@ docker run -it --rm \
 
 With this call you mount your project directory into `/usr/src/mymaven` on the container (which will be created for you), change to this directory in the container and call `mvn clean install`. At the end, your container will be removed (`--rm`) so there is no chance that you might forget to clean up afterwards.
 
-Of course it will download all the artifacts each time, so it is not a good idea to use this approach for you daily developer work (especially if you using Maven central as remote Maven repository).
+Of course it will download all the artifacts each time, so it is not a good idea to use this approach for your daily developer business (especially if you using Maven central as remote Maven repository).
 
 You can also play around with various versions of Maven by changing the image tag so at the end you can be really sure, that your project will build everywhere. Please refer to the [Docker Hub page][2] for details. 
 
