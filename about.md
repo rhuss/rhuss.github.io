@@ -7,7 +7,7 @@ This site contains my thoughts and articles on computer related stuff. Currently
 
 ### About me
 
-I'm Roland Huß and a Developer (mostly Java) for nearly two decades, live in Franconia, work in Munich and am a Chili Addict.
+I'm Roland Huß and a Developer (mostly Java) for nearly two decades, live in Franconia, work in Munich and love Chilis.
 
 And I do Open Source. My two main projects are [Jolokia](http://www.jolokia.org), the JSON/HTTP bridge to JMX, and a [docker-maven-plugin](https://github.com/rhuss/docker-maven-plugin). 
 
