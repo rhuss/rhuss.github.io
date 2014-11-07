@@ -3,7 +3,7 @@ layout: post
 title: Real clean Maven builds with Docker
 ---
 
-A local Maven repository serves as a cache for artifacts and dependencies, you all know this. This helps in speeding up things but can cause subtle problems when doing releases. Docker can help here a bit for avoiding caching issues.
+A local Maven repository serves as a cache for artifacts and dependencies, we all know this. This helps in speeding up things but can cause subtle problems when doing releases. Docker can help here a bit for avoiding caching issues.
 <!-- more -->
 
 Before doing a release I typically move `~/.m2/repository` away to be really sure that everybody else can build the source as well and that any dependencies are also on the remote Maven repository. This is a bit tedious, because it is a manual process and you can forget to move the old directory back which will was a LOT of disk space over time.
@@ -20,7 +20,7 @@ docker run -it --rm \
       mvn clean install
 ````
 
-With this call you mount your project directory into `/usr/src/mymaven` on the container (which will be created for you), change to this directory in the container and call `mvn clean install`. At the end, your container will be removed (`--rm`) so there is no chance that you might forget to clean up afterwards.
+With this call you mount your project directory into `/usr/src/mymaven` on the container, change to this directory in the container and call `mvn clean install`. At the end, your container will be removed (`--rm`) so there is no chance that you might forget to clean up afterwards.
 
 Of course it will download all the artifacts each time, so it is not a good idea to use this approach for your daily developer business (especially if you using Maven central as remote Maven repository).
 
