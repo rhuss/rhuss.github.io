@@ -12,13 +12,11 @@ Docker can help here a bit: Since yesterday there is an [official Maven image][1
 
 Assuming you are currently located in the top-level directory holding your `pom.xml` you can use this single command for running a real clean build:
 
-````bash
-docker run -it --rm \ 
-      -v "$(pwd)":/usr/src/mymaven  \ 
-      -w /usr/src/mymaven \ 
-      maven:3.2-jdk-7 \
-      mvn clean install
-````
+	docker run -it --rm \ 
+		  -v "$(pwd)":/usr/src/mymaven  \ 
+		  -w /usr/src/mymaven \ 
+		  maven:3.2-jdk-7 \
+		  mvn clean install
 
 With this call you mount your project directory into `/usr/src/mymaven` on the container, change to this directory in the container and call `mvn clean install`. At the end, your container will be removed (`--rm`) so there is no chance that you might forget to clean up afterwards.
 
@@ -26,5 +24,8 @@ Of course it will download all the artifacts each time, so it is not a good idea
 
 You can also play around with various versions of Maven by changing the image tag so at the end you can be really sure, that your project will build everywhere. Please refer to the [Docker Hub page][2] for details. 
 
+**Update**: As pointed out by [Noah Zucker][3] on Twitter you can of course redirect the local repository via `-Dmaven.repo.local=/tmp/clean-repo` temporarily to a new location. Which is confessedly much simpler and I would prefer that one of course instead if you don't need to check with different JDKs or Maven versions. Sometimes you don't see the forest for the trees if you come from the wrong direction (e.g. looking for use case of a specific docker image).
+
 [1]:	https://registry.hub.docker.com/_/maven/
 [2]:	https://registry.hub.docker.com/_/maven/
+[3]:	https://twitter.com/noahlz/status/530708791906807808
