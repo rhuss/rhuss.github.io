@@ -1,6 +1,6 @@
 ---
 layout: page
-title: A Computer Blog
+title: A Blog
 ---
 
 This site contains my thoughts and articles on computer related stuff. Currently the content is probably a bit Docker and Jolokia biased, but this might slowly shift in the future, depending what's happening. I already see this IoT thingy rising at my horizon (just got my [Wunderbar](https://relayr.io/wunderbar) ;-). My goal is to write one article per month. Hard enough.
