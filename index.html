@@ -11,7 +11,7 @@ layout: default
       <div class="entry">
         {{ post.content | split:'<!-- more -->' | first }}
 		{% if post.content contains '<!-- more -->' %}
-            </div><div><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+            </div><div><a href="{{ site.baseurl }}{{ post.url }}/" class="read-more">Read More</a>
 		{% endif %}
       </div>     
     </article>
