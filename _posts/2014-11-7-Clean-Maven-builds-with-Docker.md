@@ -24,7 +24,7 @@ Of course it will download all the artifacts each time, so it is not a good idea
 
 You can also play around with various versions of Maven by changing the image tag so at the end you can be really sure, that your project will build everywhere. Please refer to the [Docker Hub page][2] for details. 
 
-**Update**: As pointed out by [Noah Zucker][3] on Twitter you can of course redirect the local repository via `-Dmaven.repo.local=/tmp/clean-repo` temporarily to a new location. Which is confessedly much simpler and I would prefer that one of course instead if you don't need to check with different JDKs or Maven versions. Sometimes you don't see the forest for the trees if you come from the wrong direction (e.g. looking for use case of a specific docker image).
+**Update**: As pointed out by [Noah Zucker][3] on Twitter you can redirect of course the local repository via `-Dmaven.repo.local=/tmp/clean-repo` temporarily to a new location. Which is confessedly much simpler and I would prefer that one instead if you don't need to check with different JDKs or Maven versions. Sometimes you don't see the forest for the trees if you come from the wrong direction (e.g. looking for use case of a specific docker image).
 
 [1]:	https://registry.hub.docker.com/_/maven/
 [2]:	https://registry.hub.docker.com/_/maven/
