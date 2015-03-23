@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Jmx4Perl on OS X
