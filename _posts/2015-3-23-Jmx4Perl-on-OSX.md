@@ -2,7 +2,7 @@
 ---
 layout: post
 title: Jmx4Perl on OS X
-published: false
+published: true
 ---
 
 The HTTP-JMX Bridge [Jolokia][1] allows easy access to JMX. It exposes all JMX information and operations via an REST-like interface and has tons of nifty features. [Jmx4Perl][2] on the other side is a client for Jolokia, which beside Perl access modules also provides quite some nice CLI tools for accessing and installing Jolokia. This post explains how install these tools on OS X.
