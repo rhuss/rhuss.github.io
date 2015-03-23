@@ -24,7 +24,7 @@ $ brew install cpanm
 $ cpanm --sudo install JMX::Jmx4Perl
 ````
 
-This will do all the heavy lifting for you and at the end all the fine Jmx4Perl tools are installed. 
+This will do all the heavy lifting for you and at the end all the fine Jmx4Perl tools are installed and available under `/usr/local/bin`. 
 
 `j4psh` uses `libreadline` for the input handling. For the best user experience GNU ReadLine is recommended. Unfortunately, OS X doesn't ship with a *true* `libreadline` but with `libedit` which is a stripped down version of libreadline. In order to use GNU readline, some tricks are needed which are described in this [recipe][8]. For me, the following steps worked (but are probably a bit "dirty"):
 
@@ -37,7 +37,7 @@ $ sudo mv /tmp/libreadline.dylib /usr/lib/libreadline.dylib
 $ brew unlink readline
 ````
 
-These steps are only necessary if you need advanced readline functionality (or a coloured prompt in j4psh ;-).
+These steps are really only necessary if you need advanced readline functionality (or a coloured prompt in j4psh ;-).
 
 
 
