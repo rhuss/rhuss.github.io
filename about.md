@@ -7,8 +7,7 @@ This site contains my thoughts and articles on computer related stuff. Currently
 
 ### About me
 
-I am Roland Huß, a developer working for Red Hat, codin for nearly two
-decades (mostly in Java), live and work in Franconia, love chilis.
+I am Roland Huß, a developer working for Red Hat, codin for nearly two decades (mostly in Java), live and work in Franconia, love chilis.
 
 And I do Open Source. My two main projects are [Jolokia](http://www.jolokia.org), the JSON/HTTP bridge to JMX, and a [docker-maven-plugin](https://github.com/rhuss/docker-maven-plugin). 
 
