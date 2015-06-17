@@ -6,10 +6,8 @@ title: The Docker Wormhole Pattern
 Building a Docker wormhole is easy.
 <!-- more -->
 
-> A wormhole is a special type of structure that some
-> scientists think might exist, connecting parts of space and
-> time that are not usually connected
-> 
+> A wormhole is a special type of structure that some scientists think might exist, connecting parts of space and time that are not usually connected
+>  
 > --- Cambridge Dictionaries Online
 
 In Docker universe we have several uses cases, which require a Docker installation within a Docker container. For example the [OpenShift Builds][1] use images whose container's are meant to create application images. They include a whole development environment including possibly a compiler and a build tool. During the build a Docker daemon is accessed for creating the final application image.
