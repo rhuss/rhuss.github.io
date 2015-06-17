@@ -21,6 +21,7 @@ As you know a Docker host can be configured to be accessible by two alternative 
 
 Using the Unix socket of the surrounding docker daemon is easy: Simply share the path to the unix socket as a volume:
 
+	# Map local unix socket into the container
 	docker run -it -v /var/run/docker.sock:/var/run/docker.sock ...
 
 Then within the container you can use the Docker CLI or any tool that uses the Unix socket at usual. 
@@ -35,6 +36,7 @@ Running over the TCP socket is a bit more tricky because you have to find out th
 
 This works fine as long you are not using SSL. With SSL in place  you need have access to the SSL client certificates. Of course this is achieved again with a volume mount. Assuming that you are using boot2docker this could look like
 
+	# Mount certs into the container
 	docker run -ti -v \~/.boot2docker/certs/boot2docker-vm/:/certs ....
 
 This will mount your certs at `/certs` within the container and can be used to set the `DOCKER_HOST` variable.
