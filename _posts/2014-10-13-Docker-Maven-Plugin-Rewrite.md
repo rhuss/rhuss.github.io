@@ -26,7 +26,7 @@ So I changed the configuration syntax completely.
 
 It is now much more explicit and you will know merely by looking at the configuration which and how many containers will be started during integration testing and what the container with the application will look like. I don't want to go into much detail here, the post is already too long. Instead here is an example of the new syntax:
 
-````xml
+```
 <plugin>
  <groupId>org.jolokia</groupId>
  <artifactId>docker-maven-plugin</artifactId>~
@@ -57,17 +57,17 @@ It is now much more explicit and you will know merely by looking at the configur
   </images>
  </configuration>
 </plugin>
-`````
+```
 
 This examples creates and starts **two** containers during `docker:start`, linked together via the `volumes` directive. The **`<run>`** configuration section is used  to describe the runtime behavior for `docker:start` and `docker:stop`, and **`<build>`** is for specifying how images are build up during `docker:build`. 
 
 Alternatively, a **single** image could be created:
 
-````xml
+```
 <plugin>
- <groupId>~org.jolokia~</groupId>~
- <artifactId>~docker-maven-plugin~</artifactId>
- <version>~0.10.1~</version>
+ <groupId>org.jolokia~</groupId>~
+ <artifactId>docker-maven-plugin~</artifactId>
+ <version>0.10.1~</version>
  <configuration>
   <images>
    <image>
@@ -88,7 +88,7 @@ Alternatively, a **single** image could be created:
   </images>
  </configuration>
 </plugin>
-````
+```
 
 Here `consol/tomcat-7.0` is used as base for the image to build and the data referenced in the assembly descriptor is copied into the image. So there is no need to volume-link them together. 
 
