@@ -12,7 +12,7 @@ We developers are lazy, right ? We want our code to compile fast, we want the se
 
 Good news. [docker-maven-plugin][4] will support hot rebuild of Docker images and hot restart of containers with a new Maven goal `docker:watch`. It will be released with version 0.12.1. For the brave coder 0.12.1-SNAPSHOT is already out there, the documentation can be found [here][5].
 
-But before losing more words, here's a live sneak preview.
+But before losing more words, here's a sneak preview.
 
 <iframe src="https://player.vimeo.com/video/132183699" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
