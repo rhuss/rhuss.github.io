@@ -17,7 +17,7 @@ But before losing more words, here's a sneak preview.
 <iframe src="https://player.vimeo.com/video/132183699" width="720" height="405" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-[^1]:	of course, that's of course not entirely true. We love OSGi ... or we **hate** it with passion. But even the haters don't hate it for its hot deployment abilities.
+[^1]:	That's of course not entirely true. We love OSGi ... or we **hate** it with passion. But even the haters don't hate it for its hot deployment abilities.
 
 [1]:	https://github.com/rhuss/docker-maven-plugin
 [2]:	http://www.osgi.org/Main/HomePage
