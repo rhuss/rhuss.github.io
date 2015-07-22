@@ -29,8 +29,8 @@ It is now much more explicit and you will know merely by looking at the configur
 ```
 <plugin>
  <groupId>org.jolokia</groupId>
- <artifactId>docker-maven-plugin</artifactId>~
- <version>0.10.1</version>~
+ <artifactId>docker-maven-plugin</artifactId>
+ <version>0.10.1</version>
  <configuration>
   <images>
     <image>
@@ -65,9 +65,9 @@ Alternatively, a **single** image could be created:
 
 ```
 <plugin>
- <groupId>org.jolokia~</groupId>~
- <artifactId>docker-maven-plugin~</artifactId>
- <version>0.10.1~</version>
+ <groupId>org.jolokia</groupId>
+ <artifactId>docker-maven-plugin</artifactId>
+ <version>0.10.1</version>
  <configuration>
   <images>
    <image>

@@ -37,7 +37,7 @@ Running over the TCP socket is a bit more tricky because you have to find out th
 This works fine as long you are not using SSL. With SSL in place  you need have access to the SSL client certificates. Of course this is achieved again with a volume mount. Assuming that you are using boot2docker this could look like
 
 	# Mount certs into the container
-	docker run -ti -v \~/.boot2docker/certs/boot2docker-vm/:/certs ....
+	docker run -ti -v ~/.boot2docker/certs/boot2docker-vm/:/certs ....
 
 This will mount your certs at `/certs` within the container and can be used to set the `DOCKER_HOST` variable.
 
