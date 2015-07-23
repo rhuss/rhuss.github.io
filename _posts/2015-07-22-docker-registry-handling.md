@@ -14,24 +14,20 @@ An image has an unique id, which is a hash. It can also have a name. However, th
 
 So in order to push to a dedicated registry which is not (and should not be) part of the name one has to do the following:
 
-* Create a new name with the registry: `docker tag myname registry:myname`
-* Push it: `docker push registry:myname`
-* Remove the temporary name again: `docker rmi registry:myname`
+* Create a new name with the registry: `docker tag myname registry/myname`
+* Push it: `docker push registry/myname`
+* Remove the temporary name again: `docker rmi registry/myname`
 
 The [rhuss/docker-maven-plugin][1] takes these extra step when a registry is specified like in `mvn docker:push -Ddocker.registry=...`. 
 This is not only cumbersome but also needs some extra fences to ensure that these three steps are done transactional. 
 
 Wouldn't it be so much easier if a registry would be really handled as what it is, *meta data* ? And that `docker push` would support a `--registry` flag ? I'm pretty sure there is some reason why not, however I couldn't find that.
 
-The next thing is, that there are multiple ways how to specify the default registry, which also causes pain. Docker Hub is known as `index.docker.io` (this is probably now the official name), `docker.io` and `registry.hub.docker.com`. You can also define you default registry during startup of the Docker daemon. 
+The next thing is, that there are multiple ways how to specify the default registry, which also causes pain. Docker Hub is known as `index.docker.io`, `docker.io` and `registry.hub.docker.com` (the former name which still seems to work). You can also define you default registry during startup of the Docker daemon. 
 
-Unfortunately, Docker daemons treat the default registry  quite differently and asymmetrically. 
+Unfortunately, Docker daemons treat the default registry quite differently. Some strip off a given default registry from the name when creating the build, other, like the Fedora/CentOS variant add a `docker.io/` prefix if no name is given. `registry.hub.docker.com` in contrast is used as 'normal' registry (so the name stays prefixed). However when you push to it you'll end up at Docker Hub, too.
 
-The default Docker daemon (1.7.1) will create an image `myimage` if you build it with `docker build -t index.docker.io:myimage .`. But when you look for it with `docker inspect index.docker.io:myimage` you get an error. However when `docker.io` is used, inspect works as expected (but you still don't have this registry added to the name). Then with `registry.hub.docker.com` you get the name `registry.hub.docker.com:myimage` and when you push this it will also end up on docker hub. Three ways to specify the default registry, three different behaviours. 
-
-And even better, when you look at the Docker variation of Fedora and CentOS, the behaviour is again different: When you create an image `myimage` *without* registry part it will end up as `docker.io:myimage` in the docker host. 
-
-That's all a mess. Dealing with all these different behaviours is one of the biggest challenges when maintaining Docker tools like the [docker-maven-plugin][2].
+That's all confusing. Dealing with all these different behaviours is one of the biggest challenges when maintaining Docker tools like the [docker-maven-plugin][2].
 
 [1]:	https://github.com/rhuss/docker-maven-plugin
 [2]:	https://github.com/rhuss/docker-maven-plugin
