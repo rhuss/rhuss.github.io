@@ -4,7 +4,7 @@ title: Docker registry name handling is a mess
 published: true
 ---
 
-Putting the registry location, which is meta data, into the image name, which is often used like an identifier, is a call for trouble. 
+Putting the registry location, which is meta data, into the image name, which is often used like an identifier, is asking for trouble. 
 
 <!-- more -->
 
