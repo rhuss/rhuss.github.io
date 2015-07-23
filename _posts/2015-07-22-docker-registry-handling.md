@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Docker registry naming is a mess
+title: Docker registry name handling is a mess
 published: true
 ---
 
