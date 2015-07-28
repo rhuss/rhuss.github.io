@@ -3,8 +3,7 @@ layout: post
 title: Jmx4Perl for everyone
 ---
 
-As you might know, [Jmx4Perl][1] is the mother of [Jolokia][2].
-But what might be not so known is, that Jmx4Perl provides a set of nice CLI tools for accessing Jolokia agents. However, installing Jmx4Perl manually is cumbersome because of its many Perl and also native dependencies. 
+As you might know, [Jmx4Perl][1] is the mother of [Jolokia][2]. But what might be not so known is, that Jmx4Perl provides a set of nice CLI tools for accessing Jolokia agents. However, installing Jmx4Perl manually is cumbersome because of its many Perl and also native dependencies. 
 
 However, if you are a Docker user there is now a super easy way to benefit from this gems.
 <!-- more -->
