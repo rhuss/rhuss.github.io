@@ -54,7 +54,7 @@ Finally, here's a short appetiser with an (older) demo showing `j4psh` in action
 
 <iframe width="720" height="405" src="https://www.youtube.com/embed/y9TuGzxD2To" frameborder="0" allowfullscreen></iframe>
 
-[1]:	http://search.cpan.org/~roland/jmx4perl/
+[1]:	http://www.jmx4perl.org
 [2]:	https://jolokia.org/
 [3]:	http://search.cpan.org/~roland/jmx4perl/scripts/jmx4perl
 [4]:	http://search.cpan.org/~roland/jmx4perl/scripts/j4psh
