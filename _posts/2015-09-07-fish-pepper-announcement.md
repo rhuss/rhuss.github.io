@@ -8,8 +8,6 @@ When I had to  create multiple Docker base images which only differ slightly for
 
 <!-- more -->
 
-`fish-pepper` allows you to create many similar Docker builds with templates and building blocks which allows for compositions of Dockerfiles.
-
 For example consider a **Java base image**: Some users might require Java 7, some want Java 8. For running Microservices a JRE might be sufficient. In other use cases you need a full JDK. These four variants are all quite similar with respect to documentation, Dockerfiles and support files like startup scripts.  Copy-and-paste might seem to work for the initial setup but there are severe drawbacks considering image evolution or introduction of even more parameters.
 
 With `fish-pepper` you can use flexible templates which are filled with variations of the base image (like `'version' : ['java7', 'java8'], 'type': ['jdk', 'jre']`) and which will create multiple, similar Dockerfile builds. 
