@@ -10,14 +10,14 @@ However, if you are a Docker user there is now a super easy way to benefit from 
 
 Even if Perl is not your cup of tea, you might like the following tool (for which of course no Perl knowledge is required at all): 
 
-* [**jmx4perl**][3] is a command line tool for one-shot querying a Jolokia agent. It is perfectly suited for usage in shell scripts.
-* [**j4psh**][4] is a readline based, JMX shell with coloring and command line completion. You navigate the JMX namespace like a directory with `cd` and `ls`, read JMX attributes with `cat` and execute operations with `exec`. 
-* [**jolokia**][5] is an agent management tool which helps you in downloading Jolokia agents of various types (war, jvm, osgi, mule) and versions. It also knows how to repackage agents e.g. for enabling security with the war agent by inplace modification of the web.xml descriptor. 
+* [**jmx4perl**][3] is a command line tool for one-shot querying Jolokia agents. It is perfectly suited for shell scripts.
+* [**j4psh**][4] is a readline based, JMX shell with coloring and command line completion. You can navigate the JMX namespace like directories with `cd` and `ls`, read JMX attributes with `cat` and execute operations with `exec`.
+* [**jolokia**][5] is an agent management tool which helps you in downloading Jolokia agents of various types (war, jvm, osgi, mule) and versions. It also knows how to repackage agents e.g. for enabling security for the war agent by in-place modification of the web.xml descriptor. 
 * [**check\_jmx4perl**][6] is a full featured Nagios plugin.
 
-How can you now use these tools ? That's easy. All you need is a running Docker installation. The tools mentioned above are all included within the Docker image [jolokia/jmx4perl][7] which is available from Docker Hub. 
+How can you now use these tools ? All you need is a running Docker installation. The tools mentioned above are all included within the Docker image [jolokia/jmx4perl][7] which is available from Docker Hub. 
 
-Some usage examples:
+Some examples:
 
 ```
 # Get some basic information of the server
