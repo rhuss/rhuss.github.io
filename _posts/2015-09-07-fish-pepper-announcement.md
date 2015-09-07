@@ -4,7 +4,7 @@ title: fish-pepper - Docker on Capsaicin
 published: true
 ---
 
-When I had to  create multiple Docker base images which only differ slightly for some minor variations I couldn't avoid to feel quite dirty because of all the copying & pasting of Dockerfile fragments. We all know how this smells, but unfortunately Docker has only an answer for **inheritance** but not for **composition** of Docker images. Luckily there is now [fish-pepper][1], a multidimensional docker build generator, which steps into the breach.
+When I had to  create multiple Docker base images which only differ slightly for some minor variations I couldn't avoid to feel quite dirty because of all the copying & pasting of Dockerfile fragments. We all know how this smells, but unfortunately Docker has only an answer for **inheritance** but not for **composition** of Docker images. Luckily there is now [fish-pepper][1], a multi-dimensional docker build generator, which steps into the breach.
 
 <!-- more -->
 
