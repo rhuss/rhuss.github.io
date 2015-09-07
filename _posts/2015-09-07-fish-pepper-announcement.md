@@ -4,7 +4,7 @@ title: fish-pepper - Docker on Capsaicin
 published: true
 ---
 
-When I had to create create multiple Docker base images which only differ slightly for some minor variations I couldn't avoid to feel quite dirty because of all the copying & pasting of Dockerfile fragments. We all know that this smells, but unfortunately Docker has only an answer for *inheritance* but not for *composition* of Docker images. Luckily there is now [fish-pepper][1], a multidimensional docker build generator, which steps into the breach in the meantime.
+When I had to  create multiple Docker base images which only differ slightly for some minor variations I couldn't avoid to feel quite dirty because of all the copying & pasting of Dockerfile fragments. We all know that this smells, but unfortunately Docker has only an answer for *inheritance* but not for *composition* of Docker images. Luckily there is now [fish-pepper][1], a multidimensional docker build generator, which steps into the breach in the meantime.
 
 <!-- more -->
 
@@ -77,7 +77,7 @@ But wait, there is more:
 	 
 fish-pepper can be seen in its fully beauty in [fabric8io/base-images][10] where more than twenty five base images are maintained with fish-pepper. 
 
-If you have node.js installed you can install it super easy with 
+With node.js you can install fish-pepper super easy with 
 
     npm -g install fish-pepper
 
