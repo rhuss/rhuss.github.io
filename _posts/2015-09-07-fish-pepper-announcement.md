@@ -14,7 +14,7 @@ For example consider a **Java base image**: Some users might require Java 7, som
 
 With `fish-pepper` you can use flexible templates which are filled with variations of the base image (like `'version' : ['java7', 'java8'], 'type': ['jdk', 'jre']`) and which will create multiple, similar Dockerfile builds. 
 
-The main configuration of an image family is a YAML file `images.yml` which defines the possible parameters. For the example above it is
+The main configuration of an image family is `images.yml` which defines the possible parameters. For the example above it is
 
 ```
 fish-pepper:
@@ -41,7 +41,7 @@ config:
       extension: "-jdk"
 ```
 
-Given this configuration, four builds will be generated when calling `fish-pepper`, one for each combination of *version* (openjdk7,openjdk8) and *type* (jre,idk) parameter values. 
+Given this configuration, four builds will be generated when calling `fish-pepper`, one for each combination of *version* ("openjdk7" and "openjdk8") and *type* ("jre" and "jdk") parameter values. 
 
 These value can now be filled into templates which are stored in a `templates/` directory. The `Dockerfile` in this directory can refer to this configuration through a context object `fp`:
 
@@ -50,7 +50,7 @@ FROM {{ "{{= fp.config.version.java + fp.config.type.extension " }}}}
 .....
 ```
 
-Templates uses [DoT.js][2] as template engine, so that the full expressiveness of JavaScript can be used. The fish-pepper [context object][3] `fp` holds the configuration and more.
+Templates use [DoT.js][2] as template engine, so that the full expressiveness of JavaScript is available. The fish-pepper [context object][3] `fp` holds the configuration and more.
 
 The given configuration will lead to four Docker build directories:
 
@@ -67,12 +67,12 @@ images/
 
 The generated build files can also be used directly to create the images with `fish-pepper build`. This will reach out to a Docker daemon and create the images `java-openjdk7-jre`, `java-openjdk7-jdk`, `java-openjdk8-jre` and  `java-openjdk8-jdk`.
 
-Alternatively these builds can be used as the content for automated Docker Hub builds when checked into Github. The full example can be found on [GitHub][4].
+Alternatively these builds can be used as content for automated Docker Hub builds when checked into Github. The full example can be found on [GitHub][4].
 
 But wait, there is more:
 
 * [Blocks][5] can be used to reuse Dockerfile snippets and files to include across images. Blocks can be stored locally or referenced via a remote Git repository. Examples for blocks are generic [startup scripts][6] or other value add functionality like enabling agents like [agent bond][7].
-* Flexible [file mapping][8] allow multiple alternative templates.
+* Flexible [file mappings][8] allow multiple alternative templates.
 * [Defaults][9] allow shared configuration between multiple parameter values.
 	 
 fish-pepper can be seen in its fully beauty in [fabric8io/base-images][10] where more than twenty five base images are maintained with fish-pepper. 
