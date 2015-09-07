@@ -4,11 +4,11 @@ title: fish-pepper - Docker on Capsaicin
 published: true
 ---
 
-When I had to  create multiple Docker base images which only differ slightly for some minor variations I couldn't avoid to feel quite dirty because of all the copying & pasting of Dockerfile fragments. We all know how this smells, but unfortunately Docker has only an answer for *inheritance* but not for *composition* of Docker images. Luckily there is now [fish-pepper][1], a multidimensional docker build generator, which steps into the breach.
+When I had to  create multiple Docker base images which only differ slightly for some minor variations I couldn't avoid to feel quite dirty because of all the copying & pasting of Dockerfile fragments. We all know how this smells, but unfortunately Docker has only an answer for **inheritance** but not for **composition** of Docker images. Luckily there is now [fish-pepper][1], a multidimensional docker build generator, which steps into the breach.
 
 <!-- more -->
 
-For example consider a **Java base image**: Some users might require Java 7, some want Java 8. For running Microservices a JRE might be sufficient. In other use cases you need a full JDK. These four variants are all quite similar with respect to documentation, Dockerfiles and support files like startup scripts.  Copy-and-paste might seem to work for the initial setup but there are severe drawbacks considering image evolution or introduction of even more parameters.
+For example consider a Java base image: Some users might require Java 7, some want Java 8. For running Microservices a JRE might be sufficient. In other use cases you need a full JDK. These four variants are all quite similar with respect to documentation, Dockerfiles and support files like startup scripts.  Copy-and-paste might seem to work for the initial setup but there are severe drawbacks considering image evolution or introduction of even more parameters.
 
 With `fish-pepper` you can use flexible templates which are filled with variations of the base image (like `'version' : ['java7', 'java8'], 'type': ['jdk', 'jre']`) and which will create multiple, similar Dockerfile builds. 
 
