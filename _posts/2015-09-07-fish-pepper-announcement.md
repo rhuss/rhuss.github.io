@@ -75,7 +75,7 @@ But wait, there is more:
 	 
 fish-pepper can be seen in its fully beauty in [fabric8io/base-images][10] where more than twenty five base images are maintained with fish-pepper. 
 
-With node.js you can install [fish-pepper](https://github.com/fabric8io/fish-pepper) super easy with 
+With node.js you can install fish-pepper super easy with 
 
     npm -g install fish-pepper
 
