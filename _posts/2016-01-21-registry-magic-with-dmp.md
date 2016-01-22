@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Registry Magic with the docker-maven-plugin
+title: Registry Magic with docker-maven-plugin
 published: true
 ---
 Dealing with multiple Docker registries is hard, mostly because the meta information where a image is located is part of a Docker image's name, which is typically used as an identifier, too.
