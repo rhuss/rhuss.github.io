@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The docker-maven-plugin moves on
+title: docker-maven-plugin moves on
 published: true
 ---
 **rhuss/docker-maven-plugin** is dead, long live **fabric8/docker-maven-plugin** !
