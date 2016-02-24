@@ -25,13 +25,13 @@ In both cases you can define your build agnostic from any registry by omitting t
 
 For example, 
 
-{% highlight bash %}  
+{% highlight shell %}  
 mvn -Ddocker.registry=myregistry.domain.com:5000 docker:push
 {% endhighlight %}
 
 When you combine build and push steps in a single call like in 
 
-{% highlight bash %}  
+{% highlight shell %}  
 mvn package docker:build docker:push
 {% endhighlight %}
 
@@ -60,7 +60,7 @@ There are again variants to distinguish between authentication for pulling and p
 
 First of all, the registry needs to be exposed to the outside so that a Docker daemon outside the OpenShift cluster can talk with the registry:
 
-{% highlight bash %}  
+{% highlight shell %}  
 oc expose service/docker-registry --hostname=docker-registry.mydomain.com
 {% endhighlight %}
 
@@ -68,21 +68,21 @@ The hostname provided should be resolved by your host to the OpenShift API serve
 
 Next, it is important to know, that the OpenShift registry use the regular OpenShift SSO authentication, so you have to login into OpenShift before you can push to the registry. The access token obtained from the login is then used as the password for accessing the registry:
 
-{% highlight bash %}  
-# Login to OpenShift. Credentials are stored in ~/.kube/config.json:
+{% highlight shell %}  
+# Login to OpenShift. Credentials are stored in \~/.kube/config.json:
 oc login
 
 # Use user and access token for authentication:
-mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \
+mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \\
 	           -Ddocker.username=$(oc whoami) \
 	           -Ddocker.password=$(oc whoami -t)
 {% endhighlight %}
 
 The last step can be simplified by using `-Ddocker.useOpenShiftAuth` which does the user and token lookup transparently.
 
-{% highlight bash %}  
-mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \
-                -Ddocker.useOpenShiftAuth
+{% highlight shell %}  
+mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \\
+	            -Ddocker.useOpenShiftAuth
 {% endhighlight %}
 
 The configuration option `useOpenShiftAuth` again comes in multiple flavours: a default one, and dedicated for push and pull operations (`docker.pull.useOpenShiftAuth` and `docker.push.useOpenShiftAuth`).
