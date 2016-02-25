@@ -3,7 +3,7 @@ layout: post
 title: docker-maven-plugin moves on
 published: true
 ---
-**rhuss/docker-maven-plugin** is dead, long live **fabric8/docker-maven-plugin** !
+**rhuss/docker-maven-plugin** is dead, long live **fabric8io/docker-maven-plugin** !
 <!-- more -->
 
 If you follow the Docker Maven Plugin Scene[^1], you probably noticed that there has been quite some progress in the last year. Started as a personal research experiment early 2014, [rhuss/docker-maven-plugin][1] (d-m-p) has took off a little bit. With more than 300 GitHub stars it's now the second most popular docker-maven-plugin. With 38 contributors we were able to do 36 releases. It is really fantastic to see that many people contributing to a rather niche product. Many kudos go out to [Jae][2] for his many contributions and continued support on fixing and answering issues. Thanks also for always being very patient with my sometimes quite opinionated and picky code reviews :)

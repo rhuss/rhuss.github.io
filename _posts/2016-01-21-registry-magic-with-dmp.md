@@ -12,28 +12,24 @@ When setting up a Maven build for creating Docker images out of your Java applic
 
 ### Pull and Push
 
-The [docker-maven-plugin][2] (`d-m-p` in short) interacts[^1] with Docker registries in two use cases: 
+The [docker-maven-plugin][2] (`d-m-p` in short) interacts[^1] with Docker registries in two use cases:
 
 * **Pulling** base images from a registry when building images with `docker:build` or starting images with `docker:start`
 * **Pushing** built images to a registry with `docker:push`
 
 In both cases you can define your build agnostic from any registry by omitting the registry part in your image names[^2] and specify it externally as meta information. This can be done in various ways:
 
-* Adding it to the plugin configuration as an `<registry>` element. This can be easily put into a Maven profile (either directly in the `pom.xml` or also in `~/.m2/settings.xml`). 
+* Adding it to the plugin configuration as an `<registry>` element. This can be easily put into a Maven profile (either directly in the `pom.xml` or also in `~/.m2/settings.xml`).
 * Using a system property `docker.registry` when running Maven
 * As a final fallback an environment variable `DOCKER_REGISTRY` can be used, too.
 
-For example, 
+For example,
 
-{% highlight shell %}  
-mvn -Ddocker.registry=myregistry.domain.com:5000 docker:push
-{% endhighlight %}
+    mvn -Ddocker.registry=myregistry.domain.com:5000 docker:push
 
-When you combine build and push steps in a single call like in 
+When you combine build and push steps in a single call like in
 
-{% highlight shell %}  
-mvn package docker:build docker:push
-{% endhighlight %}
+    mvn package docker:build docker:push
 
 a pull operation for a base image and a push operation can happen. To allow different registries in this situation the properties `docker.pull.registry`  and `docker.push.registry` are supported, too, (with the corresponding configuration elements `<pullRegistry>` and `<pushRegistry>`, respectively).
 
@@ -47,7 +43,7 @@ When pushing an image this way, the following happens behind the scene (assuming
 
 That's all fine, but how does d-m-p deal with authentication ? Again, there are several possibilities how authentication can be performed against a registry:
 
-* Using a `<authConfig>` section in the plugin configuration with`<username>` and `<password>` elements. 
+* Using a `<authConfig>` section in the plugin configuration with`<username>` and `<password>` elements.
 * Providing system properties `docker.username` and `docker.password` when running Maven
 * Using a `<server>` configuration in `~/.m2/settings.xml` with possible encrypted password. That's the most maven-ish way for doing authentication.
 * Login into the registry with `docker login`. The plugin will pick up the credentials from `~/.docker/config.json`
@@ -56,34 +52,28 @@ There are again variants to distinguish between authentication for pulling and p
 
 ### Using the OpenShift Registry
 
-[OpenShift][4] is an awesome PaaS platform on top of [Kubernetes][5]. It comes with an [own Docker registry][6] which can be used by d-m-p, too. However, there are some things to watch out for. 
+[OpenShift][4] is an awesome PaaS platform on top of [Kubernetes][5]. It comes with an [own Docker registry][6] which can be used by d-m-p, too. However, there are some things to watch out for.
 
 First of all, the registry needs to be exposed to the outside so that a Docker daemon outside the OpenShift cluster can talk with the registry:
 
-{% highlight shell %}  
-oc expose service/docker-registry --hostname=docker-registry.mydomain.com
-{% endhighlight %}
+    oc expose service/docker-registry --hostname=docker-registry.mydomain.com
 
 The hostname provided should be resolved by your host to the OpenShift API server's IP (this happens automatically if you use the [fabric8 OpenShift Vagrant image][7] for a one-node developer installation of OpenShift).
 
 Next, it is important to know, that the OpenShift registry use the regular OpenShift SSO authentication, so you have to login into OpenShift before you can push to the registry. The access token obtained from the login is then used as the password for accessing the registry:
 
-{% highlight shell %}  
-# Login to OpenShift. Credentials are stored in \~/.kube/config.json:
-oc login
+    # Login to OpenShift. Credentials are stored in ~/.kube/config.json:
+    oc login
 
-# Use user and access token for authentication:
-mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \\
-	           -Ddocker.username=$(oc whoami) \
-	           -Ddocker.password=$(oc whoami -t)
-{% endhighlight %}
+    # Use user and access token for authentication:
+    mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \
+	             -Ddocker.username=$(oc whoami) \
+	             -Ddocker.password=$(oc whoami -t)
 
 The last step can be simplified by using `-Ddocker.useOpenShiftAuth` which does the user and token lookup transparently.
 
-{% highlight shell %}  
-mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \\
-	            -Ddocker.useOpenShiftAuth
-{% endhighlight %}
+   mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \
+  	           -Ddocker.useOpenShiftAuth
 
 The configuration option `useOpenShiftAuth` again comes in multiple flavours: a default one, and dedicated for push and pull operations (`docker.pull.useOpenShiftAuth` and `docker.push.useOpenShiftAuth`).
 
