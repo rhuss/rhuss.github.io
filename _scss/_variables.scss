@@ -7,8 +7,8 @@
 $blue: #4183C4; 
 
 // Grays
-$black: #000;
-$darkerGray: #222;
+$black: ##4e5859;
+$darkerGray: #3B4142;
 $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
@@ -20,16 +20,16 @@ $link_underline_color: rgba(0,0,0,0.1);
 $date_color: #aaa;
 
 // Font stacks
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700|Open+Sans:300,600,600italic,400,400italic)k;
 
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-$body_font: 'Open Sans', sans-serif;
-$header_font: 'Open Sans', sans-serif;
+$body_font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$header_font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $code_font: 'Source Code Pro';
-$sc_bold_weight: 700;
+$sc_bold_weight: 600;
 
 // Mobile breakpoints
 @mixin mobile {
