@@ -72,7 +72,7 @@ Next, it is important to know, that the OpenShift registry use the regular OpenS
 
 The last step can be simplified by using `-Ddocker.useOpenShiftAuth` which does the user and token lookup transparently.
 
-   mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \
+    mvn docker:push -Ddocker.registry=docker-registry.mydomain.com \
   	           -Ddocker.useOpenShiftAuth
 
 The configuration option `useOpenShiftAuth` again comes in multiple flavours: a default one, and dedicated for push and pull operations (`docker.pull.useOpenShiftAuth` and `docker.push.useOpenShiftAuth`).
