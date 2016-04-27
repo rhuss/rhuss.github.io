@@ -21,7 +21,7 @@ When there are already multiple recipes out there, why then trying yet another a
 My somewhat selfish goals were:
 
 * Using (and learning on the way) Ansible for not only a one-shot installation but also maintainance and upgrades.
-* Learning myself how to setup a Kubernetes cluster. This setup includes flannel as an overlay network, the SkyDNS extension and soon also a registry. Using Ansible helps me to incremental add on top of things already installed.
+* Learning myself how to setup a Kubernetes cluster. This setup includes flannel as an overlay network, the SkyDNS extension and soon also a registry. Using Ansible helps me to incrementally add on top of things already installed.
 * Want to use WiFi for connecting the cluster. See below for the reason.
 * Get [OpenShift Origin](https://github.com/openshift/origin) running and be able to switch between Ansible and OpenShift via Ansible.
 * Create a demonstration platform for my favourite development and integration platform [fabric8](http://fabric8.io).
