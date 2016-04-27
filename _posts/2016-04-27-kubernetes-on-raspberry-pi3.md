@@ -47,7 +47,7 @@ All in all, a 4 node Pi cluster for **288 EUR** (as of April 2016). Not so bad.
 Some remarks:
 
 * Using WiFi for the connection has the big advantage that the Raspberry Pi 3 integrated BCM43438 WiFi chip doesn't go over USB and saves valuable bandwidth used for IO in general. That way you are able to to get ~ 25 MB/s for disk IO and network traffic, respectively. And also less cables, of course. You can alway plug the power wire for demos, too ;-)
-* Use a class 10 Mirco SD but it doesn't have to be the fastest on the world at the USB bus only allows around 25 MB/s anyway.
+* A class 10 Mirco SD is recommended but it doesn't have to be the fastest on the world as the USB bus only allows around 35 MB/s anyway.
 
 ## Initial Pi Setup
 
