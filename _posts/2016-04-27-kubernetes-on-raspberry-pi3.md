@@ -6,7 +6,7 @@ published: true
 
 Let's build a Raspberry Pi Cluster running Docker and Kubernetes. There has been already a handful of good recipes, however this howto is a bit different and provides some unique features.
 <!-- more -->
-<img src="../images/pi_cluster.jpg" style="float:right; margin: 25px 0px 20px 30px"/>
+<img src="../images/pi_cluster.jpg" style="float:right; margin: 50px 0px 20px 30px"/>
 
 My main motivation for going the Raspberry Pi road for a Kubernetes cluster was that I wanted something fancy for my [Kubernetes talk](https://github.com/rhuss/jax-kubernetes-2016) to show, shamelessly stealing the idea [from](https://opensource.com/life/16/2/build-a-kubernetes-cloud-with-raspberry-pi) [others](https://www.youtube.com/watch?time_continue=4&v=AAS5Mq9EktI) (kudos to `@KurtStam`, `@saturnism` and `@ArjenWassink` for the inspiration ;-)
 
