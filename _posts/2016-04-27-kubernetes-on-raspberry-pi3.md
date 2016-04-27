@@ -167,10 +167,10 @@ This will install one master at n0 and threed additional nodes n1, n2, n3.
 
 The following features are enabled:
 
-* `etcd`, `flanneld` and `kubelet` as a systemd service on the master
-* `kubelet` and `flanneld` as systemd service on the nodes
-* Configure Docker to use the Flannel overlay network
-* Install kubectl (and alias `k`)
+* `etcd`, `flanneld` and `kubelet` are installed as systemd services on the master
+* `kubelet` and `flanneld` are installed as systemd services on the nodes
+* Docker is configured to use the Flannel overlay network
+* `kubectl` is installed (and an alias `k`)
 
 If there are some issues when restarting services in the master, don't worry. However you should best restart the master node n0 when this happens, because when setting up the other nodes the would fail if not all services are running on the master.
 
