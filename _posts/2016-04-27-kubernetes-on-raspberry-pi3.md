@@ -30,7 +30,7 @@ As it turns out the whole experience was very enlightening to me. Its one thing 
 
 ## Shopping List
 
-Here's my shopping list for a Raspberry Pi 3 clung, along with (non-affiliate) links to (German) shops, but I'm sure you can find them elswhere, too.
+Here's my shopping list for a Raspberry Pi 3 cluster, along with (non-affiliate) links to (German) shops, but I'm sure you can find them elswhere, too.
 
 | Amount | Part | Price |
 | ------ | ---- | ----- |
