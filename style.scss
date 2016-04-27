@@ -33,7 +33,7 @@ code {
   padding: .0em .3em;
   color: #4e4e4e;
   background-color: #f7f4f2;
-} 
+}
 
 .container {
   margin: 0 auto;
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $header_font;
   color: $darkerGray;
   font-weight: 400;
-  
+
   line-height: 1.46em;;
   margin: 1em 0 15px;
   padding: 0;
@@ -55,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.4;
   }
 }
-  
-h1 {  
+
+h1 {
   font-weight: 700;
   font-size: 32px;
   a {
@@ -64,17 +64,17 @@ h1 {
   }
 }
 
-h2 {  
+h2 {
   font-weight: 700;
   font-size: 24px;
 }
 
-h3 {  
+h3 {
   font-size: 18px;
   font-weight: 700;
 }
 
-h4 {  
+h4 {
   font-size: 18px;
   color: $gray;
 }
@@ -139,7 +139,7 @@ ul ul, ol ul {
 }
 
 /*
-li { 
+li {
   margin: 10px 0;
 }
 */
@@ -199,7 +199,7 @@ img {
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-  
+
   @include mobile {
     text-align: center;
   }
@@ -236,7 +236,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue; 
+  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -246,7 +246,7 @@ img {
   margin: -5px 0 0 0;
   color: $gray;
   font-size: 16px;
-  
+
   @include mobile {
     margin: 3px 0;
   }
@@ -255,9 +255,9 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue; 
+  font-family: $helveticaNeue;
   font-size: 18px;
-  
+
   @include mobile {
     float: none;
     margin-top: 9px;
@@ -293,7 +293,7 @@ nav {
   border-bottom: none;
 }
 
-.post { 
+.post {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -336,3 +336,22 @@ footer {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";
+
+table {
+    margin: 40px auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:$tableBorderWidth solid $tableColor;
+}
+
+th {
+    padding: $tableThPadding;
+    text-align: center;
+    font-weight: bold;
+    border:$tableBorderWidth solid $tableColor;
+}
+
+td {
+    padding: $tableTdPadding;
+    border:$tableBorderWidth solid $tableColor;
+}
