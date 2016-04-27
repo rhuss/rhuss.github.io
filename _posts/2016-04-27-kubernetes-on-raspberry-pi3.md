@@ -8,13 +8,13 @@ Let's build a Raspberry Pi Cluster running Docker and Kubernetes. There has been
 <!-- more -->
 <img src="../images/pi_cluster.jpg" style="float:right; margin: 50px 0px 20px 30px"/>
 
-My main motivation for going the Raspberry Pi road for a Kubernetes cluster was that I wanted something fancy for my [Kubernetes talk](https://github.com/rhuss/jax-kubernetes-2016) to show, shamelessly stealing the idea [from](https://opensource.com/life/16/2/build-a-kubernetes-cloud-with-raspberry-pi) [others](https://www.youtube.com/watch?time_continue=4&v=AAS5Mq9EktI) (kudos to `@KurtStam`, `@saturnism` and `@ArjenWassink` for the inspiration ;-)
+My main motivation for going the Raspberry Pi road for a Kubernetes cluster was that I wanted something fancy for my [Kubernetes talk](https://github.com/rhuss/jax-kubernetes-2016) to show, shamelessly stealing the idea [from](https://opensource.com/life/16/2/build-a-kubernetes-cloud-with-raspberry-pi) [others](https://www.youtube.com/watch?time_continue=4&v=AAS5Mq9EktI) (kudos to `@KurtStam`, `@saturnism`,  `@ArjenWassink` and `@kubernetesonarm` for the inspiration ;-)
 
 I.e. the following Pi-K8s projects already existed:
 
-* [kubernetes-installer-rpi](https://github.com/Project31/kubernetes-installer-rpi) : A set up shell scripts and precompiled ARM binaries for running  Kubernetes by `@KurtStam` on top of the [Hypriot Docker Image for Raspberry Pi](http://blog.hypriot.com/downloads/).
-* [Kubernetes on Arm](https://github.com/luxas/kubernetes-on-arm) : An opioninated approach with an own installer for setting up Kubernetes no only for the Pi but also for other ARM based platforms.
-* [K8s on Rpi](https://github.com/awassink/k8s-on-rpi) : Another shell based installer for installing a Kubernetes cluster.
+* **[kubernetes-installer-rpi](https://github.com/Project31/kubernetes-installer-rpi)** : A set up shell scripts and precompiled ARM binaries for running  Kubernetes by [@KurtStam](https://twitter.com/KurtStam) on top of the Hypriot Docker Image for Raspberry Pi.
+* **[Kubernetes on ARM](https://github.com/luxas/kubernetes-on-arm)** : An opioninated approach by [@kubernetesonarm](https://twitter.com/kubernetesonarm) with an own installer for setting up Kubernetes no only for the Pi but also for other ARM based platforms.
+* **[K8s on Rpi](https://github.com/awassink/k8s-on-rpi)** : Another shell based installer for installing a Kubernetes cluster by [@ArjenWassink](https://twitter.com/ArjenWassink) and [@saturnism](https://twitter.com/saturnism)
 
 When there are already multiple recipes out there, why then trying yet another approach ?
 
