@@ -81,7 +81,7 @@ Most of the installation is automated by using [Ansible](https://www.ansible.com
 
 ## Network Setup
 
-It is now time to configure your WLAN router. This of course depends on which router you use. The following instructions are based on a [TP-Link TL-WR802N](http://www.tp-link.de/products/details/TL-WR802N.html) which is quite inexepensive but still absolutely ok for our purposes since it sits very close to the cluster and my notebook anyway.
+It is now time to configure your WLAN router. This of course depends on which router you use. The following instructions are based on a [TP-Link TL-WR802N](http://www.tp-link.com/en/products/details/cat-9_TL-WR802N.html) which is quite inexepensive but still absolutely ok for our purposes since it sits very close to the cluster and my notebook anyway.
 
 First of all you need to setup the SSID and password. Use the same credentials with which you have configured your images.
 
@@ -118,11 +118,11 @@ After this initial setup is done, the next step is to initialize the base system
         cp hosts.example hosts
         vi hosts
 
-   There are three groups:
+   There are three Ansible groups which are refered to in the playbooks:
 
-   * **pis** contains all members of your cluster where one is marked as "master" in the field `host_extra`
-   * **master** IP address of the Master
-   * **nodes** All nodes which are not Master
+    | **pis** | All cluster node | `n0`, `n1`, `n2`, `n3` |
+    | **master** | Master node | `n0` |
+    | **nodes** | All nodes which are not master | `n1`, `n2`, `n3`|
 
 3. Copy over the configuration and adapt it.
 
