@@ -175,7 +175,7 @@ If there are some issues when restarting services in the master, don't worry. Ho
 
 After an initial installation it may take a bit until all infrastructure docker images has been loaded. Eventually should be able to use `kubectl get nodes` from e.g. `n0`. When this wotks but you see only one node, please reboot the cluster since some services may have not been started on the nodes (plug the cables when `n0` is ready).
 
-### Install SkyDNN
+### Install SkyDNS
 
 For service discovery via DNS you should finally install the SkyDNS addon, but only when the cluster is running, i.e. the master must be up and listening. For this final step call:
 
