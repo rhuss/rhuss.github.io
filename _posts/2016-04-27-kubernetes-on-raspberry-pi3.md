@@ -105,7 +105,7 @@ You should be able to ssh into every Pi with user *pi* and password *raspberry*.
 After this initial setup is done, the next step is to initialize the base system with Ansible. You will need Ansible 2 installed on your desktop (e.g. `brew install ansible` when running on OS X)
 
 
-### Ansible setup
+### Ansible Configuration
 
 1. Checkout the Ansible playbooks:
 
@@ -131,7 +131,7 @@ After this initial setup is done, the next step is to initialize the base system
    You should at least put in your WLAN credentials, but you are also free to adapt the other values.
 
 
-### Nodes basic setup
+### Basic Node Setup
 
 If you have already created a cluster with these playbooks and want to start a fresh, please be sure that you cleanup your `~/.ssh/known_hosts` from the old host keys. You should be able to ssh into each of the nodes without warnings. Also you must be able to reach the internet from the nodes.
 
@@ -156,7 +156,7 @@ With this basic setup you have already a working Docker environment.
 
 **Now its time to reboot the whole cluster since some required boot params has been added. Plug the wire.**
 
-### Kubernetes setup
+### Kubernetes Setup
 
 The final step for a working Kubernetes cluster is to run
 
@@ -181,7 +181,7 @@ For service discovery via DNS you should finally install the SkyDNS addon, but o
 
     ansible-playbook -i hosts skydns.yml
 
-## Wrap up
+## Wrap Up
 
 This has become a rather long recipe. I re-did everything from scratch within 60 minutes, so this could be considered as a lower boundary (because I already did it several times :). The initial setup might be a bit flaky, but should be easy to fix. I'd love to hear your feedback on this, and maybe we get it more stable afterwards. Remember, that's my first Ansible playbook :)
 
