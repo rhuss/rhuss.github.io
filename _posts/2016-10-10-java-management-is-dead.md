@@ -11,7 +11,7 @@ So, what does this mean for the future of Java EE management and monitoring ?
 
 First of all it's fair to state that [JSR 373][3] never really took off. Since February 2015 there were not more than [86 mails][4] on the expert group mailing list, half of them written in March 2015 during incubation. At the latest of January 2016 it was clear that JSR-373 [is not on Oracle's focus anymore][5]. To be honest, even we members of the expert group, we were not able to push this JSR further.
 
-So how does it came that far ? Let's have a look back into history. 
+So how did it come that far ? Let's have a look back into history. 
 
 All starts with [JSR 3][6] back in 1999. This first JMX specification is the foundation of all Java resources management. As it can been seen by its age, Java folks took care about Management and Monitoring from the very beginning on. And even better, since [JS2E 5][7] JMX is integral part of Java SE so its available on every JVM out there.
 
