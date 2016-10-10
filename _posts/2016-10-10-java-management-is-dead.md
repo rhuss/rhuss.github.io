@@ -30,7 +30,7 @@ The two major goals of JSR 373 were:
 * Provide an update of the hierarchal resource and statistics structure as defined by JSR 77
 * Provide a REST access to these resources independent of JMX
 
-In the often cited [Java EE 8 Community Survey][16] more than 60% were in favour of defining a new API for managing application, which should be based on REST (83% pro-votes). This finally lead to JSR 373. However, as it seems in retrospective, a deep interest in this topic was not given and probably lead to this final decision to drop JSR 373 from Java EE 8.
+In the often cited [Java EE 8 Community Survey][16] more than 60% were in favour of defining a new API for managing application, which should be based on REST (83% pro-votes). This finally lead to JSR 373. However, as it seems in retrospective, a deep interest in this topic was not really given and probably lead to this final decision to drop JSR 373 from Java EE 8.
 
 So, what is the state of Monitoring and Management of Java and in particular Java EE applications nowadays and what can be expect in the future ? Let's have a look into the crystal ball.
 
