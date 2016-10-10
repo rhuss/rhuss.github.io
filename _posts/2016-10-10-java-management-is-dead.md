@@ -44,8 +44,6 @@ The good thing is still that you have JMX to the rescue and I'm pretty sure that
 
 Even without a Java EE standard.
 
-> Disclaimer: Of course, all the opinions expressed here are my personal ones and are not related to the JSR 373 expert group.
-
 [1]:	https://java.net/downloads/javaee-spec/JavaEE8Update.pdf
 [2]:	https://www.jcp.org/en/jsr/detail?id=373
 [3]:	https://www.jcp.org/en/jsr/detail?id=373
