@@ -6,12 +6,12 @@ published: true
 
 Now that some weeks has been passed we all had time to absorb the [revised Java EE 8 proposal][1] presented at Java One. As you know, some JSRs remained, some things were added and some stuff was dropped. [Java EE Management API 2.0][2], supposed to be a modern successor of JSR 77, is one of the three JSRs to be dropped.
 
-So, what does this mean for the future of Java EE management and monitoring ?
+What does this mean for the future of Java EE management and monitoring ?
 <!-- more -->
 
 First of all it's fair to state that [JSR 373][3] never really took off. Since February 2015 there were not more than [86 mails][4] on the expert group mailing list, half of them written in March 2015 during incubation. At the latest of January 2016 it was clear that JSR-373 [is not on Oracle's focus anymore][5]. To be honest, even we members of the expert group, we were not able to push this JSR further.
 
-So how did it come that far ? Let's have a look back into history. 
+How did it come that far ? Let's have a look back into history. 
 
 All starts with [JSR 3][6] back in 1999. This first JMX specification is the foundation of all Java resources management. As it can been seen by its age, Java folks took care about Management and Monitoring from the very beginning on. And even better, since [JS2E 5][7] JMX is integral part of Java SE so its available on every JVM out there.
 
