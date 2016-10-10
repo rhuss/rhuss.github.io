@@ -32,7 +32,7 @@ The two major goals of JSR 373 were:
 
 In the often cited [Java EE 8 Community Survey][16] more than 60% were in favour of defining a new API for managing application, which should be based on REST (83% pro-votes). This finally lead to JSR 373. However, as it seems in retrospective, a deep interest in this topic was not really given and probably lead to this final decision to drop JSR 373 from Java EE 8.
 
-So, what is the state of Monitoring and Management of Java and in particular Java EE applications nowadays and what can be expect in the future ? Let's have a look into the crystal ball.
+So, what is the state of Monitoring and Management of Java and in particular Java EE applications nowadays and what can be expected in the future ? Let's have a look into the crystal ball.
 
 * **JMX is here to stay**. It is part of Java SE and I don't know of any plans that there are plans to remove it for future Java editions. Ok, it feels a bit rusty but it is still rock solid and gives you deep insight in the state of your JVM. With tools like [Jolokia][17] you can overcome most of the restrictions JSR 160 imposes. (Since I'm the author of Jolokia, so all my personal opinions given here should be evaluated in this light :)
 * It is not clear how the Management API of Java EE 8 and beyond looks like. It does not look like that JSR 77 will survive. Will there be a standard for Java EE management at all ? Probably not, and so there is the danger that vendors will push their proprietary management APIs, which already [happens][18] to some extent. Luckily, most of these proprietary APIs are also mirrored in JMX these days.
