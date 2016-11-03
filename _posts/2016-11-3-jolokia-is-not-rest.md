@@ -4,7 +4,7 @@ title: Why Jolokia is not RESTful
 published: true
 ---
 
-From time to time people come to me and as: "Why is Jolokia not RESTful ?". This post has the answer.
+From time to time people come to me and say: "I really would love Jolokia if only it would be RESTful". This post tells you why.
 <!-- more -->
 
 I really like REST, yes I do. 
@@ -40,20 +40,18 @@ It works by sending a list of individual, JSON encoded Jolokia requests with a s
 That list can contain any valid Jolokia operation: 
 Reading and writing attributes, executing some operations, searching for or listing of MBeans. 
 The heterogenous nature of this kind of requests makes it hard to map them to one single HTTP verb as REST suggests. 
-Also, the sheer length of the request parameter forbids to send a bulk request via GET.[^2]
+Also, the sheer length of the request parameter forbids to send a bulk request via GET as Servlet container or other application servers impose certain restrictions on the length of an URL, which vary however from server to server.
 
 ### Jolokia implements both
 
-For every Jolokia operation, we play both: GET and POST [^3]. 
+For every Jolokia operation, we play both: GET and POST [^2]. 
 As an integration tool, which helps to bridge different worlds without really having control over these worlds, the focus is on maximal flexibility so that it can adapt to any environment where it is used. 
 REST is only of second importance here, but if you think the issues described above can be solved in a more RESTful way, I'm more than open.
 
 
 [^1]:	I've to confess that I'm really not a REST expert, so if you don't agree with my arguments, I'd kindly ask you to leave a comment or tweet me for corrections.
 
-[^2]:	Servlet container or other application servers impose certain restrictions on the length of an URL, which vary however from server to server.
-
-[^3]:	or: "Country and Western"
+[^2]:	or: "Country and Western"
 
 [1]:	https://www.jolokia.org
 [2]:	https://docs.oracle.com/javase/tutorial/jmx/mbeans/
