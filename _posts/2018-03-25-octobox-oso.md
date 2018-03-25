@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Porting a Rails app to OpenShift Online
+title: Bringing Octobox to OpenShift Online
 published: true
 ---
 
