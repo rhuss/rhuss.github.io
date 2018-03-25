@@ -107,9 +107,6 @@ As a result, you get a decent running and managed installation.
 
 For the full installation instructions, please refer to the OpenShift specific Octobox [installation instructions][octobox-openshift-installation] (_still pending as PR but should be available in the upstream repo soon_)
 
-* Every declared `VOLUME` in the Docker image must have a volume mounted on in OpenShift online
-* Resource limits: Minimum 256Mb, ratio requests/limit is fixed (so, always 'Burstable')
-
 [openshift-online]: https://www.openshift.com/pricing/index.html
 [octobox]: https://github.com/octobox/octobox
 [openshift-image-guidelines]: https://docs.openshift.org/latest/creating_images/guidelines.html
