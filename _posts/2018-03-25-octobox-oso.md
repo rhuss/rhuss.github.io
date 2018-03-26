@@ -105,7 +105,7 @@ Especially the free [OpenShift Online Starter][openshift-online] is very appeali
 The challenges are mostly around creating proper Docker images and getting resource limits right.
 As a result, you get a decent running and managed installation.
 
-For the full installation instructions, please refer to the OpenShift specific Octobox [installation instructions][octobox-openshift-installation]
+For the full installation instructions, please refer to the OpenShift specific Octobox [installation instructions][octobox-openshift-installation].
 
 [openshift-online]: https://www.openshift.com/pricing/index.html
 [octobox]: https://github.com/octobox/octobox
