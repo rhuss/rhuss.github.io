@@ -105,7 +105,7 @@ Especially the free [OpenShift Online Starter][openshift-online] is very appeali
 The challenges are mostly around creating proper Docker images and getting resource limits right.
 As a result, you get a decent running and managed installation.
 
-For the full installation instructions, please refer to the OpenShift specific Octobox [installation instructions][octobox-openshift-installation] (_still pending as PR but should be available in the upstream repo soon_)
+For the full installation instructions, please refer to the OpenShift specific Octobox [installation instructions][octobox-openshift-installation]
 
 [openshift-online]: https://www.openshift.com/pricing/index.html
 [octobox]: https://github.com/octobox/octobox
@@ -117,6 +117,6 @@ For the full installation instructions, please refer to the OpenShift specific O
 [redis-dockerfile-volume]: https://github.com/sclorg/redis-container/blob/7689bf310dc29f363f0cf7e0e74a457cda5a3f6e/3.2/Dockerfile#L73
 [kubernetes-qos-class]: https://medium.com/google-cloud/quality-of-service-class-qos-in-kubernetes-bb76a89eb2c6
 [kubernetes-requests-limits]: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
-[openshift-template]: https://github.com/rhuss/octobox/blob/5f08e8b222ebb820f2a9b892ece7e768fd87a974/openshift-template.yml
+[openshift-template]: https://github.com/octobox/octobox/blob/master/openshift/octobox-template.yml
 [openshift-online-starter]: https://www.openshift.com/pricing/index.html
-[octobox-openshift-installation]: https://github.com/rhuss/octobox/blob/7785c12b73b15397c5cefa82cbe7837466ac101a/openshift/OPENSHIFT_INSTALLATION.md
+[octobox-openshift-installation]: https://github.com/octobox/octobox/blob/master/openshift/OPENSHIFT_INSTALLATION.md
