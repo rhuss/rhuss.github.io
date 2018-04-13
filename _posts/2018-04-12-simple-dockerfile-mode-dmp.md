@@ -8,7 +8,7 @@ As you might know, one of my Open Source babies is the one and only [fabric8io/d
 If you already use this Maven plugin, you know, that it is super powerful and flexible to configure.
 This flexibility comes at a price so that the configuration can become quite complicated.
 Now, if you only want to _build_ Docker images with Maven, I have good news:
-Since 0.25.1 d-m-p supports a zero XML configuration mode, the so-called [simple Dockerfile build][simple-dockerfile-mode][^1] mode.
+Since 0.25.1 d-m-p supports a zero XML configuration mode, the so-called [Simple Dockerfile Build][simple-dockerfile-mode][^1] mode.
 
 
 
