@@ -56,7 +56,7 @@ FROM busybox
 CMD ["echo", "Hello", "world!"]
 ```
 
-Of course, this image does not really much.
+This image does not really much.
 With `mvn docker:build` you can build it, with `docker run fabric8/smallest` you can test it.
 Or use `mvn docker:run` so that you even don't have to provide the image name.
 
@@ -80,13 +80,22 @@ where we define `jar` as [build arg][docker-build-arg] in the Dockerfile but als
 </properties>
 ```
 
-As you can see, you can use Maven properties in the Dockerfile which get automatically replaced by `docker:build` when creating the image.
+You can use Maven properties in the Dockerfile which get automatically replaced by `docker:build` when creating the image.
 But you can use that Dockerfile also without Maven with `docker build .`
 You can't use Maven properties with `.` directly as dots are not allowed in Docker build args, therefore we use an extra property.
 However, a maven-less usage probably does not make much sense when you don't also build the artefacts.
-The full example can be found in the [dmp GitHub repo][simple-dockerfile-example]
+The full example can be found in the [dmp GitHub repo][simple-dockerfile-example].
 
-The name of the image is auto-generated, but you can set this name also by yourself by setting the property `docker.name` (and you can even use [placeholders][dmp-placeholders] within this name)
+If you can forgo Docker build args you can use predefined Maven properties directly:
+
+```dockerfile
+
+FROM openjdk:jre
+ADD  ${project.build.directory}/${project.build.finalName}.jar /zero-config.jar
+CMD java -cp /zero-config.jar HelloWorld
+```
+
+The image name is auto-generated, but you can set this name also by yourself by setting the property `docker.name` (and you can even use [placeholders][dmp-placeholders] within this name)
 
 You can even start the container with `mvn docker:run` although without any additional configuration (e.g. like port mappings).
 Also, you can `docker:push` the image.
