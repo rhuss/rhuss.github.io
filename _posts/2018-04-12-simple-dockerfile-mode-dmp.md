@@ -66,10 +66,10 @@ A more realistic Dockerfile could look like
 ```dockerfile
 FROM openjdk:jre
 
-ARG jar=target/zero-config-1-SNAPSHOT.jar
+ARG jar=target/app-1.0.0-SNAPSHOT.jar
 
-ADD $jar /zero-config.jar
-CMD java -cp /zero-config.jar HelloWorld
+ADD $jar /app.jar
+CMD java -cp /app.jar HelloWorld
 ```
 
 where we define `jar` as [build arg][docker-build-arg] in the Dockerfile but also as property in the `pom.xml`:
@@ -89,10 +89,9 @@ The full example can be found in the [dmp GitHub repo][simple-dockerfile-example
 If you can forgo Docker build args you can use predefined Maven properties directly:
 
 ```dockerfile
-
 FROM openjdk:jre
-ADD  ${project.build.directory}/${project.build.finalName}.jar /zero-config.jar
-CMD java -cp /zero-config.jar HelloWorld
+ADD  ${project.build.directory}/${project.build.finalName}.jar /app.jar
+CMD java -cp /app.jar HelloWorld
 ```
 
 The image name is auto-generated, but you can set this name also by yourself by setting the property `docker.name` (and you can even use [placeholders][dmp-placeholders] within this name)
