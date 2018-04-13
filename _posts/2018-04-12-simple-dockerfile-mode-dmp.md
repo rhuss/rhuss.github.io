@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Dockerfile can be just good enough
+title: When a Dockerfile is just good enough
 published: true
 ---
 
