@@ -66,7 +66,7 @@ A more realistic Dockerfile could look like
 ```dockerfile
 FROM openjdk:jre
 
-ARG jare=target/zero-config-1-SNAPSHOT.jar
+ARG jar=target/zero-config-1-SNAPSHOT.jar
 
 ADD $jar /zero-config.jar
 CMD java -cp /zero-config.jar HelloWorld
