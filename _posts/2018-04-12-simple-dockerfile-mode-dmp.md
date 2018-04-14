@@ -33,7 +33,7 @@ The smallest possible Maven project for creating a Docker image consists of this
 <project>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>fabric8io</groupId>
+  <groupId>fabric8</groupId>
   <artifactId>smallest</artifactId>
   <version>1-SNAPSHOT</version>
 
