@@ -129,4 +129,4 @@ In fact, there are concrete plans for d-m-p to include the [generators][fmp-gene
 [simple-dockerfile-example]: https://github.com/fabric8io/docker-maven-plugin/tree/master/samples/zero-config
 [fmp-generator]: https://maven.fabric8.io/#generators
 [docker-build-arg]: https://docs.docker.com/engine/reference/commandline/build/#set-build-time-variables---build-arg
-[^1]: Currently the fabric8 family is moving their DNS business, so it _might_ be that you hit some "invalide cert" issues in your browser when following the doc links. You can add a security exception here, but please verify first that the "wrong" cert points to GitHub, as the documentation is served from GitHub Pages. Sorry for the inconvenience.
+[^1]: Currently the fabric8 family is moving their DNS business, so it might_be that you hit some "invalid cert" issues in your browser when following the doc links. You can add a security exception here, but please verify first that the "wrong" cert points to GitHub, as the documentation is served from GitHub Pages. Sorry for the inconvenience.
