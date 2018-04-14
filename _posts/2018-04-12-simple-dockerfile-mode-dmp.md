@@ -14,7 +14,7 @@ Since 0.25.1 d-m-p supports a zero XML configuration mode, the so-called [Simple
 
 <!-- more -->
 
-The idea of this mode started with a twitter discussion:
+The idea of this mode started with a Twitter discussion:
 
 
 <img src="../images/maven-dmp-tweet.png" class="shadow center"/>
@@ -129,4 +129,4 @@ In fact, there are concrete plans for d-m-p to include the [generators][fmp-gene
 [simple-dockerfile-example]: https://github.com/fabric8io/docker-maven-plugin/tree/master/samples/zero-config
 [fmp-generator]: https://maven.fabric8.io/#generators
 [docker-build-arg]: https://docs.docker.com/engine/reference/commandline/build/#set-build-time-variables---build-arg
-[^1]: Currently the fabric8 family is moving their DNS business, so it might_be that you hit some "invalid cert" issues in your browser when following the doc links. You can add a security exception here, but please verify first that the "wrong" cert points to GitHub, as the documentation is served from GitHub Pages. Sorry for the inconvenience.
+[^1]: Currently the fabric8 family is moving their DNS business, so it might be that you hit some "invalid cert" issues in your browser when following the doc links. You can add a security exception here, but please verify first that the "wrong" cert points to GitHub, as the documentation is served from GitHub Pages. Sorry for the inconvenience.
