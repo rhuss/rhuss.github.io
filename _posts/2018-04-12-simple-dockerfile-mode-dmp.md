@@ -8,7 +8,7 @@ As you might know, one of my Open Source babies is the one and only [fabric8io/d
 If you already use this Maven plugin, you know, that it is super powerful and flexible to configure.
 This flexibility comes at a price so that the configuration can become quite complicated.
 Now, if you only want to _build_ Docker images with Maven, I have good news:
-Since 0.25.1 d-m-p supports a zero XML configuration mode, the so-called [Simple Dockerfile Build][simple-dockerfile-mode][^1] mode.
+Since 0.25.1 d-m-p supports a zero XML configuration mode, the so-called [Simple Dockerfile Build][simple-dockerfile-mode] mode.
 
 
 
@@ -129,4 +129,3 @@ In fact, there are concrete plans for d-m-p to include the [generators][fmp-gene
 [simple-dockerfile-example]: https://github.com/fabric8io/docker-maven-plugin/tree/master/samples/zero-config
 [fmp-generator]: https://maven.fabric8.io/#generators
 [docker-build-arg]: https://docs.docker.com/engine/reference/commandline/build/#set-build-time-variables---build-arg
-[^1]: Currently the fabric8 family is moving their DNS business, so it might be that you hit some "invalid cert" issues in your browser when following the doc links. You can add a security exception here, but please verify first that the "wrong" cert points to GitHub, as the documentation is served from GitHub Pages. Sorry for the inconvenience.
