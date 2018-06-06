@@ -42,7 +42,7 @@ The smallest possible Maven project for creating a Docker image consists of this
       <plugin>
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.25.1</version>
+        <version>0.26.0</version>
       </plugin>
     </plugins>
   </build>
@@ -94,26 +94,26 @@ ADD  ${project.build.directory}/${project.build.finalName}.jar /app.jar
 CMD java -cp /app.jar HelloWorld
 ```
 
-The image name is auto-generated, but you can set this name also by yourself by setting the property `docker.name` (and you can even use [placeholders][dmp-placeholders] within this name)
+The image name is auto-generated, but you can set this name also by yourself by setting the property `docker.name` (and you can use [placeholders][dmp-placeholders] within this name)
 
 You can even start the container with `mvn docker:run` although without any additional configuration (e.g. like port mappings).
 Also, you can `docker:push` the image.
 
-You can still configure certain aspects like authentication or binding d-m-p goals to default lifecycle phases.
+You can still configure certain aspects like authentication or bind d-m-p goals to default lifecycle phases.
 Using this mode is very similar to the functionality offered by [spotify/dockerfile-maven][spotify-dockerfile-maven].
 
 If you need more horsepower, you can gradually expand on this simple setup.
-Features which are waiting to be discovered are
+Features which are waiting to be discovered are:
 
 * Setup of multiple images for running integration tests
 * Custom networks and volumes for your tests
 * Using docker-compose files for running the containers directly from the plugin
 * Exporting the Docker image as an archive
-* Watch docker containers and restarted them when the code changes
+* Watch docker containers and restart them when the code changes
 * All can be configured via properties, too and since with the latest versions, you can mix it with XML configuration.
 * ....
 
-If you are interested in even more to find out, then please have a look at the [reference manual][dmp-manual].
+If you are interested in more to find out, then please have a look at the [reference manual][dmp-manual].
 
 I'm curious what you think about this new mode.
 Please use the comments below if you want to leave some feedback.
