@@ -37,15 +37,13 @@ public class Routes extends RouteBuilder {
 Then, the configuration can be rewritten simply as
 
 ```java
-{% raw %}
-ctx.add(new Routes {{
+{% raw %}ctx.add(new Routes {{
       from("file:data/inbox?noop=true")
         .to("file:data/outbox");
-}});
-{% endraw %}
+}});{% endraw %}
 ```
 
-This trick just uses Java's [object initializers][object-initializers], a not so well known language features. The inspiration for providing the DSL context like this comes from [JMockit][jmockit] which defines its mock expectations the same way. I think object initializers are really an elegant albeit hipster way to implement DSLs.
+This trick just uses Java's [object initializers][object-initializers], a not so well known language feature. The inspiration for providing the DSL context like this comes from [JMockit][jmockit] which defines its mock expectations the same way. I think object initializers are really an elegant albeit hipster way to implement DSLs.
 
 Although you can easily define the `Routes` class on your own, you might vote for this Camel [issue][jira] or [pull request][pr] if you want to have this in upstream Camel, too.
 
