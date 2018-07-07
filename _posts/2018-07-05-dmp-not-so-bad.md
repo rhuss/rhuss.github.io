@@ -12,13 +12,13 @@ here again.
 
 The [article][post] ditches two docker-maven-plugins before it promotes Docker multi-stage builds for some reasons.
 
-To be honest, I think both approaches have their benefits, but let me comment first on two arguments given with respect to the [fabric8io/docker-maven-plugin][dmp-git].
+To be honest, I think both approaches have their benefits, but let me comment first on two arguments given concerning the [fabric8io/docker-maven-plugin][dmp-git].
 
-> There have been cases in the past where Docker has broken compatibility even between its own client and server, so a Maven plugin that uses the same API will instantly break as well.
+> There have been cases in the past where Docker has broken compatibility even between its client and server, so a Maven plugin that uses the same API will instantly break as well.
 
-This compatibility issue might be true especially if you use a typed approach to access the Docker REST API which is used by various Docker client libraries. As explained in the post, fabric8 d-m-p accesses the Docker daemon directly without any client library. This is because it accesses only the parts required for the plugin's feature set, which also means that json responses are handled in a very defensive and untyped way.
+This compatibility issue might be right especially if you use a typed approach to access the Docker REST API which is used by various Docker client libraries. As explained in the post, fabric8 d-m-p accesses the Docker daemon directly without any client library and with not marshalling. This is because it accesses only the parts required for the plugin's feature set, which also means that json responses are handled in a very defensive and untyped way.
 
-And yes, there was one issue in the early days in 2014 with a backwards-incompatible API change from Docker. This issue could be fixed quite quickly because d-m-p hadn't to wait for a client library to be updated. However, since then there never has been any issue and for the core functionality that d-m-p uses.
+And yes, there was one issue in the early days in 2014 with a backwards-incompatible API change from Docker. This issue could be fixed quite quickly because d-m-p hadn't to wait for a client library to be updated. However, since then there never has been an issue and for the core functionality that d-m-p uses.
 
 I think the relevance of Docker API incompatibilities is exaggerated in this blog post.
 
@@ -27,7 +27,7 @@ I think the relevance of Docker API incompatibilities is exaggerated in this blo
 That is simply not true. You can just put a Dockerfile on the same level as the pom.xml, refer to your artefacts in the `target/` directory (with Maven property substitution), and then declare the plugin *without any configuration*.
 See my [other blog post](https://ro14nd.de/simple-dockerfile-mode-dmp) for a short description of how it works.
 
-BTW, the reason for the own XML syntax is a historical one. The plugin started in 2014 when Dockerfile was entirely unknown to Java developers. But Maven plugin XML configuration was (and still is) a well-known business. As time passed by and Docker become more and more popular for Java developers, the `Dockerfile` syntax is well known now these days, too. So, I completely agree, that you should use Dockerfiles if possibles, and that's why the plugin supports Dockerfiles as a first-class citizen since the recent versions. The next step is to add similar support for `docker-compose.yml` files for running containers. There is already docker compose support included, albeit a bit hidden.
+BTW, the reason for the own XML syntax is a historical one. The plugin started in 2014 when Dockerfile was entirely unknown to Java developers. But Maven plugin XML configuration was (and still is) a well-known business. As time passed by and Docker become more and more popular for Java developers, the `Dockerfile` syntax is well known now these days, too. So, I completely agree, that you should use Dockerfiles if possible, and that's why the plugin supports Dockerfiles as a first-class citizen since the recent versions. The next step is to add similar support for `docker-compose.yml` files for running containers. There is already docker compose support included, albeit a bit hidden.
 
 -----
 
@@ -43,7 +43,7 @@ Other advantages of using fabric8's d-m-p :
 
 In the end, your mileage may vary, but having an article conclusion without really trying to compare pros and cons of both approaches is far too biased for me.
 
-**Update: Kostis replied to my comment and an interesting discussion is going over [there][post-comment]**
+**Update: Kostis replied to my comment, and an interesting discussion is going over [there][post-comment]**
 
 [post]: https://codefresh.io/howtos/using-docker-maven-maven-docker/
 [kostis]: https://twitter.com/codepipes
