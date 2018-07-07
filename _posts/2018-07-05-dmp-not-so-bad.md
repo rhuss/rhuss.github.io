@@ -43,7 +43,10 @@ Other advantages of using fabric8's d-m-p :
 
 In the end, your mileage may vary, but having an article conclusion without really trying to compare pros and cons of both approaches is far too biased for me.
 
+**Update: Kostis replied to my comment and an interesting discussion is going over [there][post-commenst]**
+
 [post]: https://codefresh.io/howtos/using-docker-maven-maven-docker/
 [kostis]: https://twitter.com/codepipes
 [dmp]: https://dmp.fabric8.io/
 [dmp-git]: https://github.com/fabric8io/docker-maven-plugin
+[post-comment]: https://codefresh.io/howtos/using-docker-maven-maven-docker/#comment-159
