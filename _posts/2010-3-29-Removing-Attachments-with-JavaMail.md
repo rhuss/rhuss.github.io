@@ -1,3 +1,9 @@
+---
+layout: post
+title: Removing attachments with JavaMail
+published: true
+---
+
 If you have ever sent or received mail messages via Java, chances are high that you have used JavaMail for this task.
 Most of the time JavaMail does an excellent job and a lot of use cases are described in the JavaMail FAQ.
 But there are still some additional quirks you should be aware of when doing advanced mail operations like adding or removing attachments (or “Parts”) from existing mails retreived from some IMAP or POP3 store.
@@ -5,7 +11,7 @@ This post gives a showcase for how to remove an attachment from a mail at an arb
 It points to the pitfalls which are waiting and shows some possible solutions.
 The principles laid out here are important for adding new attachments to a mail as well, but that’s yet another story.
 
-## JavaMail objects
+### JavaMail objects
 
 Before we start manipulating mail messages it is important to understand how these are represented in the JavaMail world.
 
@@ -23,7 +29,7 @@ This object tree can be navigated in both directions:
 - *getContent()* on `Part`s like `Message` or `BodyPart` to get to the child of this node. The return type is a `java.lang.Object` and in case of a plain `BodyPart` can be quite huge. Before calling `Part.getContent()` be sure to check whether it contains a container by checking for its content type via `Part.isMimeType("multipart/*")` or `Part.isMimeType("message/rfc822")`
 - *getParent()* on `Multipart` or `BodyPart` returns the parent node, which is of type `BodyPart`. Note that there is no way to get from a nested `Message` to its parent `BodyPart`. If you need to traverse the tree upwards with nested messages on the way, you first have to extract the path to this node from the top down. E.g. while identifying the part to remove you could store the parent `BodyPart`s on a stack.
 
-## First approach
+### First approach
 
 Back to our use case of removing an attachment at an arbitrary level within a mail. First, a `Message` from the IMAP Store needs to be obtained, e.g. by looking it up in an `IMAPFolder` via its UID:
 
@@ -67,7 +73,7 @@ folder.expunge(new Message[]{ originalMessage });
 
 We are done now.
 
-## But wait, that's not good enough ...
+### But wait, that's not good enough ...
 
 If you try the code above, you will probably be a bit surprised. If you fetch back the newly saved message from the folder, you will find that the attachment has **not** been removed at all.
 
