@@ -26,8 +26,8 @@ CMD env CATALINA_OPTS=$(jolokia_opts) /opt/${TC}/bin/catalina.sh run
 
 The configuration of the Jolokia agent can be influenced with various environments variables which can be given when starting the container:
 
-* `JOLOKIA_OFF` : If set disables activation of Jolokia. By default, Jolokia is enabled. 
-* `JOLOKIA_CONFIG` : If set uses this file (including path) as Jolokia JVM agent properties (as described in Jolokia's [reference manual][5]. By default this is `/opt/jolokia/jolokia.properties`. If this file exists, it will automatically be taken as configuration  
+* `JOLOKIA_OFF` : If set disables activation of Jolokia. By default, Jolokia is enabled.
+* `JOLOKIA_CONFIG` : If set uses this file (including path) as Jolokia JVM agent properties (as described in Jolokia's [reference manual][5]. By default this is `/opt/jolokia/jolokia.properties`. If this file exists, it will automatically be taken as configuration
 * `JOLOKIA_HOST` : Host address to bind to (Default: 0.0.0.0)
 * `JOLOKIA_PORT` : Port to use (Default: 8778)
 * `JOLOKIA_USER` : User for authentication. By default authentication is switched off.
@@ -35,10 +35,10 @@ The configuration of the Jolokia agent can be influenced with various environmen
 
 So, if you start your tomcat with `docker run -e JOLOKIA_OFF` no agent will be started.
 
-Currently this image is available from [Docker Hub][6] for the latest versions of Java 6,7 and 8, respectively, as they are provided by the official Docker [java][7] image. 
+Currently this image is available from [Docker Hub][6] for the latest versions of Java 6,7 and 8, respectively, as they are provided by the official Docker [java][7] image.
 
-Other base images can be easily added by using the configuration and templates from a super simple node based [build system][8]. 
- 
+Other base images can be easily added by using the configuration and templates from a super simple node based [build system][8].
+
 All appserver images from [ConSol/docker-appserver][9] ([Docker Hub][10]) are based now on this image, so Jolokia will always be by your side ;-)
 
 

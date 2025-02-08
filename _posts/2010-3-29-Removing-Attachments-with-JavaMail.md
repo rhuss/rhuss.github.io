@@ -8,6 +8,8 @@ If you have ever sent or received mail messages via Java, chances are high that 
 Most of the time JavaMail does an excellent job and a lot of use cases are described in the JavaMail FAQ.
 But there are still some additional quirks you should be aware of when doing advanced mail operations like adding or removing attachments (or “Parts”) from existing mails retreived from some IMAP or POP3 store.
 This post gives a showcase for how to remove an attachment from a mail at an arbitrary level which has been obtained from an IMAP store.
+<!-- more -->
+
 It points to the pitfalls which are waiting and shows some possible solutions.
 The principles laid out here are important for adding new attachments to a mail as well, but that’s yet another story.
 
