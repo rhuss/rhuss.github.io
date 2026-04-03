@@ -42,7 +42,7 @@ body, article, article p, article li,
 html:not(.dark) .article-content a {
   color: #333 !important;
   text-decoration: underline !important;
-  text-decoration-color: rgba(0, 0, 0, 0.1) !important;
+  text-decoration-color: rgba(0, 0, 0, 0.25) !important;
   text-underline-offset: 2px;
 }
 
@@ -59,7 +59,9 @@ html:not(.dark) .article-content a:hover {
 html.dark .article-content a,
 html.dark article .article-content a {
   color: #acb7bc !important;
-  text-decoration-color: rgba(255, 255, 255, 0.15) !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(255, 255, 255, 0.3) !important;
+  text-underline-offset: 2px;
 }
 
 html.dark .article-content a:hover,
