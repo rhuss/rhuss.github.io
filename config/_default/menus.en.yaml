@@ -10,10 +10,10 @@ main:
     weight: 30
 
 footer:
-  - name: Impressum
+  - name: Legal Notice
     pageRef: impressum
     weight: 10
-  - name: Datenschutz
+  - name: Privacy Policy
     pageRef: datenschutz
     weight: 20
   - name: License

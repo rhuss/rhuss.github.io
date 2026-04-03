@@ -16,3 +16,9 @@ For information about my professional career, find me on [LinkedIn](https://link
 ### Contact me
 
 [blog@ro14nd.de](mailto:blog@ro14nd.de)
+
+### Legal
+
+- [Legal Notice](/impressum/) (Impressum)
+- [Privacy Policy](/datenschutz/) (Datenschutzerklärung)
+- [License](/license/) (CC BY 4.0)

@@ -1,14 +1,15 @@
 ---
-title: "Impressum"
-description: "Impressum nach DDG"
+title: "Legal Notice"
+description: "Legal notice (Impressum) according to German DDG"
+aliases: ["/impressum/"]
 ---
 
-**Angaben gemäß DDG (Digitale-Dienste-Gesetz)**
+**Information pursuant to DDG (Digitale-Dienste-Gesetz)**
 
 Roland Huß
 
-*Kontakt:* [blog@ro14nd.de](mailto:blog@ro14nd.de)
+*Contact:* [blog@ro14nd.de](mailto:blog@ro14nd.de)
 
-**Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:**
+**Responsible for content according to § 18 (2) MStV:**
 
-Roland Huß (Anschrift wie oben)
+Roland Huß (address as above)
