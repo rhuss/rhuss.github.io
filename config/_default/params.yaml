@@ -2,6 +2,9 @@ colorScheme: "noir"
 defaultAppearance: "light"
 autoSwitchAppearance: true
 
+logo: "img/profile.jpg"
+disableTextInHeader: true
+
 homepage:
   layout: "profile"
   showRecent: true
@@ -13,7 +16,7 @@ article:
   showWordCount: true
   showDate: true
   showDateUpdated: false
-  showAuthor: true
+  showAuthor: false
   showBreadcrumbs: false
   showTableOfContents: true
   showRelatedContent: true

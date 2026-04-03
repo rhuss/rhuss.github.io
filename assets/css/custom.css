@@ -11,6 +11,13 @@ html {
   font-size: 112.5%;  /* body text renders at ~18px */
 }
 
+/* ── Header logo: round avatar like original ── */
+.main-menu img.logo {
+  border-radius: 50%;
+  max-height: 2.8rem;
+  max-width: 2.8rem;
+}
+
 /* ── Fonts ────────────────────────────── */
 html, body {
   font-family: 'Geist', system-ui, -apple-system, sans-serif;
