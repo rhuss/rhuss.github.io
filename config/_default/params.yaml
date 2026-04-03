@@ -8,7 +8,9 @@ disableTextInHeader: true
 homepage:
   layout: "profile"
   showRecent: true
-  recentLimit: 10
+  showRecentItems: 10
+  showMoreLink: true
+  showMoreLinkDest: "/posts/"
   cardView: false
 
 article:

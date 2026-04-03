@@ -8,14 +8,3 @@ main:
   - name: About
     pageRef: about
     weight: 30
-
-footer:
-  - name: Legal Notice
-    pageRef: impressum
-    weight: 10
-  - name: Privacy Policy
-    pageRef: datenschutz
-    weight: 20
-  - name: License
-    pageRef: license
-    weight: 30
