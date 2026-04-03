@@ -47,8 +47,8 @@ html:not(.dark) .article-content a {
 }
 
 html:not(.dark) .article-content a:hover {
-  color: #3F51B5 !important;
-  text-decoration-color: #3F51B5 !important;
+  color: #0097A7 !important;
+  text-decoration-color: #0097A7 !important;
 }
 
 /* ── Text + link colors (dark mode) ──── */
