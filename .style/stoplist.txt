@@ -1,0 +1,12 @@
+# Blog stoplist (extends global ~/.claude/style/stoplist.txt)
+delve -> explore, examine
+leverage -> use, apply
+utilize -> use
+robust -> reliable, strong
+comprehensive -> complete, thorough
+crucial -> critical, key, important
+pivotal -> critical, important
+foster -> support, encourage
+harness -> use, apply
+facilitate -> enable, help
+paramount -> critical, essential

@@ -1,0 +1,68 @@
+# Voice Profile: blog
+# Extracted from: /Users/rhuss/Blog/_posts/ (7 posts, 2014-2018)
+# Extraction date: 2026-04-03
+# Corpus: ~6,500 words from 7 files (1 excluded as outlier)
+
+name: "blog"
+version: "1.0"
+description: "Roland's technical blog voice: confident craftsman sharing what he built, honest about failures, playful cultural references"
+
+tone_description: |
+  Technically confident but personally modest. Writes as someone who built
+  the thing and wants to share what he learned, not as someone lecturing
+  from a podium. There is a craftsman's pride in the details (CORS edge
+  cases, Docker socket tricks, image layering) paired with honest admissions
+  when something did not work ("I tried hard but failed miserably"). Humor
+  appears naturally, often as asides, footnotes, or cultural references
+  (wormholes, Matryoshka dolls, Munchhausen). The writing has a distinctly
+  European engineering voice, precise but not cold, occasionally playful.
+  Rhetorical questions drive the narrative forward. Disclaimers and
+  self-deprecation build trust through transparency rather than undermining
+  authority.
+
+characteristics:
+  formality: 0.50
+  personality: 0.68
+  first_person: true
+  contractions: true
+  audience: "intermediate"
+
+sentence_patterns:
+  mix_short: true
+  max_consecutive_similar: 3
+  avg_length_target: 19
+  variation: "moderate"
+  rhetorical_questions: true
+
+elaboration:
+  depth: "moderate"
+  provide_context: true
+  include_examples: true
+  explain_reasoning: true
+  analogies: "moderate"
+  analogy_domain: "physics, culture, everyday engineering"
+
+personality_traits:
+  opinions: true
+  acknowledge_complexity: true
+  humor: "subtle"
+  personal_experience: true
+
+pronoun_balance:
+  you_percentage: 55
+  we_percentage: 45
+
+signature_phrases:
+  - "Let's have a look"
+  - "The question is now"
+  - "As it turns out"
+  - "However"
+  - "Not to mention"
+
+avoid_phrases:
+  - "in this blog post"
+  - "excited to share"
+  - "let's dive in"
+  - "without further ado"
+  - "in today's post"
+  - "it goes without saying"

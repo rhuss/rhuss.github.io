@@ -1,0 +1,5 @@
+# Preferred terminology
+Kubernetes (not k8s in prose, k8s ok in code)
+Docker (not docker)
+Pod (not pod, when referring to Kubernetes resource)
+container image (not Docker image, unless specifically Docker)

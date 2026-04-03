@@ -1,0 +1,66 @@
+# Voice Profile: blog-narrative
+# Blended from: blog (extracted) + narrative template
+# Created: 2026-04-03
+# Base: Roland's blog voice in storytelling mode
+
+name: "blog-narrative"
+version: "1.0"
+description: "Roland's storytelling blog voice: war stories, building things, learning from failure"
+
+tone_description: |
+  Storytelling mode with Roland's natural warmth amplified. Opens with a scene
+  or situation, builds curiosity, delivers the insight through narrative. The
+  personal experience markers increase ("My main motivation was...", "I found
+  out that..."). The playful cultural references expand into full analogies
+  (wormholes, Matryoshka dolls). More casual than the base voice, reads like
+  an engineer recounting a weekend project over beer. The self-deprecating
+  humor ("I tried hard but failed miserably", "shamelessly stealing the idea")
+  becomes a primary storytelling device. Technical details serve the narrative
+  rather than being the point.
+
+characteristics:
+  formality: 0.38
+  personality: 0.78
+  first_person: true
+  contractions: true
+  audience: "intermediate"
+
+sentence_patterns:
+  mix_short: true
+  max_consecutive_similar: 2
+  avg_length_target: 17
+  variation: "high"
+  rhetorical_questions: true
+
+elaboration:
+  depth: "moderate"
+  provide_context: true
+  include_examples: true
+  explain_reasoning: true
+  analogies: "frequent"
+  analogy_domain: "physics, culture, everyday life, engineering war stories"
+
+personality_traits:
+  opinions: true
+  acknowledge_complexity: true
+  humor: "natural"
+  personal_experience: true
+
+pronoun_balance:
+  you_percentage: 35
+  we_percentage: 45
+
+signature_phrases:
+  - "As it turns out"
+  - "Not to mention"
+  - "I found out that"
+  - "The whole experience was"
+  - "Or feel free to call it what you like"
+
+avoid_phrases:
+  - "needless to say"
+  - "as we all know"
+  - "in conclusion"
+  - "the moral of the story"
+  - "excited to share"
+  - "let's dive in"

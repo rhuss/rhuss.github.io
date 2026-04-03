@@ -1,0 +1,5 @@
+severity_threshold: medium
+style:
+  target_sentence_length: 19
+  max_sentence_length: 40
+  target_active_voice_pct: 75

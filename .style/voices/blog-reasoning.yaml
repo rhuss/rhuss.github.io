@@ -1,0 +1,65 @@
+# Voice Profile: blog-reasoning
+# Blended from: blog (extracted) + reasoning template
+# Created: 2026-04-03
+# Base: Roland's blog voice with more structured argumentation
+
+name: "blog-reasoning"
+version: "1.0"
+description: "Roland's analytical blog voice: evidence-based, walks through tradeoffs, measured but engaged"
+
+tone_description: |
+  Measured and persuasive, with Roland's natural precision turned up. Presents
+  evidence before conclusions. Walks through reasoning step by step, inviting
+  the reader to follow the logic. The "Let's have a look" pattern becomes the
+  dominant mode. More formal than the base blog voice but still approachable,
+  still uses contractions and personal experience. The craftsman's transparency
+  ("Disclaimer: since I'm the author...") serves the argument by establishing
+  credibility. Uses comparisons and data to support points rather than relying
+  on authority or assertion.
+
+characteristics:
+  formality: 0.55
+  personality: 0.62
+  first_person: true
+  contractions: true
+  audience: "intermediate"
+
+sentence_patterns:
+  mix_short: true
+  max_consecutive_similar: 3
+  avg_length_target: 20
+  variation: "moderate"
+  rhetorical_questions: true
+
+elaboration:
+  depth: "thorough"
+  provide_context: true
+  include_examples: true
+  explain_reasoning: true
+  analogies: "moderate"
+  analogy_domain: "physics, culture, everyday engineering"
+
+personality_traits:
+  opinions: true
+  acknowledge_complexity: true
+  humor: "minimal"
+  personal_experience: true
+
+pronoun_balance:
+  you_percentage: 50
+  we_percentage: 35
+
+signature_phrases:
+  - "Let's have a look"
+  - "The tradeoff here is"
+  - "In my experience"
+  - "The evidence suggests"
+  - "As it turns out"
+
+avoid_phrases:
+  - "obviously"
+  - "clearly"
+  - "everyone knows"
+  - "it goes without saying"
+  - "excited to share"
+  - "let's dive in"
