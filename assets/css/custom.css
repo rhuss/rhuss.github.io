@@ -18,6 +18,11 @@ html {
   max-width: 2.8rem;
 }
 
+/* ── Hide header logo on homepage (profile already shows it) ── */
+body:has(header .rounded-full) .main-menu img.logo {
+  display: none;
+}
+
 /* ── Fonts ────────────────────────────── */
 html, body {
   font-family: 'Geist', system-ui, -apple-system, sans-serif;
