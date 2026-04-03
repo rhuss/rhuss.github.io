@@ -1,28 +1,29 @@
 ---
-title: "Datenschutzerklärung"
-description: "Datenschutzerklärung nach DSGVO"
+title: "Privacy Policy"
+description: "Privacy policy (Datenschutzerklärung) according to GDPR/DSGVO"
+aliases: ["/datenschutz/"]
 ---
 
-## 1. Verantwortlicher
+## 1. Data controller
 
 Roland Huß, [blog@ro14nd.de](mailto:blog@ro14nd.de)
 
 ## 2. Hosting
 
-Diese Website wird über GitHub Pages (GitHub Inc., USA) gehostet. GitHub kann technische Daten wie IP-Adressen verarbeiten. Weitere Informationen: [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+This website is hosted on GitHub Pages (GitHub Inc., USA). GitHub may process technical data such as IP addresses. For more information, see the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
-## 3. Kommentare
+## 3. Comments
 
-Für Kommentare wird Giscus verwendet, das auf GitHub Discussions basiert. Zur Nutzung ist ein GitHub-Konto erforderlich. Es gelten die [GitHub-Datenschutzrichtlinien](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+Comments are powered by Giscus, which is based on GitHub Discussions. A GitHub account is required to participate. The [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) applies.
 
-## 4. Analyse
+## 4. Analytics
 
-Diese Website verwendet keine Cookies und kein Tracking. Es werden keine personenbezogenen Daten zu Analysezwecken erhoben.
+This website does not use cookies or tracking. No personal data is collected for analytics purposes.
 
-## 5. Ihre Rechte
+## 5. Your rights
 
-Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Kontaktieren Sie mich unter der oben genannten E-Mail-Adresse.
+You have the right to access, rectification, erasure, restriction of processing, data portability, and objection. Contact me at the email address above.
 
-## 6. Links zu sozialen Medien
+## 6. Social media links
 
-Diese Website enthält Links zu LinkedIn, Mastodon und Bluesky. Es handelt sich um einfache Verlinkungen ohne Tracking oder Datenübertragung an diese Dienste beim Besuch dieser Website.
+This website contains links to LinkedIn, Mastodon, and Bluesky. These are simple hyperlinks with no tracking or data transfer to these services when visiting this website.
