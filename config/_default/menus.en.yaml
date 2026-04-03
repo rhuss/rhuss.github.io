@@ -1,0 +1,21 @@
+main:
+  - name: Posts
+    pageRef: posts
+    weight: 10
+  - name: Tags
+    pageRef: tags
+    weight: 20
+  - name: About
+    pageRef: about
+    weight: 30
+
+footer:
+  - name: Impressum
+    pageRef: impressum
+    weight: 10
+  - name: Datenschutz
+    pageRef: datenschutz
+    weight: 20
+  - name: License
+    pageRef: license
+    weight: 30
