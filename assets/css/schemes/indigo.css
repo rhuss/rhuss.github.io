@@ -14,17 +14,17 @@
   --color-neutral-700: 46, 52, 58;
   --color-neutral-800: 22, 25, 30;
   --color-neutral-900: 15, 17, 21;
-  /* Primary: teal/green-blue accent (works in both light and dark) */
-  --color-primary-50: 224, 248, 250;
-  --color-primary-100: 178, 235, 242;
-  --color-primary-200: 128, 222, 234;
-  --color-primary-300: 77, 208, 225;
-  --color-primary-400: 38, 198, 218;
-  --color-primary-500: 0, 188, 212;
-  --color-primary-600: 0, 172, 193;
-  --color-primary-700: 0, 151, 167;
-  --color-primary-800: 0, 131, 143;
-  --color-primary-900: 0, 96, 100;
+  /* Primary: mint/seafoam green accent (#5CE0D0 base) */
+  --color-primary-50: 230, 250, 248;
+  --color-primary-100: 200, 244, 238;
+  --color-primary-200: 160, 236, 226;
+  --color-primary-300: 120, 230, 216;
+  --color-primary-400: 92, 224, 208;
+  --color-primary-500: 60, 210, 192;
+  --color-primary-600: 40, 185, 168;
+  --color-primary-700: 24, 158, 142;
+  --color-primary-800: 14, 128, 114;
+  --color-primary-900: 8, 96, 84;
   /* Secondary: slate gray */
   --color-secondary-50: 248, 250, 252;
   --color-secondary-100: 241, 245, 249;
