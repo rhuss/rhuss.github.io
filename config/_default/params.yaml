@@ -16,6 +16,7 @@ article:
   showBreadcrumbs: false
   showTableOfContents: true
   showRelatedContent: true
+  relatedContentLimit: 3
   showComments: true
 
 footer:

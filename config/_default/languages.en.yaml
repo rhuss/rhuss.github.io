@@ -4,7 +4,7 @@ params:
   author:
     name: "Roland Huß"
     headline: "The Milkman of Human Kindness"
-    image: "images/profile.jpg"
+    image: "img/profile.jpg"
     links:
       - title: GitHub
         icon: github
