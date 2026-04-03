@@ -33,9 +33,9 @@
 }
 
 .dark {
-  --color-neutral: 17, 24, 39;
-  --color-neutral-50: 17, 24, 39;
-  --color-neutral-100: 31, 41, 55;
+  --color-neutral: 12, 12, 16;
+  --color-neutral-50: 12, 12, 16;
+  --color-neutral-100: 22, 22, 30;
   --color-neutral-200: 55, 65, 81;
   --color-neutral-300: 75, 85, 99;
   --color-neutral-400: 107, 114, 128;

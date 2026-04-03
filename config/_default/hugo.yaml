@@ -6,6 +6,7 @@ theme: blowfish
 enableRobotsTXT: true
 paginate: 10
 enableEmoji: true
+summaryLength: 70
 
 permalinks:
   posts: /:slug/
@@ -30,9 +31,4 @@ markup:
       strikethrough: true
       table: true
       taskList: true
-  highlight:
-    noClasses: true
-    style: github
-  tableOfContents:
-    startLevel: 2
-    endLevel: 4
+  # highlight and tableOfContents configured by Blowfish theme defaults
