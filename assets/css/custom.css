@@ -121,14 +121,20 @@ blockquote {
   color: rgb(var(--color-neutral-500));
 }
 
-/* ── Summary/teaser text on list pages ─── */
-.prose .summary,
-.article-summary {
-  line-height: 1.6875rem;
+/* ── Recent articles list: match content width ── */
+section.space-y-10 {
+  max-width: 85ch;
+}
+
+/* ── Summary/teaser: show full excerpt, no truncation ── */
+.article-link__summary {
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+  display: block !important;
+  max-width: 85ch;
   color: rgb(var(--color-neutral-600));
 }
 
-.dark .prose .summary,
-.dark .article-summary {
+.dark .article-link__summary {
   color: rgb(var(--color-neutral-500));
 }
