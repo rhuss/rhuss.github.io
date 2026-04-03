@@ -1,0 +1,119 @@
+/* ═══════════════════════════════════════════
+   ro14nd.de — Reading-first typography
+   ═══════════════════════════════════════════ */
+
+/* ── Root font size ────────────────────── */
+/* Tailwind text-lg = 1.125rem applied on body.
+   At 16px root this gives 18px, but browser reports 16px.
+   Bump root to 17.78px so 1.125rem = ~20px body text,
+   or simply increase root to get proportionally bigger text. */
+html {
+  font-size: 112.5%;  /* body text renders at ~18px */
+}
+
+/* ── Fonts ────────────────────────────── */
+html, body {
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Line height: 27px at 18px = 1.5 ─── */
+body, article, article p, article li,
+.prose, .prose p, .prose li {
+  line-height: 1.5;
+}
+
+/* ── Text + link colors (light mode) ─── */
+.article-content, .article-content p, .article-content li {
+  color: #333 !important;
+}
+
+html:not(.dark) .article-content a {
+  color: #333 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(0, 0, 0, 0.1) !important;
+  text-underline-offset: 2px;
+}
+
+html:not(.dark) .article-content a:hover {
+  color: #3F51B5 !important;
+  text-decoration-color: #3F51B5 !important;
+}
+
+/* ── Text + link colors (dark mode) ──── */
+.dark .article-content, .dark .article-content p, .dark .article-content li {
+  color: #acb7bc !important;
+}
+
+html.dark .article-content a,
+html.dark article .article-content a {
+  color: #acb7bc !important;
+  text-decoration-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .article-content a:hover,
+html.dark article .article-content a:hover {
+  color: rgb(var(--color-primary-400)) !important;
+  text-decoration-color: rgb(var(--color-primary-400)) !important;
+}
+
+code, pre, pre code {
+  font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+}
+
+/* ── Article measure (65–75ch) ─────────── */
+article .article-content,
+.prose {
+  max-width: 70ch;
+}
+
+/* ── Inline code ───────────────────────── */
+:not(pre) > code {
+  font-size: 0.88em;
+  padding: 0.12em 0.35em;
+  border-radius: 4px;
+  background: rgba(var(--color-neutral-200), 0.6);
+  color: rgb(var(--color-neutral-800));
+  font-weight: 450;
+}
+
+.dark :not(pre) > code {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgb(var(--color-primary-500));
+}
+
+/* ── Code blocks ───────────────────────── */
+pre {
+  font-size: 0.88em;
+  line-height: 1.55;
+  border-radius: 8px;
+  border: 1px solid rgba(var(--color-neutral-200), 0.8);
+}
+
+.dark pre {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Blockquotes ───────────────────────── */
+blockquote {
+  border-left: 3px solid rgb(var(--color-primary-400));
+  padding-left: 1.25em;
+  color: rgb(var(--color-neutral-600));
+  font-style: italic;
+}
+
+.dark blockquote {
+  border-left-color: rgb(var(--color-primary-500));
+  color: rgb(var(--color-neutral-500));
+}
+
+/* ── Summary/teaser text on list pages ─── */
+.prose .summary,
+.article-summary {
+  line-height: 1.6875rem;
+  color: rgb(var(--color-neutral-600));
+}
+
+.dark .prose .summary,
+.dark .article-summary {
+  color: rgb(var(--color-neutral-500));
+}

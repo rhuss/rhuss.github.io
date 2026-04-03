@@ -1,4 +1,4 @@
-colorScheme: "indigo"
+colorScheme: "noir"
 defaultAppearance: "light"
 autoSwitchAppearance: true
 
@@ -6,6 +6,7 @@ homepage:
   layout: "profile"
   showRecent: true
   recentLimit: 10
+  cardView: false
 
 article:
   showReadingTime: true
@@ -26,5 +27,6 @@ footer:
 list:
   showBreadcrumbs: false
   groupByYear: true
+  showSummary: true
 
 enableSearch: true
