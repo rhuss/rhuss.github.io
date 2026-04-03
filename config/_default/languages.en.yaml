@@ -1,0 +1,20 @@
+languageName: English
+weight: 1
+params:
+  author:
+    name: "Roland Huß"
+    headline: "The Milkman of Human Kindness"
+    image: "images/profile.jpg"
+    links:
+      - title: GitHub
+        icon: github
+        url: https://github.com/rhuss
+      - title: LinkedIn
+        icon: linkedin
+        url: https://linkedin.com/in/ro14nd
+      - title: Mastodon
+        icon: mastodon
+        url: https://hachyderm.io/@ro14nd
+      - title: Bluesky
+        icon: bluesky
+        url: https://bsky.app/profile/ro14nd.bsky.social

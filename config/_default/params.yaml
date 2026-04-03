@@ -1,0 +1,29 @@
+colorScheme: "indigo"
+defaultAppearance: "light"
+autoSwitchAppearance: true
+
+homepage:
+  layout: "profile"
+  showRecent: true
+  recentLimit: 10
+
+article:
+  showReadingTime: true
+  showWordCount: true
+  showDate: true
+  showDateUpdated: false
+  showAuthor: true
+  showBreadcrumbs: false
+  showTableOfContents: true
+  showRelatedContent: true
+  showComments: true
+
+footer:
+  showCopyright: true
+  showThemeAttribution: false
+
+list:
+  showBreadcrumbs: false
+  groupByYear: true
+
+enableSearch: true

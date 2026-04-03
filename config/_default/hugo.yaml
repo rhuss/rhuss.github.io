@@ -1,0 +1,38 @@
+baseURL: "https://ro14nd.de/"
+languageCode: en
+title: "Roland Huß"
+theme: blowfish
+
+enableRobotsTXT: true
+paginate: 10
+enableEmoji: true
+
+permalinks:
+  posts: /:slug/
+
+taxonomies:
+  tag: tags
+  category: categories
+  series: series
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      footnote: true
+      strikethrough: true
+      table: true
+      taskList: true
+  highlight:
+    noClasses: true
+    style: github
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4

@@ -1,5 +1,11 @@
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+_site/
+.sass-cache/
 *.plist
-_site
-.sass-cache
 .UlyssesRoot
 *.lock
+.claude/*.local.md
+sandbox/
