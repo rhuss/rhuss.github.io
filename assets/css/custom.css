@@ -132,9 +132,21 @@ blockquote {
   color: rgb(var(--color-neutral-500));
 }
 
-/* ── Recent articles list: match content width ── */
+/* ── Homepage: reduce gap between profile and posts ── */
+section > h2.mt-8 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Recent articles list: match content width, tighter spacing ── */
 section.space-y-10 {
   max-width: 85ch;
+}
+
+section.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0 !important;
 }
 
 /* ── Summary/teaser: show full excerpt, no truncation ── */
