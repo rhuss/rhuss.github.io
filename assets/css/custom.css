@@ -76,7 +76,26 @@ code, pre, pre code {
 }
 
 /* ── Article measure and spacing ────────── */
-article .article-content,
+article .article-content {
+  max-width: 70ch;
+  width: 70ch;
+}
+
+/* TOC: position outside content flow so it doesn't shrink text */
+@media (min-width: 1024px) {
+  section.flex.lg\:flex-row {
+    position: relative;
+    overflow: visible;
+  }
+  section.flex.lg\:flex-row > div.order-first {
+    position: absolute;
+    right: -16rem;
+    top: 0;
+    width: 14rem;
+  }
+}
+
+/* Keep prose/summary at 85ch for homepage list */
 .prose {
   max-width: 85ch;
 }
