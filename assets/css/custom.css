@@ -119,6 +119,13 @@ pre {
   border-color: rgba(255, 255, 255, 0.06);
 }
 
+/* ── Article headings: tighter top margin ── */
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+  margin-top: 1.4em;
+}
+
 /* ── Blockquotes ───────────────────────── */
 blockquote {
   border-left: 3px solid rgb(var(--color-primary-400));
