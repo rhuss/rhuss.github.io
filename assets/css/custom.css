@@ -150,6 +150,12 @@ html.dark .article-link__summary {
   color: #acb7bc !important;
 }
 
+/* ── Search input focus: accent color ─── */
+#search-query:focus {
+  outline: 2px solid rgb(var(--color-primary-500)) !important;
+  outline-offset: -1px;
+}
+
 /* ── Giscus comments styling ──────────── */
 .giscus, .giscus-frame {
   max-width: 85ch;
