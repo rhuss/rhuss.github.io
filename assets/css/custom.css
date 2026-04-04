@@ -135,6 +135,6 @@ section.space-y-10 {
   color: rgb(var(--color-neutral-600));
 }
 
-.dark .article-link__summary {
-  color: rgb(var(--color-neutral-500));
+html.dark .article-link__summary {
+  color: #acb7bc !important;
 }
