@@ -76,29 +76,16 @@ code, pre, pre code {
 }
 
 /* ── Article measure and spacing ────────── */
-article .article-content {
-  max-width: 70ch;
-  width: 70ch;
-}
-
-/* TOC: float right, outside content flow, sticky on scroll */
-@media (min-width: 1024px) {
-  section.flex.lg\:flex-row {
-    display: block;
-  }
-  section.flex.lg\:flex-row > div.order-first {
-    float: right;
-    position: sticky;
-    top: 1rem;
-    width: 14rem;
-    margin-right: -16rem;
-    padding-left: 2rem;
-  }
-}
-
-/* Keep prose/summary at 85ch for homepage list */
+article .article-content,
 .prose {
   max-width: 85ch;
+}
+
+/* Ensure TOC column always takes space for consistent content width */
+@media (min-width: 1024px) {
+  section.flex.lg\:flex-row > div.order-first {
+    min-width: 309px;
+  }
 }
 
 .article-content.mb-20 {
