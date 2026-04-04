@@ -1,6 +1,10 @@
 <script>
   // Determine current theme from Blowfish's dark class
-  const giscusTheme = document.documentElement.classList.contains('dark') ? 'noborder_dark' : 'noborder_light';
+  // Use custom CSS themes hosted on the site for font size and monospace editor
+  const baseUrl = window.location.origin;
+  const giscusTheme = document.documentElement.classList.contains('dark')
+    ? baseUrl + '/giscus-custom-dark.css'
+    : baseUrl + '/giscus-custom-light.css';
 
   const script = document.createElement('script');
   script.src = 'https://giscus.app/client.js';
@@ -22,7 +26,9 @@
   const observer = new MutationObserver(() => {
     const iframe = document.querySelector('iframe.giscus-frame');
     if (iframe) {
-      const newTheme = document.documentElement.classList.contains('dark') ? 'noborder_dark' : 'noborder_light';
+      const newTheme = document.documentElement.classList.contains('dark')
+        ? baseUrl + '/giscus-custom-dark.css'
+        : baseUrl + '/giscus-custom-light.css';
       iframe.contentWindow.postMessage(
         { giscus: { setConfig: { theme: newTheme } } },
         'https://giscus.app'

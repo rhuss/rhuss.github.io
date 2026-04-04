@@ -1,0 +1,31 @@
+/* Custom Giscus theme for ro14nd.de - Light mode */
+@import url('https://giscus.app/themes/noborder_light.css');
+
+/* Match blog font size */
+.gsc-comment-box-textarea,
+.gsc-comment-box,
+.gsc-reply-box,
+main {
+  font-size: 18px !important;
+}
+
+/* Comment text */
+.gsc-comment-content,
+.gsc-reply-content,
+.gsc-comment-content p,
+.gsc-reply-content p {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
+
+/* Editor textarea in monospace */
+.gsc-comment-box-textarea {
+  font-family: 'JetBrains Mono', 'Source Code Pro', ui-monospace, monospace !important;
+  font-size: 16px !important;
+}
+
+/* Markdown body (rendered comments) */
+.markdown-body {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
