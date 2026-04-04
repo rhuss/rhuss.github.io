@@ -81,17 +81,18 @@ article .article-content {
   width: 70ch;
 }
 
-/* TOC: position outside content flow so it doesn't shrink text */
+/* TOC: float right, outside content flow, sticky on scroll */
 @media (min-width: 1024px) {
   section.flex.lg\:flex-row {
-    position: relative;
-    overflow: visible;
+    display: block;
   }
   section.flex.lg\:flex-row > div.order-first {
-    position: absolute;
-    right: -16rem;
-    top: 0;
+    float: right;
+    position: sticky;
+    top: 1rem;
     width: 14rem;
+    margin-right: -16rem;
+    padding-left: 2rem;
   }
 }
 
