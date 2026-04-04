@@ -1,14 +1,33 @@
-<script src="https://giscus.app/client.js"
-        data-repo="rhuss/rhuss.github.io"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkxMTk0ODExNw=="
-        data-category-id="DIC_kwDOALZQVc4C6A6v"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
+<script>
+  // Determine current theme from Blowfish's dark class
+  const giscusTheme = document.documentElement.classList.contains('dark') ? 'noborder_dark' : 'noborder_light';
+
+  const script = document.createElement('script');
+  script.src = 'https://giscus.app/client.js';
+  script.setAttribute('data-repo', 'rhuss/rhuss.github.io');
+  script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkxMTk0ODExNw==');
+  script.setAttribute('data-category-id', 'DIC_kwDOALZQVc4C6A6v');
+  script.setAttribute('data-mapping', 'pathname');
+  script.setAttribute('data-strict', '0');
+  script.setAttribute('data-reactions-enabled', '1');
+  script.setAttribute('data-emit-metadata', '0');
+  script.setAttribute('data-input-position', 'top');
+  script.setAttribute('data-theme', giscusTheme);
+  script.setAttribute('data-lang', 'en');
+  script.setAttribute('crossorigin', 'anonymous');
+  script.async = true;
+  document.currentScript.parentElement.appendChild(script);
+
+  // Sync theme when Blowfish toggles dark mode
+  const observer = new MutationObserver(() => {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe) {
+      const newTheme = document.documentElement.classList.contains('dark') ? 'noborder_dark' : 'noborder_light';
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: newTheme } } },
+        'https://giscus.app'
+      );
+    }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 </script>
