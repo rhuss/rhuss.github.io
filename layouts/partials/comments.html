@@ -1,10 +1,15 @@
 <script>
-  // Determine current theme from Blowfish's dark class
-  // Use custom CSS themes hosted on the site for font size and monospace editor
+  // Use custom CSS themes on production, built-in themes on localhost
+  const isLocal = window.location.hostname === 'localhost';
   const baseUrl = window.location.origin;
-  const giscusTheme = document.documentElement.classList.contains('dark')
-    ? baseUrl + '/giscus-custom-dark.css'
-    : baseUrl + '/giscus-custom-light.css';
+  const isDark = document.documentElement.classList.contains('dark');
+
+  function getTheme(dark) {
+    if (isLocal) return dark ? 'noborder_dark' : 'noborder_light';
+    return dark
+      ? baseUrl + '/giscus-custom-dark.css'
+      : baseUrl + '/giscus-custom-light.css';
+  }
 
   const script = document.createElement('script');
   script.src = 'https://giscus.app/client.js';
@@ -16,7 +21,7 @@
   script.setAttribute('data-reactions-enabled', '1');
   script.setAttribute('data-emit-metadata', '0');
   script.setAttribute('data-input-position', 'top');
-  script.setAttribute('data-theme', giscusTheme);
+  script.setAttribute('data-theme', getTheme(isDark));
   script.setAttribute('data-lang', 'en');
   script.setAttribute('crossorigin', 'anonymous');
   script.async = true;
@@ -26,11 +31,8 @@
   const observer = new MutationObserver(() => {
     const iframe = document.querySelector('iframe.giscus-frame');
     if (iframe) {
-      const newTheme = document.documentElement.classList.contains('dark')
-        ? baseUrl + '/giscus-custom-dark.css'
-        : baseUrl + '/giscus-custom-light.css';
       iframe.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: newTheme } } },
+        { giscus: { setConfig: { theme: getTheme(document.documentElement.classList.contains('dark')) } } },
         'https://giscus.app'
       );
     }
