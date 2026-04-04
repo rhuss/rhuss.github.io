@@ -1,6 +1,11 @@
 ---
 title: "License"
 description: "Content license for this blog"
+showReadingTime: false
+showWordCount: false
+showDate: false
+showComments: false
+showPagination: false
 ---
 
 ## Content License

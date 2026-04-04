@@ -1,6 +1,11 @@
 ---
 title: "About"
 description: "About Roland Huß and this blog"
+showReadingTime: false
+showWordCount: false
+showDate: false
+showComments: false
+showPagination: false
 ---
 
 This site contains my thoughts and articles on computer related stuff. The content is probably a bit Kubernetes, cloud-native, and developer tooling biased, but this might shift over time. My goal is to write regularly. Hard enough.
