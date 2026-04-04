@@ -18,12 +18,11 @@ I do Open Source. Among my projects are [Jolokia](https://www.jolokia.org), the 
 
 For information about my professional career, find me on [LinkedIn](https://linkedin.com/in/ro14nd).
 
-### Contact me
+### Contact
 
-[blog@ro14nd.de](mailto:blog@ro14nd.de)
+Roland Huß, [blog@ro14nd.de](mailto:blog@ro14nd.de)
 
 ### Legal
 
-- [Legal Notice](/impressum/) (Impressum)
-- [Privacy Policy](/datenschutz/) (Datenschutzerklärung)
+- [Privacy Policy](/datenschutz/)
 - [License](/license/) (CC BY 4.0)

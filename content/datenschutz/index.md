@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "Privacy policy (Datenschutzerklärung) according to GDPR/DSGVO"
+description: "Privacy policy according to GDPR"
 aliases: ["/datenschutz/"]
 showReadingTime: false
 showWordCount: false
