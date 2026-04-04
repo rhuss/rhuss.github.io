@@ -163,7 +163,7 @@ MimePart partToRemove = partExtractor.getPartByPartNr(message,"2.1",parentBodys)
 
 This example could be extended to remove multipart containers on the fly, if only one part is left after removal and replace the multipart with its then last child or remove an empty multipart altogether when its last child has been removed.
 
-## Summary
+### Summary
 
 Hopefully, I could sketch out that there are several points to take care of when manipulating existing JavaMail `Messages` (it's not that difficult if you build up one from scratch). The code shown above is only a starting point, but it hopefully saves you some time when you start wondering why on earth your nicely trimmed message isn't stored correctly on the IMAP store.
 
