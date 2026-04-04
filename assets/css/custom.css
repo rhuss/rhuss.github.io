@@ -142,7 +142,7 @@ blockquote {
 /* ── Homepage: reduce gap between profile and posts ── */
 section > h2.mt-8 {
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
 }
 
 /* ── Recent articles list: match content width, tighter spacing ── */
@@ -152,7 +152,7 @@ section.space-y-10 {
 
 section.space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0 !important;
-  margin-top: 1.25rem !important;
+  margin-top: 20px !important;
   margin-bottom: 0 !important;
 }
 
