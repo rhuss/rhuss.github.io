@@ -2,6 +2,11 @@
 title: "Privacy Policy"
 description: "Privacy policy (Datenschutzerklärung) according to GDPR/DSGVO"
 aliases: ["/datenschutz/"]
+showReadingTime: false
+showWordCount: false
+showDate: false
+showComments: false
+showPagination: false
 ---
 
 ## 1. Data controller

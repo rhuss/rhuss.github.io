@@ -2,6 +2,11 @@
 title: "Legal Notice"
 description: "Legal notice (Impressum) according to German DDG"
 aliases: ["/impressum/"]
+showReadingTime: false
+showWordCount: false
+showDate: false
+showComments: false
+showPagination: false
 ---
 
 **Information pursuant to DDG (Digitale-Dienste-Gesetz)**
