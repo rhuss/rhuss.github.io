@@ -138,3 +138,8 @@ section.space-y-10 {
 html.dark .article-link__summary {
   color: #acb7bc !important;
 }
+
+/* ── Giscus comments styling ──────────── */
+.giscus, .giscus-frame {
+  max-width: 85ch;
+}
