@@ -1,31 +1,34 @@
 /* Custom Giscus theme for ro14nd.de - Light mode */
 @import url('https://giscus.app/themes/noborder_light.css');
 
-/* Match blog font size */
-.gsc-comment-box-textarea,
-.gsc-comment-box,
-.gsc-reply-box,
-main {
-  font-size: 18px !important;
+/* Reduce borders */
+.gsc-main, .gsc-comment-box, .gsc-header {
+  border: none !important;
 }
 
-/* Comment text */
-.gsc-comment-content,
-.gsc-reply-content,
-.gsc-comment-content p,
-.gsc-reply-content p {
-  font-size: 18px !important;
-  line-height: 1.5 !important;
+.gsc-comment-box-tabs {
+  border-bottom: 1px solid #e5e7eb !important;
 }
 
-/* Editor textarea in monospace */
-.gsc-comment-box-textarea {
-  font-family: 'JetBrains Mono', 'Source Code Pro', ui-monospace, monospace !important;
+/* Reaction buttons font */
+.gsc-direct-reaction-buttons button,
+.gsc-reactions-count,
+.gsc-reactions button {
   font-size: 16px !important;
 }
 
-/* Markdown body (rendered comments) */
-.markdown-body {
-  font-size: 18px !important;
+/* Textarea: monospace, larger */
+.gsc-comment-box-textarea {
+  font-family: 'JetBrains Mono', 'Cascadia Code', ui-monospace, monospace !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* Comment text matching blog size */
+.gsc-comment-content p,
+.gsc-reply-content p,
+.markdown-body,
+.markdown-body p {
+  font-size: 17px !important;
   line-height: 1.5 !important;
 }
