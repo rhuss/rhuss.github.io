@@ -4,7 +4,7 @@ date: 2015-03-23
 slug: "jmx4perl-on-osx"
 aliases: ["/Jmx4Perl-on-OSX/"]
 description: ""
-tags: []
+tags: ["jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 

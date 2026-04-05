@@ -3,7 +3,7 @@ title: "docker-maven-plugin moves on"
 date: 2016-02-24
 slug: "dmp-moves-on"
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

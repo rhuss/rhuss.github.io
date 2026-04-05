@@ -4,7 +4,7 @@ date: 2014-08-25
 slug: "docker-for-developers"
 aliases: ["/Docker-for-Developers/"]
 description: ""
-tags: []
+tags: ["docker", "java", "archive"]
 license: "CC BY 4.0"
 ---
 

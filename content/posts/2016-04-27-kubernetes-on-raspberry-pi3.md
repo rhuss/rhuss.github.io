@@ -3,7 +3,7 @@ title: "A Raspberry Pi 3 Kubernetes Cluster"
 date: 2016-04-27
 slug: "kubernetes-on-raspberry-pi3"
 description: ""
-tags: []
+tags: ["kubernetes", "raspberry-pi", "archive"]
 license: "CC BY 4.0"
 ---
 

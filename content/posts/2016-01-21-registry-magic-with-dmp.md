@@ -3,7 +3,7 @@ title: "Registry Magic with docker-maven-plugin"
 date: 2016-01-21
 slug: "registry-magic-with-dmp"
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

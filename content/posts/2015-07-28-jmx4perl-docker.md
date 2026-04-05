@@ -3,7 +3,7 @@ title: "Jmx4Perl for everyone"
 date: 2015-07-28
 slug: "jmx4perl-docker"
 description: ""
-tags: []
+tags: ["docker", "jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 

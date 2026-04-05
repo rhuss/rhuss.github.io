@@ -3,7 +3,7 @@ title: "Java EE Management is dead"
 date: 2016-10-10
 slug: "java-management-is-dead"
 description: ""
-tags: []
+tags: ["jolokia", "java", "archive"]
 license: "CC BY 4.0"
 ---
 

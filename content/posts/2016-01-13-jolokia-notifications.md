@@ -3,7 +3,7 @@ title: "Jolokia 2.0 - JMX Notifications"
 date: 2016-01-13
 slug: "jolokia-notifications"
 description: ""
-tags: []
+tags: ["jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 
