@@ -24,6 +24,7 @@ article:
   showRelatedContent: true
   relatedContentLimit: 3
   showComments: true
+  showTaxonomies: true
 
 footer:
   showCopyright: true
