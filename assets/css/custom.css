@@ -175,6 +175,22 @@ html.dark .article-link__summary {
   outline-offset: -1px;
 }
 
+/* ── AI attribution (AIA toolkit) ────── */
+.ai-attribution {
+  font-size: 7pt;
+  color: #999;
+  margin-top: 2em;
+}
+
+.ai-attribution a {
+  color: #999 !important;
+  text-decoration: none !important;
+}
+
+.ai-attribution a:hover {
+  text-decoration: underline !important;
+}
+
 /* ── Giscus comments styling ──────────── */
 .giscus, .giscus-frame {
   max-width: 85ch;
