@@ -9,3 +9,4 @@ _site/
 *.lock
 .claude/*.local.md
 sandbox/
+brainstorm/
