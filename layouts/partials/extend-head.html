@@ -9,9 +9,7 @@
 {{ end }}
 
 <!-- RSS feed autodiscovery -->
-{{ with .OutputFormats.Get "RSS" }}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-{{ end }}
+<link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | absURL }}" title="{{ .Title }}" />
 
 <!-- Plausible Analytics -->
 <script defer data-domain="ro14nd.de" src="https://plausible.tichny.org/js/script.outbound-links.file-downloads.js"></script>
