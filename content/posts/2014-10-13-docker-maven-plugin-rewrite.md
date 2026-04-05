@@ -4,7 +4,7 @@ date: 2014-10-13
 slug: "docker-maven-plugin-rewrite"
 aliases: ["/Docker-Maven-Plugin-Rewrite/"]
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

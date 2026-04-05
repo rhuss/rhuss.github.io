@@ -3,7 +3,7 @@ title: "When a Dockerfile is just good enough"
 date: 2018-04-12
 slug: "simple-dockerfile-mode-dmp"
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

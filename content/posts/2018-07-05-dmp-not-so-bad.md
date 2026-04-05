@@ -3,7 +3,7 @@ title: "docker-maven-plugin might be still useful"
 date: 2018-07-05
 slug: "dmp-not-so-bad"
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

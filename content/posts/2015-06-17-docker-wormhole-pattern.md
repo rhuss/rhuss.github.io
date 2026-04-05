@@ -4,7 +4,7 @@ date: 2015-06-17
 slug: "docker-wormhole-pattern"
 aliases: ["/Docker-Wormhole-Pattern/"]
 description: ""
-tags: []
+tags: ["docker", "archive"]
 license: "CC BY 4.0"
 ---
 

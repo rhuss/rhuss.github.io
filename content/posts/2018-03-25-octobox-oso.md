@@ -3,7 +3,7 @@ title: "Bringing Octobox to OpenShift Online"
 date: 2018-03-25
 slug: "octobox-oso"
 description: ""
-tags: []
+tags: ["kubernetes", "archive"]
 license: "CC BY 4.0"
 ---
 

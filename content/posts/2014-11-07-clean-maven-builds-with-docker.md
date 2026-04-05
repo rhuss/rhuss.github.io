@@ -4,7 +4,7 @@ date: 2014-11-07
 slug: "clean-maven-builds-with-docker"
 aliases: ["/Clean-Maven-builds-with-Docker/"]
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

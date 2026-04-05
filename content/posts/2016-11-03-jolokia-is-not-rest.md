@@ -3,7 +3,7 @@ title: "Why Jolokia is not RESTful"
 date: 2016-11-03
 slug: "jolokia-is-not-rest"
 description: ""
-tags: []
+tags: ["jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 

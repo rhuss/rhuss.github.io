@@ -4,7 +4,7 @@ date: 2014-08-18
 slug: "jolokia-cors"
 aliases: ["/Jolokia-CORS/"]
 description: ""
-tags: []
+tags: ["jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 

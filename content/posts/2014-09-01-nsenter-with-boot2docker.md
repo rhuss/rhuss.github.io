@@ -4,7 +4,7 @@ date: 2014-09-01
 slug: "nsenter-with-boot2docker"
 aliases: ["/NSEnter-with-Boot2Docker/"]
 description: ""
-tags: []
+tags: ["docker", "archive"]
 license: "CC BY 4.0"
 ---
 

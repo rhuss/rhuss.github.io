@@ -3,7 +3,7 @@ title: "RasPi 3 Kubernetes Cluster - An Update"
 date: 2017-04-05
 slug: "k8s-on-pi-update"
 description: ""
-tags: []
+tags: ["kubernetes", "raspberry-pi", "archive"]
 license: "CC BY 4.0"
 ---
 

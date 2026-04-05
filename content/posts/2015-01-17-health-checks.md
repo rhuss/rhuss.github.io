@@ -4,7 +4,7 @@ date: 2015-01-17
 slug: "health-checks"
 aliases: ["/Health-Checks/"]
 description: ""
-tags: []
+tags: ["jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 

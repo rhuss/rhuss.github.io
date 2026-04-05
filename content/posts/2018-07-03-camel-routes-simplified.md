@@ -3,7 +3,7 @@ title: "Elegant Camel route configuration"
 date: 2018-07-03
 slug: "camel-routes-simplified"
 description: ""
-tags: []
+tags: ["java", "archive"]
 license: "CC BY 4.0"
 ---
 

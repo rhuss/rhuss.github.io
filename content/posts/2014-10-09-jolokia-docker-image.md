@@ -4,7 +4,7 @@ date: 2014-10-09
 slug: "jolokia-docker-image"
 aliases: ["/Jolokia-Docker-Image/"]
 description: ""
-tags: []
+tags: ["docker", "jolokia", "archive"]
 license: "CC BY 4.0"
 ---
 

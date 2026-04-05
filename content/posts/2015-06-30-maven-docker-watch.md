@@ -3,7 +3,7 @@ title: "docker:watch"
 date: 2015-06-30
 slug: "maven-docker-watch"
 description: ""
-tags: []
+tags: ["docker", "maven", "archive"]
 license: "CC BY 4.0"
 ---
 

@@ -3,7 +3,7 @@ title: "fish-pepper - Docker on Capsaicin"
 date: 2015-09-07
 slug: "fish-pepper-announcement"
 description: ""
-tags: []
+tags: ["docker", "archive"]
 license: "CC BY 4.0"
 ---
 

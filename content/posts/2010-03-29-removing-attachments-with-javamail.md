@@ -4,7 +4,7 @@ date: 2010-03-29
 slug: "removing-attachments-with-javamail"
 aliases: ["/Removing-Attachments-with-JavaMail/"]
 description: ""
-tags: []
+tags: ["java", "archive"]
 license: "CC BY 4.0"
 ---
 
