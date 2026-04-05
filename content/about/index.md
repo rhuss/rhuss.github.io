@@ -8,7 +8,7 @@ showComments: false
 showPagination: false
 ---
 
-This site contains my thoughts and articles on computer related stuff. The content is probably a bit Kubernetes, cloud-native, and developer tooling biased, but this might shift over time. My goal is to write regularly. Hard enough.
+This site contains my thoughts and articles on computer related stuff. The content is probably a bit Kubernetes, cloud-native, and developer tooling biased, but this is shifting towards AI-first engineering and agentic coding.
 
 ### About me
 
