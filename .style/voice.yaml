@@ -33,6 +33,7 @@ sentence_patterns:
   avg_length_target: 19
   variation: "moderate"
   rhetorical_questions: true
+  avoid_staccato: true  # Don't stack multiple short punchy sentences in a row. Flow over punch.
 
 elaboration:
   depth: "moderate"

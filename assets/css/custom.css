@@ -191,6 +191,30 @@ html.dark .article-link__summary {
   text-decoration: underline !important;
 }
 
+/* ── Theme-aware diagrams ──────────────── */
+.diagram-themed img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 1.5em auto;
+}
+
+.diagram-themed .diagram-light {
+  display: block;
+}
+
+.diagram-themed .diagram-dark {
+  display: none;
+}
+
+html.dark .diagram-themed .diagram-light {
+  display: none;
+}
+
+html.dark .diagram-themed .diagram-dark {
+  display: block;
+}
+
 /* ── Giscus comments styling ──────────── */
 .giscus, .giscus-frame {
   max-width: 85ch;
