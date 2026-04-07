@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "hugo@hugo-plugin-development": true
+  }
+}
