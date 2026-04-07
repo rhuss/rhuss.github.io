@@ -4,6 +4,8 @@ date: 2026-04-06
 slug: "cc-skill-patterns"
 description: "Practical patterns from building Claude Code skills. Why skills are suggestions not instructions, how hooks enforce what skills can't, and when to reach for a script."
 tags: ["claude-code", "context-engineering", "ai"]
+keywords: ["Claude Code skills", "skill patterns", "hooks", "context engineering", "agentic coding", "Claude Code plugins"]
+images: ["/images/cc-skill-patterns/og.png"]
 license: "CC BY 4.0"
 draft: true
 ---
