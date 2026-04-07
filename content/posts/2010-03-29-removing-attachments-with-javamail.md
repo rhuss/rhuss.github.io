@@ -27,7 +27,7 @@ Beside plain content, A `BodyPart` can contain another `Multipart` or even anoth
 
 As you can see, the structure of a `Message` can be rather heterogenous, a tree with nodes of different types. The following picture illustrates the tree structure for a sample message.
 
-<img src="/images/javamail-message.png" style="margin: auto;"/>
+<img src="/images/removing-attachments-with-javamail/javamail-message.png" style="margin: auto;"/>
 
 
 This object tree can be navigated in both directions:

@@ -17,7 +17,7 @@ This post shows how Octobox can be ported to the free "starter" tier of [OpenShi
 
 <!--more-->
 
-<img src="/images/octobox.png" style="margin: auto;"/>
+<img src="/images/octobox-oso/octobox.png" style="margin: auto;"/>
 
 ## Application setup
 

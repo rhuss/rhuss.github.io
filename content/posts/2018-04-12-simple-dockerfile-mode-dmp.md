@@ -20,7 +20,7 @@ Since 0.25.1 d-m-p supports a zero XML configuration mode, the so-called [Simple
 The idea of this mode started with a Twitter discussion:
 
 
-<img src="/images/maven-dmp-tweet.png" class="shadow center"/>
+<img src="/images/simple-dockerfile-mode-dmp/maven-dmp-tweet.png" class="shadow center"/>
 
 
 And actually, it's true: If all that you want is to build a single Docker image from a Dockerfile, then the initial configuration is indeed too complex.

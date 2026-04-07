@@ -11,7 +11,7 @@ I'm a big fan of the [Camel Java DSL][camel-java-dsl] for defining Camel routes 
 <!--more-->
 
 <!--
-<img src="/images/camel-logo.png" style="margin-top: 0px; margin-left: 40px; float: right"/>
+<img src="/images/camel-routes-simplified/camel-logo.png" style="margin-top: 0px; margin-left: 40px; float: right"/>
 -->
 
 If you are a Camel user, you know, that defining a route for a given Camel context `ctx` ist just a matter to implement the `configure()` method of the abstract `RouteBuilder` class:
