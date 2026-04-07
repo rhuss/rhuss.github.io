@@ -7,7 +7,7 @@ tags: ["meta", "writing", "ai", "kubernetes"]
 keywords: ["blog restart", "context engineering", "AgentOps", "Kubernetes", "AI engineering", "Spec Driven Development"]
 images: ["/images/blog-winter-is-over/og.png"]
 license: "CC BY 4.0"
-draft: true
+draft: false
 ---
 
 The last post on this blog was about [Jib](https://github.com/GoogleContainerTools/jib), Google's daemonless Java image builder. That was July 2018. Almost eight years ago. Anybody remember when that was the latest hotness?
