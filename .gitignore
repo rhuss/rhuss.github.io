@@ -10,3 +10,5 @@ _site/
 .claude/*.local.md
 sandbox/
 brainstorm/
+.claude/settings.local.json
+.playwright-mcp/
