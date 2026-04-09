@@ -12,7 +12,7 @@ draft: false
 
 The last post on this blog was about [Jib](https://github.com/GoogleContainerTools/jib), Google's daemonless Java image builder. That was July 2018. Almost eight years ago. Anybody remember when that was the latest hotness?
 
-Before that, I wrote about Docker when Docker was still exciting and built a [Kubernetes cluster on Raspberry Pi 3](/kubernetes-on-raspberry-pi3/) nodes when that was still a weekend adventure. I spent way too many words on Jolokia and JMX. 27 posts between 2010 and 2018, then silence. If you've been reading tech blogs long enough, you know how that goes.
+Before that, I wrote about Docker when Docker was still exciting and built a [Kubernetes cluster on Raspberry Pi 3](/kubernetes-on-raspberry-pi3/) nodes when that was still a weekend adventure. I spent way many words on Jolokia and JMX. 27 posts between 2010 and 2018, then silence. If you've been reading tech blogs long enough, you know how that goes.
 
 So what breaks eight years of silence?
 <!--more-->
