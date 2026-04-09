@@ -1,13 +1,13 @@
 ---
 title: "Claude Code skill patterns"
-date: 2026-04-06
+date: 2026-04-09
 slug: "cc-skill-patterns"
 description: "Practical patterns from building Claude Code skills. Why skills are suggestions not instructions, how hooks enforce what skills can't, and when to reach for a script."
 tags: ["claude-code", "context-engineering", "ai"]
 keywords: ["Claude Code skills", "skill patterns", "hooks", "context engineering", "agentic coding", "Claude Code plugins"]
 images: ["/images/cc-skill-patterns/og.png"]
 license: "CC BY 4.0"
-draft: true
+draft: false
 ---
 
 Claude Code skills let you extend a coding agent with custom workflows, specialist knowledge, and automation. You write a `SKILL.md` file with instructions, and the agent follows them. At least, that's the idea.
@@ -15,7 +15,7 @@ Claude Code skills let you extend a coding agent with custom workflows, speciali
 In practice, Claude treats skill content as advice, not as instructions. A skill that says "always use spec-kit to create the specification" might get followed, or Claude might decide it already has enough context from the brainstorming phase to write the spec directly. It's being helpful, but it's also wrong. This post describes patterns for dealing with that challenge, from scripts that enforce consistency to hooks that block shortcuts before they happen.
 <!--more-->
 
-Stronger wording does not help. I tried "MUST", "ALWAYS", "CRITICAL", bold, uppercase. None of it changes the fundamental dynamic: the model reads your skill, considers it, and then makes its own judgment call. Compare that to hook-injected context (system reminders), which Claude treats as ground truth. This difference in compliance is not a bug, it's how the architecture works. Understanding it early saves you from writing increasingly aggressive skill instructions that still get ignored.
+Stronger wording does not help. I tried "MUST", "ALWAYS", "CRITICAL", bold, uppercase. None of it changes the underlying behavior: the model reads your skill, considers it, and then makes its own judgment call. Compare that to hook-injected context (system reminders), which Claude treats as ground truth. This difference in compliance is not a bug, it's how the architecture works. Understanding it early saves you from writing increasingly aggressive skill instructions that still get ignored.
 
 The patterns in this post come from building [cc-prose](https://github.com/rhuss/cc-prose) (voice-consistent writing), [cc-spex](https://github.com/rhuss/cc-spex) (spec-driven development on top of [spec-kit](https://github.com/github/spec-kit)), and a few others.
 
