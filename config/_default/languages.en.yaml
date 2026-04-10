@@ -6,15 +6,7 @@ params:
     headline: "The Milkman of Human Kindness"
     image: "img/profile.jpg"
     links:
-      - title: GitHub
-        icon: github
-        url: https://github.com/rhuss
-      - title: LinkedIn
-        icon: linkedin
-        url: https://linkedin.com/in/ro14nd
-      - title: Mastodon
-        icon: mastodon
-        url: https://hachyderm.io/@ro14nd
-      - title: Bluesky
-        icon: bluesky
-        url: https://bsky.app/profile/ro14nd.bsky.social
+      - github: https://github.com/rhuss
+      - linkedin: https://linkedin.com/in/ro14nd
+      - mastodon: https://hachyderm.io/@ro14nd
+      - bluesky: https://bsky.app/profile/ro14nd.bsky.social
