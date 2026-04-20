@@ -5,7 +5,7 @@ slug: "context-engineering-101"
 description: "Practical lessons from months of daily coding agent use. Context engineering is not about better prompts. It's about understanding what the agent sees, how it degrades, and building habits that keep sessions productive."
 tags: ["context-engineering", "ai", "claude-code"]
 keywords: ["context engineering", "coding agents", "Claude Code", "context window", "AGENTS.md", "spec-driven development", "prompt engineering"]
-images: ["/images/context-engineering-101/og.png"]
+images: ["/images/context-engineering-101/og.png?v=2"]
 license: "CC BY 4.0"
 draft: false
 ---
