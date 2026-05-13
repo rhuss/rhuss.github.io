@@ -5,7 +5,7 @@ slug: "know-your-limits"
 description: "AI can carry you into domains you can't verify. A self-assessment quiz reveals where your expertise ends. Finding that limit is the point."
 tags: ["ai", "process", "opinion", "self-assessment", "context-engineering"]
 keywords: ["AI trust calibration", "self-assessment AI", "developer AI trust", "AI verification", "LLM trust", "know your limits AI", "cognitive offloading AI"]
-images: ["/images/know-your-limits/og.jpg"]
+images: ["/images/know-your-limits/og.jpg?v=2"]
 license: "CC BY 4.0"
 draft: false
 ---
