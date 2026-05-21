@@ -2,7 +2,7 @@
 title: "AI Wrote It. Nobody Read It."
 date: 2026-05-20
 slug: "ai-wrote-it-nobody-read-it"
-description: "AI-generated documentation leaves fingerprints when nobody reviewed it. Not the vocabulary. The structural signs. The first one your reader spots kills trust in everything else."
+description: "AI made writing cheap. It didn't make reading cheap. How to spot when the review was missing, and why it matters more for internal docs than anywhere else."
 tags: ["ai", "documentation", "opinion", "quality", "context-engineering"]
 keywords: ["AI documentation", "AI slop", "work slop", "document review", "technical writing AI", "documentation quality", "AI trust"]
 images: ["/images/the-review-you-didnt-do/og.jpg"]
