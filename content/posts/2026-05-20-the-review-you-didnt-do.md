@@ -75,7 +75,7 @@ A few practical steps:
 
 **Be honest about the review level.** If you used AI to generate the document and only had time for a light pass, say so. "This document was AI-drafted and lightly reviewed. Please flag errors." That one sentence is more respectful than pretending you wrote and verified every word. Attribution tells the reader "AI helped write this." What readers also need to know is how carefully a human reviewed it. As I wrote in the [Know Your Limits](/know-your-limits/) post, honest self-assessment leads to better decisions than performed confidence.
 
-AI can write the draft in five minutes. The review is what turns it into something worth reading. Skip that step, and your readers will notice before you do.
+AI can write the draft in minutes. The review that turns it into something worth reading takes longer, and there's no shortcut for it. Skip that step, and your readers will notice before you do.
 
 <div class="ai-attribution">
 
