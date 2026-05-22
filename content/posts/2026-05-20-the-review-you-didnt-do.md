@@ -39,7 +39,7 @@ A document written for **human readers** should be concise, opinionated, and str
 
 A document written for **machine consumers** (coding agents, RAG pipelines, model training data) can be more verbose, include more detail, and tolerate repetition, because machines don't get bored or lose focus. They need explicit metadata, consistent terminology, and structured headings rather than visual layout cues. But the stakes are different too: inconsistencies and wrong information don't just confuse today's agent. In your RAG pipeline, they poison tomorrow's retrieval results. In training data, they get baked into model weights and produce wrong answers for years. Poorly reviewed docs fed into machine consumers make every AI system that reads them worse.
 
-The problem isn't which audience you chose. The problem is not choosing. And that starts in the prompt: if you don't tell the AI who the reader is, what they already know, and what decision they need to make, you get the 30-page default. Everything covered at medium depth, no priorities, no opinion, no awareness of what the reader already knows or needs to decide. State your audience in the first paragraph. One sentence changes how everything that follows gets written and read.
+The problem isn't which audience you chose. The problem is not choosing, which usually means the document was optimized for neither.
 
 ## The signs that need a closer look
 
