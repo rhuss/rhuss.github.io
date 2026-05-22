@@ -39,11 +39,7 @@ A document written for **human readers** should be concise, opinionated, and str
 
 A document written for **machine consumers** (coding agents, RAG pipelines, model training data) can be more verbose, include more detail, and tolerate repetition, because machines don't get bored or lose focus. They need explicit metadata, consistent terminology, and structured headings rather than visual layout cues. But the stakes are different too: inconsistencies and wrong information don't just confuse today's agent. In your RAG pipeline, they poison tomorrow's retrieval results. In training data, they get baked into model weights and produce wrong answers for years. Poorly reviewed docs fed into machine consumers make every AI system that reads them worse.
 
-The problem isn't which audience you chose. The problem is not choosing, which usually means the document was optimized for neither.
-
-State your audience in the first paragraph. If you're writing reference material for agents, say so. If you're writing for a human architect making a decision this week, say that. A document that's verbose enough for agent consumption but unmarked will frustrate every human who tries to read it, and a document trimmed for human reading might lack the detail an agent needs.
-
-This starts in the prompt. If you don't tell the AI who the reader is, what they already know, and what decision they need to make, the AI defaults to writing for everyone, which means writing for no one. The same topic produces completely different documents depending on whether you're writing for a platform team choosing between options by Friday, a coding agent that needs exact API signatures as context, or an executive who needs to understand a risk in two pages. Without that framing, you get the 30-page default: everything covered at medium depth, no priorities, no opinion, no awareness of what the reader already knows or needs to decide.
+The problem isn't which audience you chose. The problem is not choosing. And that starts in the prompt: if you don't tell the AI who the reader is, what they already know, and what decision they need to make, you get the 30-page default. Everything covered at medium depth, no priorities, no opinion, no awareness of what the reader already knows or needs to decide. State your audience in the first paragraph. One sentence changes how everything that follows gets written and read.
 
 ## The signs that need a closer look
 
