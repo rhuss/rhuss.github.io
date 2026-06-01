@@ -156,6 +156,10 @@ section.space-y-10 > :not([hidden]) ~ :not([hidden]) {
   margin-bottom: 0 !important;
 }
 
+section.space-y-10 {
+  margin-top: 12px !important;
+}
+
 /* ── Summary/teaser: show full excerpt, no truncation ── */
 .article-link__summary {
   -webkit-line-clamp: unset !important;
