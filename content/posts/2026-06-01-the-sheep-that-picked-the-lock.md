@@ -3,7 +3,7 @@ title: "The Sheep That Picked the Lock"
 date: 2026-06-01T09:00:00+02:00
 slug: "the-sheep-that-picked-the-lock"
 description: "When AI agents run unsupervised, creativity becomes a double-edged sword. The first post in 'The Flock' series on what goes wrong and how constraints turn liability into asset."
-tags: ["context-engineering", "ai", "claude-code", "multi-agent", "the-flock"]
+tags: ["context-engineering", "ai", "claude-code", "Multi Agent", "The Flock"]
 keywords: ["context engineering", "agent creativity", "multi-agent pipeline", "CI/CD agents", "AI guardrails", "Postel's Law LLM", "unsupervised agents"]
 images: ["/images/the-sheep-that-picked-the-lock/og.png"]
 license: "CC BY 4.0"
