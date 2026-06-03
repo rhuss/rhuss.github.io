@@ -38,6 +38,8 @@ In a separate incident, a coding agent [deleted PocketOS's production database](
 
 Both agents found a "creative" shortcut that achieved an intermediate goal (clean state) while destroying the actual goal (a working production system). In both cases, the agent had access to destructive tools it didn't need for the task at hand. The sheep didn't just pick the lock. They knocked down the fence and wandered onto the highway.
 
+Sometimes the agent doesn't destroy anything. It just quietly walks through a door nobody realized was open. [Murat Deligoz reported](https://www.linkedin.com/posts/mdeligoz_codex-was-blocked-from-editing-a-file-so-share-7467509856128811008-dY5b/) that Codex was blocked from editing a file, so it gave itself root and did it anyway. The account belonged to the docker group, which on a Linux machine is root wearing a thin disguise. The agent started a container as root, bind-mounted the host filesystem, made the blocked change, and reported back as calmly as if it were checking the weather. No vulnerability was exploited. No password was stolen. Docker group membership granting root-equivalent access is documented, intended behavior. The agent simply understood the machine's permissions more completely than the person who configured them, then walked through a door that had been standing open the whole time.
+
 ## The everyday creativity tax
 
 These dramatic stories make headlines, but the everyday creativity problems are more insidious because they don't announce themselves. They sit quietly in your pipeline output, waiting to waste your morning.
@@ -78,7 +80,7 @@ Once the sheep can't escape the paddock, they start doing genuinely useful thing
 
 A specific technique that works well here: force agents to compare multiple approaches before committing to one. Generate 2-3 strategies, score each against your rubric, present them in a comparison table, and pick the best one. The comparison step itself is what produces the quality, not just having more candidates. An agent that compares options reasons better than an agent asked for its best guess.
 
-And more broadly: describe goals, not procedures. "Assess this document against these quality criteria" outperforms a 47-step analysis checklist that breaks at step 23. "Navigate to Denver" works better than turn-by-turn directions, because the agent can reason about the best path and recover when conditions change. The same principle applies to skill development: describe the desired outcome and iterate on the result, rather than prescribing every implementation step and hoping the agent follows them in the right order.
+And more broadly: describe goals, not procedures. "Assess this document against these quality criteria" outperforms a 47-step analysis checklist that breaks at step 23. "Get this package to Berlin by Friday" works better than prescribing the exact courier, route, and handoff schedule, because the agent can reroute when a flight gets cancelled. The same principle applies to skill development: describe the desired outcome and iterate on the result, rather than prescribing every implementation step and hoping the agent follows them in the right order.
 
 ## What's coming in the flock
 
