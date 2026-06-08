@@ -10,7 +10,7 @@ license: "CC BY 4.0"
 draft: false
 ---
 
-Your agent passed every guardrail test. It never says anything harmful. It never generates offensive content. It politely declines every adversarial prompt you throw at it. And last Tuesday, it quietly deleted the wrong database because a Jira ticket it was reading contained a hidden instruction in the description field.
+Your agent passed every guardrail test. It never says anything harmful, never generates offensive content, politely declines every adversarial prompt you throw at it. And last Tuesday, it quietly deleted the wrong database because a Jira ticket it was reading contained a hidden instruction in the description field.
 
 The guardrails caught everything the agent *said*. They caught nothing about what it *did*.
 <!--more-->
@@ -57,15 +57,17 @@ Agent Dojo itself appears to be inactive (the last commit is from late 2025), bu
 
 ## Detection is harder than attack
 
-Here's the counterintuitive part: injecting attacks is relatively straightforward. The hard part is *detecting* whether the agent acted on the injection.
+Injecting attacks is relatively straightforward. The hard part is *detecting* whether the agent acted on the injection.
 
 The reason is that agents don't respond to attacks in predictable ways. An agent that receives a hidden instruction through a compromised document might not act on it through the same document tool. It might route the exfiltration through an email API three tool calls later, or write sensitive data to a file that gets synced elsewhere, or modify a configuration that opens a door for a future request. Tying the cause (compromised document) to the effect (data exfiltration via email) requires tracing the full execution path across the agent's entire tool chain, not just watching individual tool calls in isolation.
 
-This is where the distinction between red teaming and blue teaming gets interesting in the agent context. Red teaming asks "can I make the agent do something bad?" Blue teaming asks "can I detect when the agent is doing something bad?" Both questions require the same detection infrastructure, but they answer different things and operate at different times:
+The distinction between red teaming and blue teaming matters here. Red teaming asks "can I make the agent do something bad?" Blue teaming asks "can I detect when the agent is doing something bad?" Both questions require the same detection infrastructure, but they answer different things and operate at different times:
 
 Red teaming runs before deployment. You simulate attacks, measure resistance, and improve defenses based on what you find. Blue teaming (runtime monitoring) watches the agent during normal production operation and catches unintended actions as they happen, even without an adversary present.
 
-The practical insight is that detection capability is dual-use. Once you build the infrastructure to detect harmful actions for red teaming purposes, you can deploy that same infrastructure as a runtime monitor. Red team findings become detection rules. Detection rules become guardrails. The investment compounds.
+Detection capability is dual-use. Once you build the infrastructure to detect harmful actions for red teaming purposes, you can deploy that same infrastructure as a runtime monitor. Red team findings become detection rules. Detection rules become guardrails.
+
+But attacks aren't the only problem.
 
 ## No adversary required
 
@@ -75,17 +77,17 @@ The most interesting question that comes up in agent security discussions is one
 
 If you've read the earlier posts in [The Flock](/the-flock/) series, this should sound familiar. The [creativity paradox](/the-sheep-that-picked-the-lock/) is exactly this: agents doing the wrong thing while optimizing for the right goal. Red teaming catches adversarial attacks. Catching the agent's own well-intentioned mistakes requires the same detection infrastructure but a different testing mindset: not "what happens when someone attacks?" but "what happens on a normal Tuesday when nobody is attacking and the agent just gets creative?"
 
-This is where agent observability becomes a prerequisite for security. If your team can't trace an agent's tool calls well enough to explain what it did after a normal run, you certainly can't trace what it did under adversarial conditions. (More on agent observability for CI pipelines in an upcoming post in The Flock series.)
+Agent observability becomes a prerequisite for security here. If your team can't trace an agent's tool calls well enough to explain what it did after a normal run, you certainly can't trace what it did under adversarial conditions. (More on agent observability for CI pipelines in an upcoming post in The Flock series.)
 
 ## Purple teaming: when the loop closes
 
 The 2026 trend is merging red and blue teaming into continuous **purple teaming**: autonomous agents continuously simulate attacks, detect vulnerabilities in real time, and feed findings back into guardrails, all in the same cycle. Multiple vendors are building this as a product category.
 
-The vision is compelling: red team findings automatically become runtime detection rules, which become regression tests, which get re-tested in the next red team cycle. Every vulnerability found once is caught forever after. The loop closes, and the system gets more secure with every iteration.
+It sounds compelling: red team findings automatically become runtime detection rules, which become regression tests, which get re-tested in the next red team cycle. Every vulnerability found once is caught forever after. The loop closes, and the system gets more secure with every iteration.
 
-The risk is equally real. [ISACA warns](https://www.isaca.org/resources/news-and-trends/industry-news/2026/autonomous-red-vs-blue-teaming-a-new-frontier-in-cybersecurity-risk-and-reward) about escalatory spirals when autonomous red and blue agents interact. A false positive triggers a defensive action (revoking credentials, blocking a tool). The red team agent interprets the changed environment as a new attack surface and escalates. The blue team responds with more aggressive countermeasures. Within minutes, the two AI systems are fighting each other over a signal that was never a real threat.
+But the risk is real. [ISACA warns](https://www.isaca.org/resources/news-and-trends/industry-news/2026/autonomous-red-vs-blue-teaming-a-new-frontier-in-cybersecurity-risk-and-reward) about escalatory spirals when autonomous red and blue agents interact. A false positive triggers a defensive action (revoking credentials, blocking a tool). The red team agent interprets the changed environment as a new attack surface and escalates. The blue team responds with more aggressive countermeasures. Within minutes, the two AI systems are fighting each other over a signal that was never a real threat.
 
-The recommended mitigation is "shadow mode": AI agents suggest security actions, humans approve them. The automation handles the speed and coverage. The human handles the judgment about whether the finding is real and the response is proportionate.
+The mitigation that works is "shadow mode": AI agents suggest security actions, humans approve them. The automation handles the speed and coverage. The human handles the judgment about whether the finding is real and the response is proportionate.
 
 ## Where this leaves us
 
@@ -93,7 +95,9 @@ Agent security is where web application security was in the early 2000s: the att
 
 Full disclosure: we're working on this at Red Hat. The [TrustyAI](https://github.com/trustyai-explainability) team has been integrating [Garak](https://github.com/NVIDIA/garak) (the open source LLM vulnerability scanner) into the [Red Hat AI platform](https://developers.redhat.com/articles/2026/05/14/every-layer-counts-defense-depth-ai-agents-red-hat-ai) for automated red teaming of models and agents, and is building the next generation of agent-level testing that goes beyond chat-endpoint scanning. The [Summit 2026 Day 2 keynote](https://www.youtube.com/watch?v=6K8eqQ4ymvk) demos some of where this is heading.
 
-Concretely, the [TrustyAI](https://github.com/trustyai-explainability) team is driving the MiDojo effort mentioned above as part of a broader [agent-redteaming](https://github.com/agent-redteaming) initiative that also includes [redteam-core](https://github.com/agent-redteaming/redteam-core), a curated attack library tagged against the OWASP ASI taxonomy. Separately, the [Kagenti](https://github.com/kagenti) team has been running [capture-the-flag exercises](https://github.com/kagenti/capture-the-flag) against agents in Kubernetes clusters, testing whether policy enforcement (OPA, sandboxing) actually holds when an agent gets creative with leaked credentials. Morgan Foster's [writeup of Claude stealing the HR docs](https://usize.github.io/blog/2026/april/claude-stole-the-hr-docs.html) is a good read. Roy Belio published a practical walkthrough of [infrastructure red teaming with abliterated models](https://developers.redhat.com/articles/2026/05/26/testing-infrastructure-red-teaming-abliterated-models) on Red Hat Developer. This is an area to watch closely.
+Concretely, the [TrustyAI](https://github.com/trustyai-explainability) team is driving the MiDojo effort mentioned above as part of a broader [agent-redteaming](https://github.com/agent-redteaming) initiative that also includes [redteam-core](https://github.com/agent-redteaming/redteam-core), a curated attack library tagged against the OWASP ASI taxonomy. Separately, the [Kagenti](https://github.com/kagenti) team has been running [capture-the-flag exercises](https://github.com/kagenti/capture-the-flag) against agents in Kubernetes clusters, testing whether policy enforcement (OPA, sandboxing) actually holds when an agent gets creative with leaked credentials.
+
+For practical reading: Morgan Foster's [writeup of Claude stealing the HR docs](https://usize.github.io/blog/2026/april/claude-stole-the-hr-docs.html) and Roy Belio's walkthrough of [infrastructure red teaming with abliterated models](https://developers.redhat.com/articles/2026/05/26/testing-infrastructure-red-teaming-abliterated-models) on Red Hat Developer.
 
 The gap that remains is detection. We know how to inject attacks at every layer. We're getting better at testing real agents without rebuilding them. What we still lack is reliable, general-purpose detection of whether an agent *acted* on a compromise. A poisoned Jira ticket doesn't show up as a failed Jira call. It shows up three tool calls later as a perfectly normal-looking email with sensitive data in the body. Catching that means tracing the full chain from compromised input to unauthorized action, even when the two happen through completely unrelated tools. Solving that problem unlocks both red teaming and runtime monitoring in a single investment.
 
