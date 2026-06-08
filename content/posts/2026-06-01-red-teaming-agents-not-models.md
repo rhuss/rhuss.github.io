@@ -5,7 +5,7 @@ slug: "red-teaming-agents-not-models"
 description: "Agent red teaming goes beyond model guardrails. Your agent passed every test for what it says, then quietly deleted the wrong database. Why testing agents requires a fundamentally different approach."
 tags: ["ai", "security", "agents", "red-teaming", "context-engineering"]
 keywords: ["agent red teaming", "agentic security", "AI agent testing", "prompt injection", "OWASP agentic", "purple teaming", "agent security"]
-images: ["/images/red-teaming-agents-not-models/og.jpg?v=2"]
+images: ["/images/red-teaming-agents-not-models/og-v2.jpg"]
 license: "CC BY 4.0"
 draft: false
 ---
