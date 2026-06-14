@@ -2,10 +2,10 @@
 title: "Three Hops Deep and No Browser in Sight"
 date: 2026-06-14
 slug: "three-hops-deep-and-no-browser-in-sight"
-description: "MCP handles client-to-server auth fine. The problem starts when the server needs your Google token and the agent asking for it is three hops deep with no browser in sight."
-tags: ["ai", "security", "agents", "mcp", "context-engineering"]
+description: "MCP handles client-to-server auth fine. The problem starts when the server needs your Google token and the agent is three hops deep with no browser in sight."
+tags: ["ai", "security", "agents", "mcp", "context-engineering", "oauth"]
 keywords: ["MCP authentication", "OAuth agents", "token gap", "multi-agent consent", "MCP URL elicitation", "agentic IAM", "agent authorization", "AAuth"]
-images: ["/images/three-hops-deep-and-no-browser-in-sight/og.png"]
+images: ["/images/three-hops-deep-and-no-browser-in-sight/og.jpg"]
 license: "CC BY 4.0"
 draft: false
 ---
@@ -17,7 +17,7 @@ Now imagine the agent that needs your Google Calendar isn't the one you're talki
 That's what this post is about.
 <!--more-->
 
-{{< figure src="/images/three-hops-deep-and-no-browser-in-sight/og.png" alt="Watercolor split-screen illustration. Left side labeled 'On Your Laptop': a sheep with glasses sitting at a desk, clicking 'Allow' on a consent screen. Right side labeled 'Three Hops Deep': three sheep standing in a dim barn filled with hay bales arranged like server racks, facing a padlocked door with no computer in sight." >}}
+{{< figure src="/images/three-hops-deep-and-no-browser-in-sight/og.jpg" alt="Watercolor split-screen illustration. Left side labeled 'On Your Laptop': a sheep with glasses sitting at a desk, clicking 'Allow' on a consent screen. Right side labeled 'Three Hops Deep': three sheep standing in a dim barn filled with hay bales arranged like server racks, facing a padlocked door with no computer in sight." >}}
 
 ## Two tokens, two problems
 
