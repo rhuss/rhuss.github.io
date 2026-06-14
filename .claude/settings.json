@@ -1,5 +1,9 @@
 {
   "enabledPlugins": {
-    "hugo@hugo-plugin-development": true
+    "blog@blog-plugin-development": true,
+    "copyedit@cc-rhuss-marketplace": true,
+    "hugo@hugo-plugin-development": true,
+    "prompt@prompt-plugin-development": true,
+    "skill@skill-plugin-development": true
   }
 }

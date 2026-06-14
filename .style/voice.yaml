@@ -1,28 +1,41 @@
 # Voice Profile: blog
-# Extracted from: /Users/rhuss/Blog/_posts/ (7 posts, 2014-2018)
-# Extraction date: 2026-04-03
-# Corpus: ~6,500 words from 7 files (1 excluded as outlier)
+# Extracted from: 2026 blog posts (context-engineering-101, the-review-you-didnt-do,
+#   the-sheep-that-picked-the-lock, red-teaming-agents-not-models)
+# Influenced by: Jean du Plessis (kilo.ai) for emotional register, reflective closers, paragraph breathing room
+# Original personality retained from: 2014-2018 posts (craftsman's pride, cultural references, self-deprecation)
+# Extraction date: 2026-06-13
+# Corpus: ~8,200 words from 4 posts (2026), compared against 7 older posts
 
 name: "blog"
-version: "1.0"
-description: "Roland's technical blog voice: confident craftsman sharing what he built, honest about failures, playful cultural references"
+version: "2.0"
+description: "Roland's evolved blog voice: analytical and direct, with room for emotional honesty, reflective endings, and occasional longer paragraphs"
 
 tone_description: |
-  Technically confident but personally modest. Writes as someone who built
-  the thing and wants to share what he learned, not as someone lecturing
-  from a podium. There is a craftsman's pride in the details (CORS edge
-  cases, Docker socket tricks, image layering) paired with honest admissions
-  when something did not work ("I tried hard but failed miserably"). Humor
-  appears naturally, often as asides, footnotes, or cultural references
-  (wormholes, Matryoshka dolls, Munchhausen). The writing has a distinctly
-  European engineering voice, precise but not cold, occasionally playful.
-  Rhetorical questions drive the narrative forward. Disclaimers and
-  self-deprecation build trust through transparency rather than undermining
-  authority.
+  Technically precise but personally honest. Writes as someone who traced the
+  problem through the codebase and wants to show what he found, not lecture
+  about it. The analytical confidence from the 2026 posts is the backbone:
+  direct assertions, concrete examples before principles, no hedging.
+
+  What's evolved from the earlier voice: the craftsman's pride is still there,
+  but the subjects are bigger (agent security, protocol architecture, organizational
+  patterns) and the writing acknowledges emotional weight when it's real. Fear of
+  irrelevance, frustration with tools, the discomfort of not knowing the answer
+  yet. These get named directly, not buried under analysis.
+
+  Humor appears as wry observation, not performance. "The most expensive cheat
+  sheet ever written" earns the laugh because the story earned it first.
+  Cultural references and analogies are fewer than the older posts but sharper
+  when they appear (brain in a jar, hotel keycard, sheep picking locks).
+
+  Paragraphs are mostly short and punchy (3-5 sentences), but occasionally one
+  runs longer to let a complex idea breathe. The rhythm varies: tight analytical
+  sequences alternate with more ruminative passages. Closers can be punchy
+  ("it's the whole problem") or reflective ("less certain in the abstract, but
+  more useful in practice"), depending on what the post needs.
 
 characteristics:
-  formality: 0.50
-  personality: 0.68
+  formality: 0.45
+  personality: 0.72
   first_person: true
   contractions: true
   audience: "intermediate"
@@ -30,10 +43,10 @@ characteristics:
 sentence_patterns:
   mix_short: true
   max_consecutive_similar: 3
-  avg_length_target: 19
-  variation: "moderate"
+  avg_length_target: 14
+  variation: "high"
   rhetorical_questions: true
-  avoid_staccato: true  # Don't stack multiple short punchy sentences in a row. Flow over punch.
+  avoid_staccato: true
 
 elaboration:
   depth: "moderate"
@@ -41,11 +54,12 @@ elaboration:
   include_examples: true
   explain_reasoning: true
   analogies: "moderate"
-  analogy_domain: "physics, culture, everyday engineering"
+  analogy_domain: "everyday engineering, farm life (The Flock series), protocol mechanics"
 
 personality_traits:
   opinions: true
   acknowledge_complexity: true
+  acknowledge_emotions: true
   humor: "subtle"
   personal_experience: true
 
@@ -53,12 +67,24 @@ pronoun_balance:
   you_percentage: 55
   we_percentage: 45
 
+paragraph_rhythm:
+  default_length: "3-5 sentences"
+  allow_longer: true
+  longer_when: "complex idea needs room to breathe, building to a reflective point"
+  max_long_paragraphs_per_post: 3
+
+closers:
+  style: "mixed"
+  punchy_when: "the post built toward a sharp contrast or tension"
+  reflective_when: "the post explored open questions or uncertainty"
+  avoid: "generic positive conclusions, upbeat predictions"
+
 signature_phrases:
-  - "Let's have a look"
-  - "The question is now"
+  - "The question is"
   - "As it turns out"
-  - "However"
-  - "Not to mention"
+  - "This is where"
+  - "The fix is"
+  - "And that changes"
 
 avoid_phrases:
   - "in this blog post"
@@ -67,3 +93,7 @@ avoid_phrases:
   - "without further ado"
   - "in today's post"
   - "it goes without saying"
+  - "here's the thing"
+  - "the reality is"
+  - "game-changing"
+  - "groundbreaking"
