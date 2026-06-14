@@ -14,7 +14,6 @@ You've seen this screen. If you use Claude Code or Cursor with MCP servers, you'
 
 Now imagine the agent that needs your Google Calendar isn't the one you're talking to. It's three agents deep in a multi-agent chain, running in a container with no browser and no way to show you a consent screen.
 
-That's what this post is about.
 <!--more-->
 
 {{< figure src="/images/three-hops-deep-and-no-browser-in-sight/og.jpg" alt="Watercolor split-screen illustration. Left side labeled 'On Your Laptop': a sheep with glasses sitting at a desk, clicking 'Allow' on a consent screen. Right side labeled 'Three Hops Deep': three sheep standing in a dim barn filled with hay bales arranged like server racks, facing a padlocked door with no computer in sight." >}}
