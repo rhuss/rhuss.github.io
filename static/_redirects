@@ -1,0 +1,13 @@
+# Redirect social tracking suffixes appended as path segments
+# These come from social media announcements that used /{slug}/{platform}
+# instead of query parameters for tracking
+/*/Bluesky /:splat/ 301
+/*/bluesky /:splat/ 301
+/*/LinkedIn /:splat/ 301
+/*/linkedin /:splat/ 301
+/*/Mastodon /:splat/ 301
+/*/mastodon /:splat/ 301
+/*/github /:splat/ 301
+/*/GitHub /:splat/ 301
+/*/twitter /:splat/ 301
+/*/Twitter /:splat/ 301
