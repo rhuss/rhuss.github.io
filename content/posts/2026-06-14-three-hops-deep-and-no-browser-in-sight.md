@@ -1,13 +1,13 @@
 ---
 title: "Three Hops Deep and No Browser in Sight"
-date: 2026-06-15
+date: 2026-06-14
 slug: "three-hops-deep-and-no-browser-in-sight"
 description: "MCP handles client-to-server auth fine. The problem starts when the server needs your Google token and the agent asking for it is three hops deep with no browser in sight."
 tags: ["ai", "security", "agents", "mcp", "context-engineering"]
 keywords: ["MCP authentication", "OAuth agents", "token gap", "multi-agent consent", "MCP URL elicitation", "agentic IAM", "agent authorization", "AAuth"]
 images: ["/images/three-hops-deep-and-no-browser-in-sight/og.png"]
 license: "CC BY 4.0"
-draft: true
+draft: false
 ---
 
 You've seen this screen. If you use Claude Code or Cursor with MCP servers, you've clicked through it dozens of times. "Google MCP Server wants to access your Google Account." You review the scopes, click Allow, a token lands in your local config, and everything works.
