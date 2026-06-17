@@ -20,7 +20,7 @@ Now imagine the agent that needs your Google Calendar isn't the one you're talki
 
 ## Two tokens, two problems
 
-MCP authentication handles the connection between your client and the MCP server well. The spec's [OAuth 2.1 flow](https://modelcontextprotocol.io/specification/draft/basic/authorization) works like standard OAuth: your client authenticates with the MCP server's authorization server, gets an access token, and sends it with every request. The server validates the token, serves the request, and holds no per-user state. Stateless. Each request carries its own bearer token.
+MCP authentication handles the connection between your client and the MCP server well. The spec's [OAuth 2.1 flow](https://modelcontextprotocol.io/specification/draft/basic/authorization) works like standard OAuth: your client authenticates with the MCP server's authorization server, gets an access token, and sends it with every request. The server validates the token, serves the request, and holds no per-user state. Each request carries its own bearer token.
 
 The problem starts when the MCP server needs to call an external service on your behalf. The token your client sends authenticates you *to the MCP server*. When that server needs to read your Google Calendar, it needs a completely different token. One that Google issued, through Google's own consent flow.
 
