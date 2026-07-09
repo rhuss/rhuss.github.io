@@ -2,7 +2,7 @@
 title: "The Sheep That Forgot the Way Home"
 date: 2026-07-09
 slug: "the-sheep-that-forgot-the-way-home"
-description: "Context compaction doesn't just forget information. It invents replacements with complete confidence. The second post in 'The Flock' series on why agent state must live on disk."
+description: "Context compaction doesn't just forget information. It invents replacements with complete confidence. Why agent state must live on disk."
 tags: ["context-engineering", "ai", "claude-code", "multi-agent", "the-flock", "agents-md"]
 keywords: ["context compaction", "agent state management", "LLM memory", "context window", "CI agents", "unsupervised agents", "state persistence", "AGENTS.md", "post-compaction hook"]
 images: ["/images/the-sheep-that-forgot-the-way-home/og.jpg"]
