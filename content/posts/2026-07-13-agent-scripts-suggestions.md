@@ -45,13 +45,13 @@ This hierarchy has solid academic backing. [Wallace et al.](https://arxiv.org/ab
 
 Once you see the pattern, the fix becomes clear: stop relying on level-three instructions and enforce critical logic at level one.
 
-## Three layers, zero interpretation
+## Hooks and structured outputs
 
 The examples here use Claude Code's hook system (`UserPromptSubmit`, `PreToolUse`), but the pattern is not Claude Code specific. Cursor has rules and `.cursor/tools`, Windsurf has flows, Cline has custom instructions with tool approval, and most agent harnesses offer some way to inject context at the system level or gate tool calls before they execute. The specific API differs, the architectural principle is the same: move enforcement out of instructions and into the harness.
 
 The final architecture gives the agent nothing to interpret.
 
-**Layer 1: Hook-based path injection.** A `UserPromptSubmit` hook (a Python script) runs before the agent sees the prompt. It resolves its own filesystem location using `Path(__file__).parent.parent.parent`, constructs absolute paths to every script the agent might need, and injects them as structured XML in the system context:
+**Path injection.** A `UserPromptSubmit` hook (a Python script) runs before the agent sees the prompt. It resolves its own filesystem location using `Path(__file__).parent.parent.parent`, constructs absolute paths to every script the agent might need, and injects them as structured XML in the system context:
 
 ```xml
 <init-command>/Users/me/.claude/plugins/cache/.../scripts/init.sh</init-command>
@@ -61,13 +61,13 @@ How this lands in the model's context matters. In Claude Code, hook output goes 
 
 Path resolution happens in deterministic Python code, not in probabilistic language model reasoning. The hook fires only on the plugin's slash commands and captures session state at hook time. No ambiguity left for the agent to resolve.
 
-**Layer 2: Hook-based enforcement.** A `PreToolUse` hook fires before every tool call the agent makes. It checks a state file on disk that tracks where the workflow currently is, and if the agent tries to skip ahead, the hook blocks the call and tells it exactly which steps it needs to complete first. The skill file still contains the workflow instructions (the agent needs them for the judgment calls within each step), but the hook makes compliance non-optional. Instead of hoping the agent follows a multi-step procedure, the hook gates every action against the expected sequence.
+**Stage enforcement.** A `PreToolUse` hook fires before every tool call the agent makes. It checks a state file on disk that tracks where the workflow currently is, and if the agent tries to skip ahead, the hook blocks the call and tells it exactly which steps it needs to complete first. The skill file still contains the workflow instructions (the agent needs them for the judgment calls within each step), but the hook makes compliance non-optional. Instead of hoping the agent follows a multi-step procedure, the hook gates every action against the expected sequence.
 
-This is the key insight: hooks do double duty. The `UserPromptSubmit` hook provides information (resolved paths, session state). The `PreToolUse` hook enforces behavior (stage ordering, shortcut prevention). Together, they move both context and compliance from level three (advisory skills) to level one (system-level enforcement).
+These two hooks work together: one provides information (resolved paths, session state), the other enforces behavior (stage ordering, shortcut prevention). Together, they move both context and compliance from the advisory tier to system-level enforcement.
 
-**Layer 3: Structured output parsing.** The init script returns machine-parseable status codes: `READY`, `NEED_INSTALL`, `ERROR`, `RESTART_REQUIRED`. The skill uses conditional logic: "If output contains NEED_INSTALL, show output, STOP." This removes the last opportunity for improvisation. No ambiguous output to reason about, just a keyword to match and a branch to follow.
+**Structured outputs.** The init script returns machine-parseable status codes: `READY`, `NEED_INSTALL`, `ERROR`, `RESTART_REQUIRED`. The skill uses conditional logic: "If output contains NEED_INSTALL, show output, STOP." This removes the last opportunity for improvisation. No ambiguous output to reason about, just a keyword to match and a branch to follow.
 
-Together, these layers reduce the agent's job to: read a path from context, execute it, parse a keyword, follow the branch. Each step is concrete and verifiable. Nothing left to infer, guess, or optimize away.
+Together, these mechanisms reduce the agent's job to: read a path from context, execute it, parse a keyword, follow the branch. Each step is concrete and verifiable. Nothing left to infer, guess, or optimize away.
 
 ## Architecture over instructions
 
