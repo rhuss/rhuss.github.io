@@ -71,15 +71,15 @@ Together, these mechanisms reduce the agent's job to: read a path from context, 
 
 ## Architecture over instructions
 
-Building reliable agent tooling means thinking about the agent as a confident but context-limited collaborator. It will try to help and it will apply its judgment. And that judgment will sometimes lead it to skip the step that matters most, because that step looks redundant from the outside.
+An AI coding agent is a confident but context-limited collaborator. It will try to help and it will apply its judgment. And that judgment will sometimes lead it to skip the step that matters most, because that step looks redundant from the outside.
 
-The defense is not better instructions, and three rounds of trying taught me that. I kept adding guardrails, constraints, and anti-exploration language. None of it stuck, because instructions are interpreted, and interpretation introduces variance.
+Better instructions don't fix this. More guardrails, more constraints, more anti-exploration language: none of it sticks, because instructions are interpreted, and interpretation introduces variance.
 
-The defense is architecture: removing opportunities for interpretation by resolving ambiguity before the agent encounters it. Hooks resolve paths and enforce stage ordering, structured outputs constrain branching. Each layer removes a category of improvisation. What remains is an agent executing a well-defined protocol, which is what a plugin init command should be.
+Architecture fixes it. Remove opportunities for interpretation by resolving ambiguity before the agent encounters it. Hooks resolve paths and enforce stage ordering, structured outputs constrain branching. Each mechanism removes a category of improvisation. What remains is an agent executing a well-defined protocol, which is what a plugin init command should be.
 
-There's a cost dimension worth keeping in mind, too. Every exploratory call the agent makes is tokens burned and seconds lost. The difference between "one Bash call with a pre-resolved path" and "six exploratory calls to figure out where the script lives" is the difference between a tool that feels responsive and one that feels like it's fighting you.
+Every exploratory call the agent makes is also tokens burned and seconds lost. The difference between "one Bash call with a pre-resolved path" and "six exploratory calls to figure out where the script lives" is the difference between a tool that feels responsive and one that feels like it's fighting you.
 
-The final architecture trusts instructions for what they're good at (communicating intent to humans reading the code) and uses structural mechanisms for what needs to be reliable. That distinction might be the most useful thing the whole exercise taught me.
+Trust instructions for what they're good at (communicating intent to humans reading the code) and use structural mechanisms for what needs to be reliable.
 
 <div class="ai-attribution">
 
