@@ -43,7 +43,9 @@ As it turns out, every one of my failed attempts had the same root cause: critic
 
 This hierarchy has solid academic backing. [Wallace et al.](https://arxiv.org/abs/2404.13208) formalized it as "The Instruction Hierarchy" at ICLR 2025, showing that LLMs trained with explicit privilege levels (system > user > tool content) became significantly more reliable. Anthropic's own [principal hierarchy](https://www.anthropic.com/constitution) encodes a similar ordering: Anthropic > operator > user, with environment context (tool outputs, loaded files) given the least inherent trust. In Claude Code specifically, you can see it in action: CLAUDE.md and skill content arrives wrapped in `<system-reminder>` tags with the disclaimer "this context may or may not be relevant to your tasks," literally downgrading it to advisory status.
 
-Once you see the pattern, the fix becomes clear: stop relying on level-three instructions and enforce critical logic at level one.
+The [AGENTS.md](https://agents.md/) spec is moving in the same direction. The [v1.1 proposal](https://github.com/agentsmd/agents.md/issues/135) formalizes a 5-level priority hierarchy (LLM system prompt > agent system prompt > user prompt > local AGENTS.md > ancestor AGENTS.md) and explicitly acknowledges that enforcement is "often achieved probabilistically through prompting." That's the core tension: context files can express intent, but they can't guarantee compliance. Deterministic enforcement has to come from somewhere else.
+
+That somewhere else is hooks.
 
 ## Hooks and structured outputs
 
