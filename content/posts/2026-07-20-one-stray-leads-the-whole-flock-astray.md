@@ -53,7 +53,7 @@ Context contamination can't be solved with better prompts. Anchoring bias resist
 
 The fix is structural: separate creation from assessment, isolate items from each other, clear the context between agents, and make the reviewing agent blind to the creation process. These aren't optimizations you add after the pipeline works. They're prerequisites for the pipeline producing reliable results.
 
-The [first post in this series](/the-sheep-that-picked-the-lock/) called for deterministic guardrails around agent creativity. The [second](/the-sheep-that-forgot-the-way-home/) called for state on disk because memory can't be trusted. This one adds: separate the paddocks, because one stray's confidence is enough to convert the whole flock.
+[The Flock](/the-flock/) so far: [deterministic guardrails](/the-sheep-that-picked-the-lock/) around agent creativity, [state on disk](/the-sheep-that-forgot-the-way-home/) because memory can't be trusted, and now separate paddocks, because one stray's confidence is enough to convert the whole flock.
 
 <div class="ai-attribution">
 
