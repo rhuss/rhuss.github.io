@@ -10,7 +10,7 @@ draft: false
 license: "CC BY 4.0"
 ---
 
-The [previous post in The Flock series](/the-sheep-that-forgot-the-way-home/) covered what happens when agents forget mid-run and confidently fill the gaps. This one covers a different failure mode: what happens when one agent's leftover context converts the next agent into something it was never supposed to be.
+The [previous post](/the-sheep-that-forgot-the-way-home/) in [The Flock](/the-flock/) series covered what happens when agents forget mid-run and confidently fill the gaps. This one covers a different failure mode: what happens when one agent's leftover context converts the next agent into something it was never supposed to be.
 <!--more-->
 
 *The flock grazes in separate paddocks for a reason. Put the bell sheep and the border collie in the same field and by afternoon the collie has stopped herding and started grazing. It didn't forget its job. It absorbed the bell sheep's confidence and decided that grazing was the job all along.*
