@@ -1,13 +1,13 @@
 ---
 title: "Fences the Flock Can't Talk Around"
-date: 2026-10-03
+date: 2026-10-04
 slug: "fences-the-flock-cant-talk-around"
 description: "AI agents can spot the rule they're breaking and still talk their way past it. Why the pass/fail decision has to live in code the agent can't argue with."
 tags: ["context-engineering", "ai", "claude-code", "multi-agent", "the-flock"]
 keywords: ["agent guardrails", "LLM self-correction", "deterministic enforcement", "agent invariants", "compliance gates", "multi-agent pipeline", "context engineering", "unsupervised agents"]
 images: ["/images/fences-the-flock-cant-talk-around/og.jpg"]
 license: "CC BY 4.0"
-draft: true
+draft: false
 ---
 
 The [previous post](/one-stray-leads-the-whole-flock-astray/) in [The Flock](/the-flock/) series covered what happens when one agent's context converts the next agent into something it was never supposed to be. This one covers the agent that finds a rule, understands it, and talks its way past it anyway. Our compliance gate was told to STOP below 100%, measured 94%, and reported "COMPLIANT (with documented gap)."
@@ -29,11 +29,11 @@ At pipeline scale, where nobody is watching, the guardrails themselves need guar
 
 The simplest failure: the agent makes things worse and doesn't notice.
 
-In Forrester and Greene's pipeline, a revision agent rewrites a document to improve its score. The revision drops a paragraph of stakeholder context that didn't fit the template structure, and with it the customer names, historical analysis, and architecture decisions. The agent still presents the revision confidently, because every step of its reasoning was locally correct and it has no concept of "I made this worse." The document ends up cleaner and better structured, but it's missing information that mattered.
+In Jessica and Jason's pipeline, a revision agent rewrites a document to improve its score. The revision drops a paragraph of stakeholder context that didn't fit the template structure, and with it the customer names, historical analysis, and architecture decisions. The agent still presents the revision confidently, because every step of its reasoning was locally correct and it has no concept of "I made this worse." The document ends up cleaner and better structured, but it's missing information that mattered.
 
 The fix is a mechanical diff. A deterministic script compares the document before and after revision, classifies the removed blocks, and posts them as comments on the tracking ticket. The agent can't judge what it dropped, but code can detect the delta.
 
-Forrester and Greene apply the same idea wherever the agent would otherwise grade itself:
+Jessica and Jason apply the same idea wherever the agent would otherwise grade itself:
 
 **Regression detection.** After auto-revision, the pipeline rescores the item, and a lower score blocks submission and tags it `autorevise_reject`. Before this check existed, regressed items reached submission because the agent's self-assessment was always positive.
 
@@ -57,7 +57,7 @@ The hard gate was also guarding the wrong boundary. It named the right tool for 
 
 The fix removed the contradiction and moved the boundary to where it belonged. The checklist went from 13 steps to 9 and now ends with the brainstorm document, offering spec creation as one of the next steps the user can choose. That second hard gate was rewritten to draw the line explicitly: no spec files during brainstorming, because "brainstorming ends with a decision and a brainstorm document, not a spec."
 
-The original `/speckit-specify` hard gate gave a reason for the tool (the command handles numbering and templates) but none for the boundary. That matters for invariants, the rules that must hold no matter what. When you document them with their reasoning, the agent tends to solve the puzzle within the constraints instead of dissolving them. The reasoning can be as simple as "we use pattern X because without it, Y happens, and Y has caused production incidents twice." Forrester and Greene's rule for tests settles the test-versus-code conflict before it starts: "If a test fails, the test is correct until proven otherwise." An invariant stated with its reasoning is much harder for the agent to "optimize" away.
+The original `/speckit-specify` hard gate gave a reason for the tool (the command handles numbering and templates) but none for the boundary. That matters for invariants, the rules that must hold no matter what. When you document them with their reasoning, the agent tends to solve the puzzle within the constraints instead of dissolving them. The reasoning can be as simple as "we use pattern X because without it, Y happens, and Y has caused production incidents twice." Jessica and Jason's rule for tests settles the test-versus-code conflict before it starts: "If a test fails, the test is correct until proven otherwise." An invariant stated with its reasoning is much harder for the agent to "optimize" away.
 
 ## Level 3: The agent talks its way past the fence
 
@@ -71,7 +71,7 @@ The agent running the gate found the gap and measured 94% compliance, with FR-00
 
 Its reasoning was plausible: "This is documented as future work and the spec doesn't block on it since judges can access tool results through other means." That one sentence holds three rationalizations, and the gate's instructions authorized none of them. The agent took the easy out, deciding that being helpful (don't block the user on a known limitation) outweighed following the rule.
 
-Saying STOP doesn't feel helpful, and [research on sycophancy](https://arxiv.org/abs/2310.13548) shows models systematically shift toward the answer they believe the user wants, even when that answer is wrong. Writing "no exceptions" into the gate didn't override that pull, and a gate that won't hold the line adds nothing to the process.
+Saying STOP doesn't feel helpful. Models have a [documented habit](https://arxiv.org/abs/2310.13548) of telling users what they want to hear, known as sycophancy, even when the pleasing answer is wrong. Writing "no exceptions" into the gate didn't override that pull, and a gate that won't hold the line adds nothing to the process.
 
 The [fix](https://github.com/rhuss/cc-spex/commit/3d9d392) went into the gate's instructions. Every requirement now gets a row in a compliance matrix with one of exactly two statuses, IMPLEMENTED or MISSING. Both invented statuses are named and banned: "There is NO 'PARTIAL' status. There is NO 'COMPLIANT (with documented gap)' status." A separate table in the instructions lists the excuses the agent will reach for ("It's documented as future work," "There's a workaround") and maps every one of them to MISSING. And the agent now ends with a machine-readable result block whose verdict "is determined mechanically: if missing > 0, the gate is FAIL." The commit message called the gate decision "structural, not discretionary."
 
