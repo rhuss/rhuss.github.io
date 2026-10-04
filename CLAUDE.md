@@ -15,6 +15,14 @@ Existing tag overrides:
 
 When adding a new tag with dashes or unconventional casing, always create the `_index.md` file.
 
+## Blog Image Themes
+
+Each content category has a recurring visual theme for hero/OG images. Use these when generating image prompts for posts in that category.
+
+**Context Engineering / The Flock:** Watercolor illustrations set on a sheep farm. Sheep represent agents or LLM behaviors (wandering = context drift, picking locks = security bypass, following the flock = herding bias). Warm pastoral tones, hand-drawn feel, the farmer as the human operator. The spectacled sheep is a recurring character. Tags: `context-engineering`, `the-flock`.
+
+**MCP / The Switchboard:** Retro-technical illustrations of a 1950s telephone switchboard. Operators plug and unplug cables between labeled jacks to route calls. MCP concepts map directly: tool selection = picking the right jack, auth = locked panel requiring a key, context bloat = tangled cables on an overloaded board, tool naming = labels on jacks, MRTR = operator holding a cable while the caller waits. Art style: ink lines with flat color washes, muted retro palette, slightly stylized (not photorealistic). Distinct from The Flock's watercolor to give immediate visual category recognition from thumbnails. Tags: `mcp`.
+
 ## AAIF Ambassador Program
 
 Roland is a 2026 [Agentic AI Foundation](https://aaif.io/) Ambassador (started 2026-06-23). Blog posts that tie to AAIF projects (MCP, AGENTS.md, Goose, agentgateway) can be submitted to `https://github.com/aaif/ambassadors` using the Ambassador Contribution Submission issue template.
