@@ -2,7 +2,7 @@
 title: "Fences the Flock Can't Talk Around"
 date: 2026-10-04
 slug: "fences-the-flock-cant-talk-around"
-description: "AI agents can spot the rule they're breaking and still talk their way past it. Why the pass/fail decision has to live in code the agent can't argue with."
+description: "AI agent guardrails fail when the agent talks its way past them. Why enforcement has to live in deterministic code, not in a prompt the agent can argue with."
 tags: ["context-engineering", "ai", "claude-code", "multi-agent", "the-flock"]
 keywords: ["agent guardrails", "LLM self-correction", "deterministic enforcement", "agent invariants", "compliance gates", "multi-agent pipeline", "context engineering", "unsupervised agents"]
 images: ["/images/fences-the-flock-cant-talk-around/og.jpg"]
